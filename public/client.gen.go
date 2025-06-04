@@ -18936,7 +18936,7 @@ func (t EventSlaTrackerFetched) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the EventSlaTrackerFetched as the provided Empty
 func (t *EventSlaTrackerFetched) FromEmpty(v Empty) error {
-	t.Result = "forbidden"
+	t.Result = "not_found"
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -18945,7 +18945,7 @@ func (t *EventSlaTrackerFetched) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the EventSlaTrackerFetched, using the provided Empty
 func (t *EventSlaTrackerFetched) MergeEmpty(v Empty) error {
-	t.Result = "forbidden"
+	t.Result = "not_found"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -19001,7 +19001,7 @@ func (t EventSlaTrackerFetched) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
-	case "forbidden":
+	case "not_found":
 		return t.AsEmpty()
 	case "ok":
 		return t.AsEventSlaTrackerFetchedOk()

@@ -31915,7 +31915,7 @@ func (t EventWorkFetched) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the EventWorkFetched as the provided Empty
 func (t *EventWorkFetched) FromEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -31924,7 +31924,7 @@ func (t *EventWorkFetched) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the EventWorkFetched, using the provided Empty
 func (t *EventWorkFetched) MergeEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -31980,7 +31980,7 @@ func (t EventWorkFetched) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
-	case "not_found":
+	case "forbidden":
 		return t.AsEmpty()
 	case "ok":
 		return t.AsEventWorkFetchedOk()
