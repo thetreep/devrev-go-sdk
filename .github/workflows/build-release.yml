@@ -1,0 +1,154 @@
+name: Build and Release SDK
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_bump:
+        description: 'Version bump type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+  schedule:
+    - cron: '0 0 * * 1'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+
+      - name: Install dependencies
+        run: |
+          go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - name: Fetch latest specs
+        run: |
+          chmod +x .github/scripts/fetch-specs.sh
+          ./.github/scripts/fetch-specs.sh
+
+      - name: Fetch latest changelogs
+        run: |
+          chmod +x .github/scripts/fetch-changelogs.sh
+          ./.github/scripts/fetch-changelogs.sh
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes detected"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Generate SDK
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: make generate
+
+      - name: Run tests
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: make test
+
+      - name: Bump version
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          chmod +x .github/scripts/bump-version.sh
+          VERSION_BUMP="${{ github.event.inputs.version_bump || 'patch' }}"
+          ./.github/scripts/bump-version.sh $VERSION_BUMP
+
+      - name: Get version
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: get_version
+        run: echo "version=v$(cat VERSION)" >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git add -A
+          git commit -m "chore: update SDK to ${{ steps.get_version.outputs.version }}
+
+          - Updated OpenAPI specifications
+          - Regenerated SDK clients
+          - Updated changelogs"
+
+      - name: Push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: git push origin main
+
+      - name: Create Git tag
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git tag -a ${{ steps.get_version.outputs.version }} -m "Release ${{ steps.get_version.outputs.version }}"
+          git push origin ${{ steps.get_version.outputs.version }}
+
+      - name: Extract changelog for release
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: extract_changelog
+        run: |
+          # Extract the latest version's changelog
+          VERSION=${{ steps.get_version.outputs.version }}
+          awk -v ver="$VERSION" '
+            /^## v[0-9]+\.[0-9]+\.[0-9]+/ {
+              if (found) exit;
+              if ($0 ~ ver) found=1;
+            }
+            found && /^## v[0-9]+\.[0-9]+\.[0-9]+/ && $0 !~ ver {exit}
+            found {print}
+          ' CHANGELOG.md > release_notes.md
+          
+          # Add installation instructions
+          echo "" >> release_notes.md
+          echo "## Installation" >> release_notes.md
+          echo "" >> release_notes.md
+          echo '```bash' >> release_notes.md
+          echo "go get github.com/${{ github.repository }}@$VERSION" >> release_notes.md
+          echo '```' >> release_notes.md
+          echo "" >> release_notes.md
+          echo "## Usage" >> release_notes.md
+          echo "" >> release_notes.md
+          echo "### Public API Client" >> release_notes.md
+          echo '```go' >> release_notes.md
+          echo 'import "github.com/${{ github.repository }}/public"' >> release_notes.md
+          echo '```' >> release_notes.md
+          echo "" >> release_notes.md
+          echo "### Beta API Client" >> release_notes.md
+          echo '```go' >> release_notes.md
+          echo 'import "github.com/${{ github.repository }}/beta"' >> release_notes.md
+          echo '```' >> release_notes.md
+
+      - name: Create Release
+        if: steps.check_changes.outputs.has_changes == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.get_version.outputs.version }}
+          name: Release ${{ steps.get_version.outputs.version }}
+          body_path: release_notes.md
+          draft: false
+          prerelease: false
+          generate_release_notes: false
+          fail_on_unmatched_files: false
+          token: ${{ secrets.GITHUB_TOKEN }}

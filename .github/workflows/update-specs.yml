@@ -1,0 +1,49 @@
+name: Update OpenAPI Specs
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [specs-updated]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-specs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+
+      - name: Install dependencies
+        run: |
+          go install github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen@latest
+
+      - name: Fetch latest specs
+        run: |
+          chmod +x .github/scripts/fetch-specs.sh
+          ./.github/scripts/fetch-specs.sh
+
+      - name: Generate SDK
+        run: make generate
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update OpenAPI specifications"
+          title: "Update OpenAPI Specifications"
+          body: |
+            This PR updates the OpenAPI specifications from the upstream repository.
+
+            - Updated public API spec
+            - Updated beta API spec
+            - Regenerated SDK clients
+          branch: update-specs
+          delete-branch: true
