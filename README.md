@@ -1,6 +1,6 @@
 # DevRev Go SDK
 
-Official Go SDK for DevRev's Public and Beta APIs.
+Unofficial Go SDK for DevRev's Public and Beta APIs.
 
 ## Installation
 
