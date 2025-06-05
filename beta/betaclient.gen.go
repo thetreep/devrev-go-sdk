@@ -28142,7 +28142,7 @@ func (t ChatsGetRequest) AsChatsGetRequestDm() (ChatsGetRequestDm, error) {
 
 // FromChatsGetRequestDm overwrites any union data inside the ChatsGetRequest as the provided ChatsGetRequestDm
 func (t *ChatsGetRequest) FromChatsGetRequestDm(v ChatsGetRequestDm) error {
-	t.Type = "dm"
+	t.Type = func() *ChatType { v := ChatType("dm"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -28151,7 +28151,7 @@ func (t *ChatsGetRequest) FromChatsGetRequestDm(v ChatsGetRequestDm) error {
 
 // MergeChatsGetRequestDm performs a merge with any union data inside the ChatsGetRequest, using the provided ChatsGetRequestDm
 func (t *ChatsGetRequest) MergeChatsGetRequestDm(v ChatsGetRequestDm) error {
-	t.Type = "dm"
+	t.Type = func() *ChatType { v := ChatType("dm"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -28172,7 +28172,7 @@ func (t ChatsGetRequest) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the ChatsGetRequest as the provided Empty
 func (t *ChatsGetRequest) FromEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *ChatType { v := ChatType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -28181,7 +28181,7 @@ func (t *ChatsGetRequest) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the ChatsGetRequest, using the provided Empty
 func (t *ChatsGetRequest) MergeEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *ChatType { v := ChatType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -28283,7 +28283,7 @@ func (t ChatsUpdateRequest) AsChatsUpdateRequestDm() (ChatsUpdateRequestDm, erro
 
 // FromChatsUpdateRequestDm overwrites any union data inside the ChatsUpdateRequest as the provided ChatsUpdateRequestDm
 func (t *ChatsUpdateRequest) FromChatsUpdateRequestDm(v ChatsUpdateRequestDm) error {
-	t.Type = "dm"
+	t.Type = func() *ChatType { v := ChatType("dm"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -28292,7 +28292,7 @@ func (t *ChatsUpdateRequest) FromChatsUpdateRequestDm(v ChatsUpdateRequestDm) er
 
 // MergeChatsUpdateRequestDm performs a merge with any union data inside the ChatsUpdateRequest, using the provided ChatsUpdateRequestDm
 func (t *ChatsUpdateRequest) MergeChatsUpdateRequestDm(v ChatsUpdateRequestDm) error {
-	t.Type = "dm"
+	t.Type = func() *ChatType { v := ChatType("dm"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -28313,7 +28313,7 @@ func (t ChatsUpdateRequest) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the ChatsUpdateRequest as the provided Empty
 func (t *ChatsUpdateRequest) FromEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *ChatType { v := ChatType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -28322,7 +28322,7 @@ func (t *ChatsUpdateRequest) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the ChatsUpdateRequest, using the provided Empty
 func (t *ChatsUpdateRequest) MergeEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *ChatType { v := ChatType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -29700,7 +29700,7 @@ func (t DevOrgAuthConnectionsUpdateRequest) AsDevOrgAuthConnectionsUpdateRequest
 
 // FromDevOrgAuthConnectionsUpdateRequestAzureAdOptions overwrites any union data inside the DevOrgAuthConnectionsUpdateRequest as the provided DevOrgAuthConnectionsUpdateRequestAzureAdOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequestAzureAdOptions(v DevOrgAuthConnectionsUpdateRequestAzureAdOptions) error {
-	t.Type = "waad"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("waad"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -29709,7 +29709,7 @@ func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequ
 
 // MergeDevOrgAuthConnectionsUpdateRequestAzureAdOptions performs a merge with any union data inside the DevOrgAuthConnectionsUpdateRequest, using the provided DevOrgAuthConnectionsUpdateRequestAzureAdOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) MergeDevOrgAuthConnectionsUpdateRequestAzureAdOptions(v DevOrgAuthConnectionsUpdateRequestAzureAdOptions) error {
-	t.Type = "waad"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("waad"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -29730,7 +29730,7 @@ func (t DevOrgAuthConnectionsUpdateRequest) AsDevOrgAuthConnectionsUpdateRequest
 
 // FromDevOrgAuthConnectionsUpdateRequestGoogleAppsOptions overwrites any union data inside the DevOrgAuthConnectionsUpdateRequest as the provided DevOrgAuthConnectionsUpdateRequestGoogleAppsOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequestGoogleAppsOptions(v DevOrgAuthConnectionsUpdateRequestGoogleAppsOptions) error {
-	t.Type = "google_apps"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("google_apps"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -29739,7 +29739,7 @@ func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequ
 
 // MergeDevOrgAuthConnectionsUpdateRequestGoogleAppsOptions performs a merge with any union data inside the DevOrgAuthConnectionsUpdateRequest, using the provided DevOrgAuthConnectionsUpdateRequestGoogleAppsOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) MergeDevOrgAuthConnectionsUpdateRequestGoogleAppsOptions(v DevOrgAuthConnectionsUpdateRequestGoogleAppsOptions) error {
-	t.Type = "google_apps"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("google_apps"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -29760,7 +29760,7 @@ func (t DevOrgAuthConnectionsUpdateRequest) AsDevOrgAuthConnectionsUpdateRequest
 
 // FromDevOrgAuthConnectionsUpdateRequestOidcOptions overwrites any union data inside the DevOrgAuthConnectionsUpdateRequest as the provided DevOrgAuthConnectionsUpdateRequestOidcOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequestOidcOptions(v DevOrgAuthConnectionsUpdateRequestOidcOptions) error {
-	t.Type = "oidc"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("oidc"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -29769,7 +29769,7 @@ func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequ
 
 // MergeDevOrgAuthConnectionsUpdateRequestOidcOptions performs a merge with any union data inside the DevOrgAuthConnectionsUpdateRequest, using the provided DevOrgAuthConnectionsUpdateRequestOidcOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) MergeDevOrgAuthConnectionsUpdateRequestOidcOptions(v DevOrgAuthConnectionsUpdateRequestOidcOptions) error {
-	t.Type = "oidc"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("oidc"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -29790,7 +29790,7 @@ func (t DevOrgAuthConnectionsUpdateRequest) AsDevOrgAuthConnectionsUpdateRequest
 
 // FromDevOrgAuthConnectionsUpdateRequestOktaOptions overwrites any union data inside the DevOrgAuthConnectionsUpdateRequest as the provided DevOrgAuthConnectionsUpdateRequestOktaOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequestOktaOptions(v DevOrgAuthConnectionsUpdateRequestOktaOptions) error {
-	t.Type = "okta"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("okta"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -29799,7 +29799,7 @@ func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequ
 
 // MergeDevOrgAuthConnectionsUpdateRequestOktaOptions performs a merge with any union data inside the DevOrgAuthConnectionsUpdateRequest, using the provided DevOrgAuthConnectionsUpdateRequestOktaOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) MergeDevOrgAuthConnectionsUpdateRequestOktaOptions(v DevOrgAuthConnectionsUpdateRequestOktaOptions) error {
-	t.Type = "okta"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("okta"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -29820,7 +29820,7 @@ func (t DevOrgAuthConnectionsUpdateRequest) AsDevOrgAuthConnectionsUpdateRequest
 
 // FromDevOrgAuthConnectionsUpdateRequestSamlOptions overwrites any union data inside the DevOrgAuthConnectionsUpdateRequest as the provided DevOrgAuthConnectionsUpdateRequestSamlOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequestSamlOptions(v DevOrgAuthConnectionsUpdateRequestSamlOptions) error {
-	t.Type = "samlp"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("samlp"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -29829,7 +29829,7 @@ func (t *DevOrgAuthConnectionsUpdateRequest) FromDevOrgAuthConnectionsUpdateRequ
 
 // MergeDevOrgAuthConnectionsUpdateRequestSamlOptions performs a merge with any union data inside the DevOrgAuthConnectionsUpdateRequest, using the provided DevOrgAuthConnectionsUpdateRequestSamlOptions
 func (t *DevOrgAuthConnectionsUpdateRequest) MergeDevOrgAuthConnectionsUpdateRequestSamlOptions(v DevOrgAuthConnectionsUpdateRequestSamlOptions) error {
-	t.Type = "samlp"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("samlp"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -29850,7 +29850,7 @@ func (t DevOrgAuthConnectionsUpdateRequest) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the DevOrgAuthConnectionsUpdateRequest as the provided Empty
 func (t *DevOrgAuthConnectionsUpdateRequest) FromEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -29859,7 +29859,7 @@ func (t *DevOrgAuthConnectionsUpdateRequest) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the DevOrgAuthConnectionsUpdateRequest, using the provided Empty
 func (t *DevOrgAuthConnectionsUpdateRequest) MergeEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *DevOrgAuthConnectionsUpdateRequestType { v := DevOrgAuthConnectionsUpdateRequestType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -31777,7 +31777,7 @@ func (t EventSlaTrackerFetched) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the EventSlaTrackerFetched as the provided Empty
 func (t *EventSlaTrackerFetched) FromEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -31786,7 +31786,7 @@ func (t *EventSlaTrackerFetched) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the EventSlaTrackerFetched, using the provided Empty
 func (t *EventSlaTrackerFetched) MergeEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -31842,7 +31842,7 @@ func (t EventSlaTrackerFetched) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
-	case "not_found":
+	case "forbidden":
 		return t.AsEmpty()
 	case "ok":
 		return t.AsEventSlaTrackerFetchedOk()
@@ -34671,7 +34671,7 @@ func (t PartsUpdateRequest) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the PartsUpdateRequest as the provided Empty
 func (t *PartsUpdateRequest) FromEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *PartType { v := PartType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -34680,7 +34680,7 @@ func (t *PartsUpdateRequest) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the PartsUpdateRequest, using the provided Empty
 func (t *PartsUpdateRequest) MergeEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *PartType { v := PartType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -34701,7 +34701,7 @@ func (t PartsUpdateRequest) AsPartsUpdateRequestCapability() (PartsUpdateRequest
 
 // FromPartsUpdateRequestCapability overwrites any union data inside the PartsUpdateRequest as the provided PartsUpdateRequestCapability
 func (t *PartsUpdateRequest) FromPartsUpdateRequestCapability(v PartsUpdateRequestCapability) error {
-	t.Type = "capability"
+	t.Type = func() *PartType { v := PartType("capability"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -34710,7 +34710,7 @@ func (t *PartsUpdateRequest) FromPartsUpdateRequestCapability(v PartsUpdateReque
 
 // MergePartsUpdateRequestCapability performs a merge with any union data inside the PartsUpdateRequest, using the provided PartsUpdateRequestCapability
 func (t *PartsUpdateRequest) MergePartsUpdateRequestCapability(v PartsUpdateRequestCapability) error {
-	t.Type = "capability"
+	t.Type = func() *PartType { v := PartType("capability"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -34731,7 +34731,7 @@ func (t PartsUpdateRequest) AsPartsUpdateRequestEnhancement() (PartsUpdateReques
 
 // FromPartsUpdateRequestEnhancement overwrites any union data inside the PartsUpdateRequest as the provided PartsUpdateRequestEnhancement
 func (t *PartsUpdateRequest) FromPartsUpdateRequestEnhancement(v PartsUpdateRequestEnhancement) error {
-	t.Type = "enhancement"
+	t.Type = func() *PartType { v := PartType("enhancement"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -34740,7 +34740,7 @@ func (t *PartsUpdateRequest) FromPartsUpdateRequestEnhancement(v PartsUpdateRequ
 
 // MergePartsUpdateRequestEnhancement performs a merge with any union data inside the PartsUpdateRequest, using the provided PartsUpdateRequestEnhancement
 func (t *PartsUpdateRequest) MergePartsUpdateRequestEnhancement(v PartsUpdateRequestEnhancement) error {
-	t.Type = "enhancement"
+	t.Type = func() *PartType { v := PartType("enhancement"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -34761,7 +34761,7 @@ func (t PartsUpdateRequest) AsPartsUpdateRequestFeature() (PartsUpdateRequestFea
 
 // FromPartsUpdateRequestFeature overwrites any union data inside the PartsUpdateRequest as the provided PartsUpdateRequestFeature
 func (t *PartsUpdateRequest) FromPartsUpdateRequestFeature(v PartsUpdateRequestFeature) error {
-	t.Type = "feature"
+	t.Type = func() *PartType { v := PartType("feature"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -34770,7 +34770,7 @@ func (t *PartsUpdateRequest) FromPartsUpdateRequestFeature(v PartsUpdateRequestF
 
 // MergePartsUpdateRequestFeature performs a merge with any union data inside the PartsUpdateRequest, using the provided PartsUpdateRequestFeature
 func (t *PartsUpdateRequest) MergePartsUpdateRequestFeature(v PartsUpdateRequestFeature) error {
-	t.Type = "feature"
+	t.Type = func() *PartType { v := PartType("feature"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -34791,7 +34791,7 @@ func (t PartsUpdateRequest) AsPartsUpdateRequestLinkable() (PartsUpdateRequestLi
 
 // FromPartsUpdateRequestLinkable overwrites any union data inside the PartsUpdateRequest as the provided PartsUpdateRequestLinkable
 func (t *PartsUpdateRequest) FromPartsUpdateRequestLinkable(v PartsUpdateRequestLinkable) error {
-	t.Type = "linkable"
+	t.Type = func() *PartType { v := PartType("linkable"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -34800,7 +34800,7 @@ func (t *PartsUpdateRequest) FromPartsUpdateRequestLinkable(v PartsUpdateRequest
 
 // MergePartsUpdateRequestLinkable performs a merge with any union data inside the PartsUpdateRequest, using the provided PartsUpdateRequestLinkable
 func (t *PartsUpdateRequest) MergePartsUpdateRequestLinkable(v PartsUpdateRequestLinkable) error {
-	t.Type = "linkable"
+	t.Type = func() *PartType { v := PartType("linkable"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -34821,7 +34821,7 @@ func (t PartsUpdateRequest) AsPartsUpdateRequestProduct() (PartsUpdateRequestPro
 
 // FromPartsUpdateRequestProduct overwrites any union data inside the PartsUpdateRequest as the provided PartsUpdateRequestProduct
 func (t *PartsUpdateRequest) FromPartsUpdateRequestProduct(v PartsUpdateRequestProduct) error {
-	t.Type = "product"
+	t.Type = func() *PartType { v := PartType("product"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -34830,7 +34830,7 @@ func (t *PartsUpdateRequest) FromPartsUpdateRequestProduct(v PartsUpdateRequestP
 
 // MergePartsUpdateRequestProduct performs a merge with any union data inside the PartsUpdateRequest, using the provided PartsUpdateRequestProduct
 func (t *PartsUpdateRequest) MergePartsUpdateRequestProduct(v PartsUpdateRequestProduct) error {
-	t.Type = "product"
+	t.Type = func() *PartType { v := PartType("product"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -34851,7 +34851,7 @@ func (t PartsUpdateRequest) AsPartsUpdateRequestRunnable() (PartsUpdateRequestRu
 
 // FromPartsUpdateRequestRunnable overwrites any union data inside the PartsUpdateRequest as the provided PartsUpdateRequestRunnable
 func (t *PartsUpdateRequest) FromPartsUpdateRequestRunnable(v PartsUpdateRequestRunnable) error {
-	t.Type = "runnable"
+	t.Type = func() *PartType { v := PartType("runnable"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -34860,7 +34860,7 @@ func (t *PartsUpdateRequest) FromPartsUpdateRequestRunnable(v PartsUpdateRequest
 
 // MergePartsUpdateRequestRunnable performs a merge with any union data inside the PartsUpdateRequest, using the provided PartsUpdateRequestRunnable
 func (t *PartsUpdateRequest) MergePartsUpdateRequestRunnable(v PartsUpdateRequestRunnable) error {
-	t.Type = "runnable"
+	t.Type = func() *PartType { v := PartType("runnable"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -39616,7 +39616,7 @@ func (t WorksUpdateRequest) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the WorksUpdateRequest as the provided Empty
 func (t *WorksUpdateRequest) FromEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *WorkType { v := WorkType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -39625,7 +39625,7 @@ func (t *WorksUpdateRequest) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the WorksUpdateRequest, using the provided Empty
 func (t *WorksUpdateRequest) MergeEmpty(v Empty) error {
-	t.Type = "none"
+	t.Type = func() *WorkType { v := WorkType("none"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -39646,7 +39646,7 @@ func (t WorksUpdateRequest) AsWorksUpdateRequestIssue() (WorksUpdateRequestIssue
 
 // FromWorksUpdateRequestIssue overwrites any union data inside the WorksUpdateRequest as the provided WorksUpdateRequestIssue
 func (t *WorksUpdateRequest) FromWorksUpdateRequestIssue(v WorksUpdateRequestIssue) error {
-	t.Type = "issue"
+	t.Type = func() *WorkType { v := WorkType("issue"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -39655,7 +39655,7 @@ func (t *WorksUpdateRequest) FromWorksUpdateRequestIssue(v WorksUpdateRequestIss
 
 // MergeWorksUpdateRequestIssue performs a merge with any union data inside the WorksUpdateRequest, using the provided WorksUpdateRequestIssue
 func (t *WorksUpdateRequest) MergeWorksUpdateRequestIssue(v WorksUpdateRequestIssue) error {
-	t.Type = "issue"
+	t.Type = func() *WorkType { v := WorkType("issue"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -39676,7 +39676,7 @@ func (t WorksUpdateRequest) AsWorksUpdateRequestOpportunity() (WorksUpdateReques
 
 // FromWorksUpdateRequestOpportunity overwrites any union data inside the WorksUpdateRequest as the provided WorksUpdateRequestOpportunity
 func (t *WorksUpdateRequest) FromWorksUpdateRequestOpportunity(v WorksUpdateRequestOpportunity) error {
-	t.Type = "opportunity"
+	t.Type = func() *WorkType { v := WorkType("opportunity"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -39685,7 +39685,7 @@ func (t *WorksUpdateRequest) FromWorksUpdateRequestOpportunity(v WorksUpdateRequ
 
 // MergeWorksUpdateRequestOpportunity performs a merge with any union data inside the WorksUpdateRequest, using the provided WorksUpdateRequestOpportunity
 func (t *WorksUpdateRequest) MergeWorksUpdateRequestOpportunity(v WorksUpdateRequestOpportunity) error {
-	t.Type = "opportunity"
+	t.Type = func() *WorkType { v := WorkType("opportunity"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -39706,7 +39706,7 @@ func (t WorksUpdateRequest) AsWorksUpdateRequestTask() (WorksUpdateRequestTask, 
 
 // FromWorksUpdateRequestTask overwrites any union data inside the WorksUpdateRequest as the provided WorksUpdateRequestTask
 func (t *WorksUpdateRequest) FromWorksUpdateRequestTask(v WorksUpdateRequestTask) error {
-	t.Type = "task"
+	t.Type = func() *WorkType { v := WorkType("task"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -39715,7 +39715,7 @@ func (t *WorksUpdateRequest) FromWorksUpdateRequestTask(v WorksUpdateRequestTask
 
 // MergeWorksUpdateRequestTask performs a merge with any union data inside the WorksUpdateRequest, using the provided WorksUpdateRequestTask
 func (t *WorksUpdateRequest) MergeWorksUpdateRequestTask(v WorksUpdateRequestTask) error {
-	t.Type = "task"
+	t.Type = func() *WorkType { v := WorkType("task"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -39736,7 +39736,7 @@ func (t WorksUpdateRequest) AsWorksUpdateRequestTicket() (WorksUpdateRequestTick
 
 // FromWorksUpdateRequestTicket overwrites any union data inside the WorksUpdateRequest as the provided WorksUpdateRequestTicket
 func (t *WorksUpdateRequest) FromWorksUpdateRequestTicket(v WorksUpdateRequestTicket) error {
-	t.Type = "ticket"
+	t.Type = func() *WorkType { v := WorkType("ticket"); return &v }()
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -39745,7 +39745,7 @@ func (t *WorksUpdateRequest) FromWorksUpdateRequestTicket(v WorksUpdateRequestTi
 
 // MergeWorksUpdateRequestTicket performs a merge with any union data inside the WorksUpdateRequest, using the provided WorksUpdateRequestTicket
 func (t *WorksUpdateRequest) MergeWorksUpdateRequestTicket(v WorksUpdateRequestTicket) error {
-	t.Type = "ticket"
+	t.Type = func() *WorkType { v := WorkType("ticket"); return &v }()
 
 	b, err := json.Marshal(v)
 	if err != nil {
