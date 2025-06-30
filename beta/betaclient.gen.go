@@ -103,50 +103,52 @@ const (
 
 // Defines values for AtomType.
 const (
-	AtomTypeAccount             AtomType = "account"
-	AtomTypeAppFragment         AtomType = "app_fragment"
-	AtomTypeAuthToken           AtomType = "auth_token"
-	AtomTypeCapability          AtomType = "capability"
-	AtomTypeCodeChange          AtomType = "code_change"
-	AtomTypeCommand             AtomType = "command"
-	AtomTypeConversation        AtomType = "conversation"
-	AtomTypeCustomObject        AtomType = "custom_object"
-	AtomTypeCustomTypeFragment  AtomType = "custom_type_fragment"
-	AtomTypeDevOrg              AtomType = "dev_org"
-	AtomTypeDevUser             AtomType = "dev_user"
-	AtomTypeDm                  AtomType = "dm"
-	AtomTypeEngagement          AtomType = "engagement"
-	AtomTypeEnhancement         AtomType = "enhancement"
-	AtomTypeFeature             AtomType = "feature"
-	AtomTypeGroup               AtomType = "group"
-	AtomTypeIncident            AtomType = "incident"
-	AtomTypeIssue               AtomType = "issue"
-	AtomTypeLink                AtomType = "link"
-	AtomTypeLinkable            AtomType = "linkable"
-	AtomTypeMeeting             AtomType = "meeting"
-	AtomTypeObjectMember        AtomType = "object_member"
-	AtomTypeOpportunity         AtomType = "opportunity"
-	AtomTypeProduct             AtomType = "product"
-	AtomTypeQuestionAnswer      AtomType = "question_answer"
-	AtomTypeRevOrg              AtomType = "rev_org"
-	AtomTypeRevUser             AtomType = "rev_user"
-	AtomTypeRunnable            AtomType = "runnable"
-	AtomTypeServiceAccount      AtomType = "service_account"
-	AtomTypeSla                 AtomType = "sla"
-	AtomTypeSlaTracker          AtomType = "sla_tracker"
-	AtomTypeSnapIn              AtomType = "snap_in"
-	AtomTypeSnapInVersion       AtomType = "snap_in_version"
-	AtomTypeSysUser             AtomType = "sys_user"
-	AtomTypeTag                 AtomType = "tag"
-	AtomTypeTask                AtomType = "task"
-	AtomTypeTenantFragment      AtomType = "tenant_fragment"
-	AtomTypeTicket              AtomType = "ticket"
-	AtomTypeTimelineChangeEvent AtomType = "timeline_change_event"
-	AtomTypeTimelineComment     AtomType = "timeline_comment"
-	AtomTypeUom                 AtomType = "uom"
-	AtomTypeUserPreferences     AtomType = "user_preferences"
-	AtomTypeWebhook             AtomType = "webhook"
-	AtomTypeWidget              AtomType = "widget"
+	AtomTypeAccount                     AtomType = "account"
+	AtomTypeAppFragment                 AtomType = "app_fragment"
+	AtomTypeArticle                     AtomType = "article"
+	AtomTypeAuthToken                   AtomType = "auth_token"
+	AtomTypeCapability                  AtomType = "capability"
+	AtomTypeCodeChange                  AtomType = "code_change"
+	AtomTypeCommand                     AtomType = "command"
+	AtomTypeConversation                AtomType = "conversation"
+	AtomTypeCustomObject                AtomType = "custom_object"
+	AtomTypeCustomTypeFragment          AtomType = "custom_type_fragment"
+	AtomTypeDevOrg                      AtomType = "dev_org"
+	AtomTypeDevUser                     AtomType = "dev_user"
+	AtomTypeDm                          AtomType = "dm"
+	AtomTypeEngagement                  AtomType = "engagement"
+	AtomTypeEnhancement                 AtomType = "enhancement"
+	AtomTypeFeature                     AtomType = "feature"
+	AtomTypeGroup                       AtomType = "group"
+	AtomTypeIncident                    AtomType = "incident"
+	AtomTypeIssue                       AtomType = "issue"
+	AtomTypeLink                        AtomType = "link"
+	AtomTypeLinkable                    AtomType = "linkable"
+	AtomTypeMeeting                     AtomType = "meeting"
+	AtomTypeNotificationContentTemplate AtomType = "notification_content_template"
+	AtomTypeObjectMember                AtomType = "object_member"
+	AtomTypeOpportunity                 AtomType = "opportunity"
+	AtomTypeProduct                     AtomType = "product"
+	AtomTypeQuestionAnswer              AtomType = "question_answer"
+	AtomTypeRevOrg                      AtomType = "rev_org"
+	AtomTypeRevUser                     AtomType = "rev_user"
+	AtomTypeRunnable                    AtomType = "runnable"
+	AtomTypeServiceAccount              AtomType = "service_account"
+	AtomTypeSla                         AtomType = "sla"
+	AtomTypeSlaTracker                  AtomType = "sla_tracker"
+	AtomTypeSnapIn                      AtomType = "snap_in"
+	AtomTypeSnapInVersion               AtomType = "snap_in_version"
+	AtomTypeSysUser                     AtomType = "sys_user"
+	AtomTypeTag                         AtomType = "tag"
+	AtomTypeTask                        AtomType = "task"
+	AtomTypeTenantFragment              AtomType = "tenant_fragment"
+	AtomTypeTicket                      AtomType = "ticket"
+	AtomTypeTimelineChangeEvent         AtomType = "timeline_change_event"
+	AtomTypeTimelineComment             AtomType = "timeline_comment"
+	AtomTypeUom                         AtomType = "uom"
+	AtomTypeUserPreferences             AtomType = "user_preferences"
+	AtomTypeWebhook                     AtomType = "webhook"
+	AtomTypeWidget                      AtomType = "widget"
 )
 
 // Defines values for AuthConnectionToggle.
@@ -289,9 +291,20 @@ const (
 	CommandSurfaceSurfaceDiscussions  CommandSurfaceSurface = "discussions"
 )
 
+// Defines values for ContentTemplateType.
+const (
+	ContentTemplateTypeNotificationContentTemplate ContentTemplateType = "notification_content_template"
+)
+
 // Defines values for ConversationsCreateRequestTypeValue.
 const (
 	ConversationsCreateRequestTypeValueSupport ConversationsCreateRequestTypeValue = "support"
+)
+
+// Defines values for ConversationsVistaGroupItemType.
+const (
+	ConversationsVistaGroupItemTypeCurated ConversationsVistaGroupItemType = "curated"
+	ConversationsVistaGroupItemTypeDynamic ConversationsVistaGroupItemType = "dynamic"
 )
 
 // Defines values for CustomSchemaFragmentFragmentType.
@@ -377,6 +390,24 @@ const (
 // Defines values for DevUsersCreateRequestStateEnumValue.
 const (
 	DevUsersCreateRequestStateEnumValueShadow DevUsersCreateRequestStateEnumValue = "shadow"
+)
+
+// Defines values for DynamicVistaFilterType.
+const (
+	DynamicVistaFilterTypeAccounts      DynamicVistaFilterType = "accounts"
+	DynamicVistaFilterTypeArticles      DynamicVistaFilterType = "articles"
+	DynamicVistaFilterTypeConversations DynamicVistaFilterType = "conversations"
+	DynamicVistaFilterTypeCredits       DynamicVistaFilterType = "credits"
+	DynamicVistaFilterTypeCustomObjects DynamicVistaFilterType = "custom_objects"
+	DynamicVistaFilterTypeDevUsers      DynamicVistaFilterType = "dev_users"
+	DynamicVistaFilterTypeIncidents     DynamicVistaFilterType = "incidents"
+	DynamicVistaFilterTypeInvoices      DynamicVistaFilterType = "invoices"
+	DynamicVistaFilterTypeMeetings      DynamicVistaFilterType = "meetings"
+	DynamicVistaFilterTypeParts         DynamicVistaFilterType = "parts"
+	DynamicVistaFilterTypeQuotes        DynamicVistaFilterType = "quotes"
+	DynamicVistaFilterTypeRevOrgs       DynamicVistaFilterType = "rev_orgs"
+	DynamicVistaFilterTypeRevUsers      DynamicVistaFilterType = "rev_users"
+	DynamicVistaFilterTypeWorks         DynamicVistaFilterType = "works"
 )
 
 // Defines values for EngagementType.
@@ -594,6 +625,12 @@ const (
 	Scim    GroupIngestionSource = "scim"
 )
 
+// Defines values for GroupItemType.
+const (
+	GroupItemTypeCurated GroupItemType = "curated"
+	GroupItemTypeDynamic GroupItemType = "dynamic"
+)
+
 // Defines values for GroupMemberType.
 const (
 	GroupMemberTypeDevUser GroupMemberType = "dev_user"
@@ -606,11 +643,18 @@ const (
 	GroupTypeStatic  GroupType = "static"
 )
 
+// Defines values for GroupedVistaFilterType.
+const (
+	GroupedVistaFilterTypeConversations GroupedVistaFilterType = "conversations"
+	GroupedVistaFilterTypeParts         GroupedVistaFilterType = "parts"
+	GroupedVistaFilterTypeWorks         GroupedVistaFilterType = "works"
+)
+
 // Defines values for GroupedVistaFlavor.
 const (
-	Nnl          GroupedVistaFlavor = "nnl"
-	SprintBoard  GroupedVistaFlavor = "sprint_board"
-	SupportInbox GroupedVistaFlavor = "support_inbox"
+	GroupedVistaFlavorNnl          GroupedVistaFlavor = "nnl"
+	GroupedVistaFlavorSprintBoard  GroupedVistaFlavor = "sprint_board"
+	GroupedVistaFlavorSupportInbox GroupedVistaFlavor = "support_inbox"
 )
 
 // Defines values for IssuePriority.
@@ -630,6 +674,7 @@ const (
 // Defines values for LinkEndpointType.
 const (
 	LinkEndpointTypeAccount      LinkEndpointType = "account"
+	LinkEndpointTypeArticle      LinkEndpointType = "article"
 	LinkEndpointTypeCapability   LinkEndpointType = "capability"
 	LinkEndpointTypeCodeChange   LinkEndpointType = "code_change"
 	LinkEndpointTypeConversation LinkEndpointType = "conversation"
@@ -822,6 +867,12 @@ const (
 	PartTypeLinkable    PartType = "linkable"
 	PartTypeProduct     PartType = "product"
 	PartTypeRunnable    PartType = "runnable"
+)
+
+// Defines values for PartsVistaGroupItemType.
+const (
+	PartsVistaGroupItemTypeCurated PartsVistaGroupItemType = "curated"
+	PartsVistaGroupItemTypeDynamic PartsVistaGroupItemType = "dynamic"
 )
 
 // Defines values for PreferencesType.
@@ -1342,6 +1393,7 @@ const (
 // Defines values for TimelineEntryObjectType.
 const (
 	TimelineEntryObjectTypeAccount             TimelineEntryObjectType = "account"
+	TimelineEntryObjectTypeArticle             TimelineEntryObjectType = "article"
 	TimelineEntryObjectTypeCapability          TimelineEntryObjectType = "capability"
 	TimelineEntryObjectTypeCodeChange          TimelineEntryObjectType = "code_change"
 	TimelineEntryObjectTypeConversation        TimelineEntryObjectType = "conversation"
@@ -1425,6 +1477,20 @@ const (
 	UserTypeSysUser        UserType = "sys_user"
 )
 
+// Defines values for VistaFlavor.
+const (
+	VistaFlavorNnl          VistaFlavor = "nnl"
+	VistaFlavorSprintBoard  VistaFlavor = "sprint_board"
+	VistaFlavorSupportInbox VistaFlavor = "support_inbox"
+)
+
+// Defines values for VistaGroupItemGroupObjectType.
+const (
+	VistaGroupItemGroupObjectTypeConversation VistaGroupItemGroupObjectType = "conversation"
+	VistaGroupItemGroupObjectTypePart         VistaGroupItemGroupObjectType = "part"
+	VistaGroupItemGroupObjectTypeWork         VistaGroupItemGroupObjectType = "work"
+)
+
 // Defines values for VistaGroupItemState.
 const (
 	VistaGroupItemStateActive    VistaGroupItemState = "active"
@@ -1440,9 +1506,9 @@ const (
 
 // Defines values for VistaType.
 const (
-	Curated VistaType = "curated"
-	Dynamic VistaType = "dynamic"
-	Grouped VistaType = "grouped"
+	VistaTypeCurated VistaType = "curated"
+	VistaTypeDynamic VistaType = "dynamic"
+	VistaTypeGrouped VistaType = "grouped"
 )
 
 // Defines values for VisualizationAxisColorType.
@@ -1473,6 +1539,9 @@ const (
 	AccountDeleted        WebhookEventType = "account_deleted"
 	AccountUpdated        WebhookEventType = "account_updated"
 	AiAgentResponse       WebhookEventType = "ai_agent_response"
+	ArticleCreated        WebhookEventType = "article_created"
+	ArticleDeleted        WebhookEventType = "article_deleted"
+	ArticleUpdated        WebhookEventType = "article_updated"
 	ConversationCreated   WebhookEventType = "conversation_created"
 	ConversationDeleted   WebhookEventType = "conversation_deleted"
 	ConversationUpdated   WebhookEventType = "conversation_updated"
@@ -1598,6 +1667,12 @@ const (
 	WorkTypeOpportunity WorkType = "opportunity"
 	WorkTypeTask        WorkType = "task"
 	WorkTypeTicket      WorkType = "ticket"
+)
+
+// Defines values for WorksVistaGroupItemType.
+const (
+	Curated WorksVistaGroupItemType = "curated"
+	Dynamic WorksVistaGroupItemType = "dynamic"
 )
 
 // AccessLevel defines model for access-level.
@@ -1998,18 +2073,54 @@ type AddTagWithValue struct {
 
 // AggregatedSchema List of custom fields from multiple source fragments.
 type AggregatedSchema struct {
+	// Apps Apps corresponding to the app fragments used to populate the same
+	// in the object.
+	Apps *[]string `json:"apps,omitempty"`
+
 	// Conditions The conditions associated with the fields.
 	Conditions *[]CustomSchemaFragmentCondition `json:"conditions,omitempty"`
 
-	// StockFieldOverrides The stock field overrides.
+	// CustomCompositeSchemas List of all composite schemas used by custom fields.
+	CustomCompositeSchemas []CompositeSchema `json:"custom_composite_schemas"`
+
+	// CustomFields List of all custom fields in this schema.
+	CustomFields []SchemaFieldDescriptor `json:"custom_fields"`
+
+	// Description Description of the schema.
+	Description *string `json:"description,omitempty"`
+
+	// IsCustomLeafType True when the fragments being aggregated correspond to a custom
+	// leaf type.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType Leaf type of the fragments being aggregated.
+	LeafType       *string              `json:"leaf_type,omitempty"`
+	StageDiagramId *StageDiagramSummary `json:"stage_diagram_id,omitempty"`
+
+	// StockCompositeSchemas List of all composite schemas used by stock fields.
+	StockCompositeSchemas []CompositeSchema `json:"stock_composite_schemas"`
+
+	// StockFieldOverrides Optional overrides for properties of stock fields. Overrides in the
+	// custom type fragment take precedence over those defined in the
+	// tenant fragment.
 	StockFieldOverrides *[]StockFieldOverride `json:"stock_field_overrides,omitempty"`
+
+	// StockFields List of all stock fields in this schema.
+	StockFields []SchemaFieldDescriptor `json:"stock_fields"`
+
+	// Subtype Subtype corresponding to the custom type fragment used to populate
+	// the same in the object.
+	Subtype *string `json:"subtype,omitempty"`
+
+	// SubtypeDisplayName Display name of the subtype.
+	SubtypeDisplayName *string `json:"subtype_display_name,omitempty"`
+
+	// Title Name of the schema.
+	Title *string `json:"title,omitempty"`
 }
 
 // AggregatedSchemaGetRequest defines model for aggregated-schema-get-request.
 type AggregatedSchemaGetRequest struct {
-	// CustomSchemaFragmentIds The list of custom schema fragment DONs which are to be aggregated.
-	CustomSchemaFragmentIds *[]string `json:"custom_schema_fragment_ids,omitempty"`
-
 	// CustomSchemaSpec Custom schemas described using identifiers
 	CustomSchemaSpec *CustomSchemaSpecForRead `json:"custom_schema_spec,omitempty"`
 
@@ -2019,12 +2130,6 @@ type AggregatedSchemaGetRequest struct {
 	// LeafType The leaf type. Used for inferring the default stage diagram and
 	// tenant fragment ID.
 	LeafType *string `json:"leaf_type,omitempty"`
-
-	// PerObjectSchema Per object schema, if associated with the leaf type.
-	PerObjectSchema *[]FieldDescriptor `json:"per_object_schema,omitempty"`
-
-	// StockSchemaFragmentId The stock schema fragment which is to be aggregated.
-	StockSchemaFragmentId *string `json:"stock_schema_fragment_id,omitempty"`
 }
 
 // AggregatedSchemaGetResponseBody defines model for aggregated-schema-get-response.
@@ -2313,6 +2418,9 @@ type AppFragment struct {
 	// AppDisplayName The display name of the app.
 	AppDisplayName *string `json:"app_display_name,omitempty"`
 
+	// CompositeSchemas List of composite schemas.
+	CompositeSchemas *[]CompositeSchema `json:"composite_schemas,omitempty"`
+
 	// Conditions The conditions associated with the fields.
 	Conditions *[]CustomSchemaFragmentCondition `json:"conditions,omitempty"`
 	CreatedBy  *UserSummary                     `json:"created_by,omitempty"`
@@ -2340,6 +2448,9 @@ type AppFragment struct {
 	// Id Globally unique object ID.
 	Id string `json:"id"`
 
+	// IsCustomLeafType Indicates if the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
 	// IsDeprecated Indicates if the fragment is deprecated. Modifications to this
 	// field are done in-place and don't result in creation of a new
 	// fragment in chain.
@@ -2357,6 +2468,16 @@ type AppFragment struct {
 
 // AppFragmentSummary defines model for app-fragment-summary.
 type AppFragmentSummary = CustomSchemaFragmentBaseSummary
+
+// AppliesToPartFilter The filter for applies to part.
+type AppliesToPartFilter struct {
+	// IncludeChildParts Whether to include items belonging to children of any of the
+	// provided parts.
+	IncludeChildParts *bool `json:"include_child_parts,omitempty"`
+
+	// Parts Part IDs to filter on.
+	Parts []string `json:"parts"`
+}
 
 // ArchetypeMetricTarget Metric with corresponding target values.
 type ArchetypeMetricTarget struct {
@@ -2693,9 +2814,6 @@ type ArticlesDeleteResponseBody = map[string]interface{}
 
 // ArticlesGetRequest The request to get an article.
 type ArticlesGetRequest struct {
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
-
 	// Id The ID of the required article.
 	Id string `json:"id"`
 }
@@ -2726,9 +2844,6 @@ type ArticlesListRequest struct {
 	// Cursor The cursor to resume iteration from. If not provided, then
 	// iteration starts from the beginning.
 	Cursor *string `json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
 
 	// Limit The maximum number of articles to return. The default is '50'.
 	Limit *int32 `json:"limit,omitempty"`
@@ -3321,6 +3436,9 @@ type AuthTokenTokenType string
 
 // AuthTokensAccountTraits Carries account info.
 type AuthTokensAccountTraits struct {
+	// CustomFields Application-defined custom fields of the account.
+	CustomFields *map[string]interface{} `json:"custom_fields,omitempty"`
+
 	// DisplayName The display name of the account.
 	DisplayName *string `json:"display_name,omitempty"`
 
@@ -4102,6 +4220,10 @@ type ClientOverride struct {
 	// ClientName The name of the client.
 	ClientName *string `json:"client_name,omitempty"`
 
+	// DecimalPlaces Number of decimal places to show. Only applicable for number
+	// fields.
+	DecimalPlaces *int32 `json:"decimal_places,omitempty"`
+
 	// DisplayName The display name of the field.
 	DisplayName *string `json:"display_name,omitempty"`
 
@@ -4114,11 +4236,18 @@ type ClientOverride struct {
 	// IsRequired Whether the field is mandatory.
 	IsRequired *bool `json:"is_required,omitempty"`
 
+	// Order Relative order in which the field is shown.
+	Order *int32 `json:"order,omitempty"`
+
 	// Placeholder A placeholder for the field.
 	Placeholder *string `json:"placeholder,omitempty"`
 
 	// Tooltip Tooltip for the field.
 	Tooltip *string `json:"tooltip,omitempty"`
+
+	// UseShorthandNotation Whether to use shorthand notation. Example, 1K instead of 1000.
+	// Only applicable for number fields.
+	UseShorthandNotation *bool `json:"use_shorthand_notation,omitempty"`
 
 	// ViewOverrides The view overrides for the client.
 	ViewOverrides *[]ViewOverride `json:"view_overrides,omitempty"`
@@ -4338,7 +4467,9 @@ type ColumnWidgetVisualization struct {
 
 // Command defines model for command.
 type Command struct {
-	CreatedBy *UserSummary `json:"created_by,omitempty"`
+	// Action Action defines some logic to run.
+	Action    *CommandAction `json:"action,omitempty"`
+	CreatedBy *UserSummary   `json:"created_by,omitempty"`
 
 	// CreatedDate Timestamp when the object was created.
 	CreatedDate *time.Time `json:"created_date,omitempty"`
@@ -4368,6 +4499,7 @@ type Command struct {
 	// SharedWith The list of users, groups and audiences with whom the command is
 	// shared.
 	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+	Source     *SnapInSummary          `json:"source,omitempty"`
 
 	// Status Status of the command.
 	Status *CommandStatus `json:"status,omitempty"`
@@ -4378,6 +4510,20 @@ type Command struct {
 	// UsageHint A user friendly description of the parameters which can be passed
 	// to the command.
 	UsageHint *string `json:"usage_hint,omitempty"`
+}
+
+// CommandAction Action defines some logic to run.
+type CommandAction struct {
+	// Code The raw code to execute, defined in the language specified by
+	// executor.
+	Code *string `json:"code,omitempty"`
+
+	// ExecutorType Specifies how the action is defined.
+	ExecutorType *CommandActionExecutorType `json:"executor_type,omitempty"`
+
+	// Message The message to populate in discussion box, when the command is
+	// selected to execute.
+	Message *string `json:"message,omitempty"`
 }
 
 // CommandActionExecutorType Specifies how the action is defined.
@@ -4576,10 +4722,29 @@ type CommentSearchSummary struct {
 	Snippet *string `json:"snippet,omitempty"`
 }
 
+// CompositeSchema The schema of a composite type.
+type CompositeSchema struct {
+	// Description Description of this composite type.
+	Description *string `json:"description,omitempty"`
+
+	// Fields List of all fields in this schema.
+	Fields []SchemaFieldDescriptor `json:"fields"`
+
+	// Name Name of this composite type.
+	Name *string `json:"name,omitempty"`
+}
+
 // ContentTemplate defines model for content-template.
 type ContentTemplate struct {
-	Type ContentTemplateType `json:"type"`
+	Type  ContentTemplateType `json:"type"`
+	union json.RawMessage
 }
+
+// ContentTemplateBase defines model for content-template-base.
+type ContentTemplateBase = AtomBase
+
+// ContentTemplateBaseSummary defines model for content-template-base-summary.
+type ContentTemplateBaseSummary = AtomBaseSummary
 
 // ContentTemplateCreateRequest The request to create a new content template.
 type ContentTemplateCreateRequest struct {
@@ -4687,7 +4852,7 @@ type ContentTemplateListResponseBody struct {
 }
 
 // ContentTemplateType defines model for content-template-type.
-type ContentTemplateType = string
+type ContentTemplateType string
 
 // Conversation defines model for conversation.
 type Conversation struct {
@@ -4736,6 +4901,10 @@ type Conversation struct {
 	// SlaSummary SLA summary for the object.
 	SlaSummary *ArchetypeSlaSummary `json:"sla_summary,omitempty"`
 	SlaTracker *SlaTrackerSummary   `json:"sla_tracker,omitempty"`
+
+	// SourceChannel Source channel for the conversation.
+	SourceChannel   *string                              `json:"source_channel,omitempty"`
+	SourceChannelV2 *ExternalCommunicationChannelSummary `json:"source_channel_v2,omitempty"`
 
 	// Stage Describes the current stage of a work item.
 	Stage *LegacyStage `json:"stage,omitempty"`
@@ -5188,6 +5357,31 @@ type ConversationsUpdateResponseBody struct {
 	Conversation Conversation `json:"conversation"`
 }
 
+// ConversationsVistaGroupItem defines model for conversations-vista-group-item.
+type ConversationsVistaGroupItem struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Type of conversations vista group item.
+	Type ConversationsVistaGroupItemType `json:"type"`
+}
+
+// ConversationsVistaGroupItemType Type of conversations vista group item.
+type ConversationsVistaGroupItemType string
+
 // CreateAssociation Association of Rev users with Rev orgs or accounts. A Rev user can be
 // associated with 0 or more accounts and Rev orgs. A Rev org association
 // automatically adds an account association.
@@ -5487,6 +5681,36 @@ type CreateWeeklyOrgScheduleInterval struct {
 	To int64 `json:"to"`
 }
 
+// CuratedVista defines model for curated-vista.
+type CuratedVista struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault *bool `json:"is_default,omitempty"`
+
+	// Items Item list to store a curated list of DevRev objects.
+	Items      *[]AtomSummary `json:"items,omitempty"`
+	ModifiedBy *UserSummary   `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+}
+
 // CuratedVistaSummary defines model for curated-vista-summary.
 type CuratedVistaSummary = VistaBaseSummary
 
@@ -5698,11 +5922,17 @@ type CustomObject struct {
 	DisplayId *string `json:"display_id,omitempty"`
 
 	// Id Globally unique object ID.
-	Id         string       `json:"id"`
+	Id string `json:"id"`
+
+	// LeafType Type of the object.
+	LeafType   *string      `json:"leaf_type,omitempty"`
 	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
 
 	// ModifiedDate Timestamp when the object was last modified.
 	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Stage Describes the current stage of a object.
+	Stage *Stage `json:"stage,omitempty"`
 
 	// StockSchemaFragment Stock schema fragment.
 	StockSchemaFragment *string `json:"stock_schema_fragment,omitempty"`
@@ -5712,6 +5942,14 @@ type CustomObject struct {
 
 	// SyncMetadata Sync information for records synced into/from DevRev.
 	SyncMetadata *SyncMetadata `json:"sync_metadata,omitempty"`
+
+	// Title Title of the object.
+	Title *string `json:"title,omitempty"`
+
+	// UniqueKey A unique key that, if provided, ensures the combination of
+	// {leaf_type, unique_key} is distinct across all objects in the
+	// system.
+	UniqueKey *string `json:"unique_key,omitempty"`
 }
 
 // CustomObjectSearchSummary defines model for custom-object-search-summary.
@@ -5736,6 +5974,9 @@ type CustomObjectSummary struct {
 
 	// SyncMetadata Sync information for records synced into/from DevRev.
 	SyncMetadata *SyncMetadataSummary `json:"sync_metadata,omitempty"`
+
+	// Title Title of the object.
+	Title *string `json:"title,omitempty"`
 }
 
 // CustomObjectsCountRequest defines model for custom-objects-count-request.
@@ -5781,7 +6022,7 @@ type CustomObjectsCreateRequest struct {
 
 	// UniqueKey The unique key of the custom object.This can be used to hold an
 	// external reference to another object.
-	UniqueKey string `json:"unique_key"`
+	UniqueKey *string `json:"unique_key,omitempty"`
 }
 
 // CustomObjectsCreateResponseBody defines model for custom-objects-create-response.
@@ -5893,6 +6134,9 @@ type CustomSchemaFragment struct {
 
 // CustomSchemaFragmentBase defines model for custom-schema-fragment-base.
 type CustomSchemaFragmentBase struct {
+	// CompositeSchemas List of composite schemas.
+	CompositeSchemas *[]CompositeSchema `json:"composite_schemas,omitempty"`
+
 	// Conditions The conditions associated with the fields.
 	Conditions *[]CustomSchemaFragmentCondition `json:"conditions,omitempty"`
 	CreatedBy  *UserSummary                     `json:"created_by,omitempty"`
@@ -5920,6 +6164,9 @@ type CustomSchemaFragmentBase struct {
 	// Id Globally unique object ID.
 	Id string `json:"id"`
 
+	// IsCustomLeafType Indicates if the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
 	// IsDeprecated Indicates if the fragment is deprecated. Modifications to this
 	// field are done in-place and don't result in creation of a new
 	// fragment in chain.
@@ -5940,7 +6187,7 @@ type CustomSchemaFragmentBaseSummary = AtomBaseSummary
 
 // CustomSchemaFragmentCondition The condition associated with a field.
 type CustomSchemaFragmentCondition struct {
-	// Effects The linked effects when the expression evaluates to true.
+	// Effects The associated effects when the expression evaluates to true.
 	Effects *[]CustomSchemaFragmentEffect `json:"effects,omitempty"`
 
 	// Expression The expression to evaluate.
@@ -6209,7 +6456,7 @@ type CustomStage struct {
 	// Name The human readable name of the stage.
 	Name *string `json:"name,omitempty"`
 
-	// Ordinal Ordinal used to sort/group stages.
+	// Ordinal Position of the stage in the global stage ordering.
 	Ordinal *int32              `json:"ordinal,omitempty"`
 	State   *CustomStateSummary `json:"state,omitempty"`
 }
@@ -6330,7 +6577,7 @@ type CustomState struct {
 	// Name The human readable name of the state.
 	Name *string `json:"name,omitempty"`
 
-	// Ordinal Ordinal used to identify system states.
+	// Ordinal Position of the state in the global state ordering.
 	Ordinal *int32 `json:"ordinal,omitempty"`
 }
 
@@ -6431,6 +6678,9 @@ type CustomStatesUpdateResponseBody struct {
 
 // CustomTypeFragment defines model for custom-type-fragment.
 type CustomTypeFragment struct {
+	// CompositeSchemas List of composite schemas.
+	CompositeSchemas *[]CompositeSchema `json:"composite_schemas,omitempty"`
+
 	// Conditions The conditions associated with the fields.
 	Conditions *[]CustomSchemaFragmentCondition `json:"conditions,omitempty"`
 	CreatedBy  *UserSummary                     `json:"created_by,omitempty"`
@@ -6458,6 +6708,9 @@ type CustomTypeFragment struct {
 	// Id Globally unique object ID.
 	Id string `json:"id"`
 
+	// IsCustomLeafType Indicates if the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
 	// IsDeprecated Indicates if the fragment is deprecated. Modifications to this
 	// field are done in-place and don't result in creation of a new
 	// fragment in chain.
@@ -6477,10 +6730,10 @@ type CustomTypeFragment struct {
 	Path         *[]CustomTypePathComponent `json:"path,omitempty"`
 	StageDiagram *StageDiagramSummary       `json:"stage_diagram,omitempty"`
 
-	// StockFieldOverrides The stock field overrides.
+	// StockFieldOverrides Optional overrides for properties of stock fields.
 	StockFieldOverrides *[]StockFieldOverride `json:"stock_field_overrides,omitempty"`
 
-	// Subtype The string used to populate the subtype in the leaf type.
+	// Subtype Subtype this fragment applies to.
 	Subtype *string `json:"subtype,omitempty"`
 
 	// SubtypeDisplayName Display name of the subtype. Modifications to this field are done
@@ -7132,6 +7385,9 @@ type DevUsersSelfUpdateRequest struct {
 
 	// JobTitle Job title of the Dev User.
 	JobTitle *DevUserJobTitle `json:"job_title,omitempty"`
+
+	// ReportsTo The ID of the Dev user that the user reports to.
+	ReportsTo *string `json:"reports_to,omitempty"`
 }
 
 // DevUsersUpdateJobHistoryItem defines model for dev-users-update-job-history-item.
@@ -7186,6 +7442,9 @@ type DevUsersUpdateRequest struct {
 
 	// JobTitle Job title of the Dev User.
 	JobTitle *DevUserJobTitle `json:"job_title,omitempty"`
+
+	// ReportsTo The ID of the Dev user that the user reports to.
+	ReportsTo *string `json:"reports_to,omitempty"`
 }
 
 // DevUsersUpdateResponseBody The response to update a Dev user.
@@ -7251,9 +7510,6 @@ type DirectoriesDeleteResponseBody = map[string]interface{}
 
 // DirectoriesGetRequest The request to get a directory.
 type DirectoriesGetRequest struct {
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
-
 	// Id The ID of the requested directory.
 	Id string `json:"id"`
 }
@@ -7271,9 +7527,6 @@ type DirectoriesListRequest struct {
 	// Cursor The cursor to resume iteration from. If not provided, then
 	// iteration starts from the beginning.
 	Cursor *string `json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
 
 	// Limit The maximum number of directories to return. The default is '50'.
 	Limit *int32 `json:"limit,omitempty"`
@@ -7498,6 +7751,39 @@ type DonutWidgetVisualization struct {
 
 // DynamicGroupInfo Information to define dynamic groups.
 type DynamicGroupInfo = map[string]interface{}
+
+// DynamicVista defines model for dynamic-vista.
+type DynamicVista struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// FilterType Type of DevRev object for which the vista is applicable.
+	FilterType DynamicVistaFilterType `json:"filter_type"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault  *bool        `json:"is_default,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+}
+
+// DynamicVistaFilterType Type of DevRev object for which the vista is applicable.
+type DynamicVistaFilterType string
 
 // DynamicVistaSummary defines model for dynamic-vista-summary.
 type DynamicVistaSummary = VistaBaseSummary
@@ -8446,6 +8732,24 @@ type EventAiAgentResponseBody struct {
 // EventAiAgentResponseAgentResponse defines model for EventAiAgentResponse.AgentResponse.
 type EventAiAgentResponseAgentResponse string
 
+// EventArticleCreated defines model for event-article-created.
+type EventArticleCreated struct {
+	Article Article `json:"article"`
+}
+
+// EventArticleDeleted defines model for event-article-deleted.
+type EventArticleDeleted struct {
+	// Id The ID of the article that was deleted.
+	Id         string   `json:"id"`
+	OldArticle *Article `json:"old_article,omitempty"`
+}
+
+// EventArticleUpdated defines model for event-article-updated.
+type EventArticleUpdated struct {
+	Article    Article  `json:"article"`
+	OldArticle *Article `json:"old_article,omitempty"`
+}
+
 // EventConversationCreated defines model for event-conversation-created.
 type EventConversationCreated struct {
 	Conversation Conversation `json:"conversation"`
@@ -8991,7 +9295,104 @@ type FieldDelta struct {
 }
 
 // FieldDescriptor Set of field attributes.
-type FieldDescriptor = map[string]interface{}
+type FieldDescriptor struct {
+	// DefaultValue The default value for this field.
+	DefaultValue *map[string]interface{} `json:"default_value,omitempty"`
+
+	// Description Description of the field.
+	Description *string `json:"description,omitempty"`
+
+	// DevrevCompositeType Composite type.
+	DevrevCompositeType *string `json:"devrev_composite_type,omitempty"`
+
+	// DevrevEnum Allowed values for an enum field type.
+	DevrevEnum *[]string `json:"devrev_enum,omitempty"`
+
+	// DevrevFieldType DevRev field type.
+	DevrevFieldType *string `json:"devrev_field_type,omitempty"`
+
+	// DevrevIdType Object ID types.
+	DevrevIdType *[]string `json:"devrev_id_type,omitempty"`
+
+	// IsFilterable Whether this field is filterable, groupable and sortable.
+	IsFilterable *bool `json:"is_filterable,omitempty"`
+
+	// IsImmutable Whether this field is immutable or not.
+	IsImmutable *bool `json:"is_immutable,omitempty"`
+
+	// IsOverridable Whether a stock unified enum can be extended with new values.
+	IsOverridable *bool `json:"is_overridable,omitempty"`
+
+	// IsRequired Whether this field is required or not.
+	IsRequired *bool `json:"is_required,omitempty"`
+
+	// IsSensitive Whether this field can hold PII or sensitive information that
+	// should not be logged.
+	IsSensitive *bool `json:"is_sensitive,omitempty"`
+
+	// IsSystem Whether this field is a system field or not.
+	IsSystem *bool `json:"is_system,omitempty"`
+
+	// Name Name of the field.
+	Name *string `json:"name,omitempty"`
+
+	// UenumValues Allowed values for a unified enum.
+	UenumValues *[]SchemaFieldUenumValue `json:"uenum_values,omitempty"`
+
+	// Ui The schema of ui specific fields.
+	Ui *SchemaFieldUiMetadata `json:"ui,omitempty"`
+
+	// Validation Validation annotations.
+	Validation *FieldValidation `json:"validation,omitempty"`
+}
+
+// FieldValidation Validation annotations.
+type FieldValidation struct {
+	// Contains string contains.
+	Contains *string `json:"contains,omitempty"`
+
+	// Disabled disables validations for this field.
+	Disabled *bool `json:"disabled,omitempty"`
+
+	// EqItems exact array length.
+	EqItems *int32 `json:"eq_items,omitempty"`
+
+	// EqLen exact string length.
+	EqLen *int32 `json:"eq_len,omitempty"`
+
+	// Gt int must be greater than this.
+	Gt *int32 `json:"gt,omitempty"`
+
+	// Gte int must be greater or equal than this.
+	Gte *int32 `json:"gte,omitempty"`
+
+	// Lt int must be less than this.
+	Lt *int32 `json:"lt,omitempty"`
+
+	// Lte int must be less or equal than this.
+	Lte *int32 `json:"lte,omitempty"`
+
+	// MaxItems maximum array length.
+	MaxItems *int32 `json:"max_items,omitempty"`
+
+	// MaxLen maximum string length.
+	MaxLen *int32 `json:"max_len,omitempty"`
+
+	// MinItems minimum array length.
+	MinItems *int32 `json:"min_items,omitempty"`
+
+	// MinLen minimum string length.
+	MinLen *int32 `json:"min_len,omitempty"`
+
+	// Pattern string pattern (re).
+	Pattern *string `json:"pattern,omitempty"`
+
+	// Prefix string prefix.
+	Prefix *string `json:"prefix,omitempty"`
+
+	// Suffix string suffix.
+	Suffix *string `json:"suffix,omitempty"`
+}
 
 // FieldValue defines model for field-value.
 type FieldValue struct {
@@ -9209,6 +9610,9 @@ type Group struct {
 // GroupIngestionSource Creation source of the group.
 type GroupIngestionSource string
 
+// GroupItemType Type of the vista group item object.
+type GroupItemType string
+
 // GroupMemberType Type of the members in the group.
 type GroupMemberType string
 
@@ -9317,6 +9721,42 @@ type GroupSummary struct {
 
 // GroupType Type of the group.
 type GroupType string
+
+// GroupedVista defines model for grouped-vista.
+type GroupedVista struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// FilterType Type of DevRev object for which the grouped vista is applicable.
+	FilterType GroupedVistaFilterType `json:"filter_type"`
+
+	// Flavor Denotes the use case of the grouped vista.
+	Flavor *GroupedVistaFlavor `json:"flavor,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault  *bool        `json:"is_default,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+}
+
+// GroupedVistaFilterType Type of DevRev object for which the grouped vista is applicable.
+type GroupedVistaFilterType string
 
 // GroupedVistaFlavor Denotes the use case of the grouped vista.
 type GroupedVistaFlavor string
@@ -11307,6 +11747,12 @@ type Money struct {
 	Currency *string `json:"currency,omitempty"`
 }
 
+// NotificationContentTemplate defines model for notification-content-template.
+type NotificationContentTemplate = ContentTemplateBase
+
+// NotificationContentTemplateSummary defines model for notification-content-template-summary.
+type NotificationContentTemplateSummary = ContentTemplateBaseSummary
+
 // NotificationsSendRequest defines model for notifications-send-request.
 type NotificationsSendRequest struct {
 	// Notifications The list of notifications to send.
@@ -12235,6 +12681,9 @@ type PartsListRequest struct {
 	// ParentPart The filter for specifying parent part.
 	ParentPart *ParentPartFilter `json:"parent_part,omitempty"`
 
+	// SortBy Fields to sort the parts by and the direction to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
 	// Subtype Filters for subtypes.
 	Subtype *[]string `json:"subtype,omitempty"`
 
@@ -12364,6 +12813,31 @@ type PartsUpdateRequestTags struct {
 type PartsUpdateResponseBody struct {
 	Part Part `json:"part"`
 }
+
+// PartsVistaGroupItem defines model for parts-vista-group-item.
+type PartsVistaGroupItem struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Type of parts vista group item.
+	Type PartsVistaGroupItemType `json:"type"`
+}
+
+// PartsVistaGroupItemType Type of parts vista group item.
+type PartsVistaGroupItemType string
 
 // PieVisualizationXAxis The X-axis for a pie visualization.
 type PieVisualizationXAxis struct {
@@ -14252,6 +14726,10 @@ type SchemaFieldUiMetadata struct {
 	// CreateView Create view UI hint overrides.
 	CreateView *SchemaFieldCreateViewUiMetadata `json:"create_view,omitempty"`
 
+	// DecimalPlaces Number of decimal places to show (only applicable for number
+	// fields).
+	DecimalPlaces *int32 `json:"decimal_places,omitempty"`
+
 	// DetailView Detail view UI hint overrides.
 	DetailView *SchemaFieldDetailViewUiMetadata `json:"detail_view,omitempty"`
 
@@ -14270,7 +14748,7 @@ type SchemaFieldUiMetadata struct {
 	// IsBulkActionEnabled Whether the field supports bulk action.
 	IsBulkActionEnabled *bool `json:"is_bulk_action_enabled,omitempty"`
 
-	// IsCurrencyField Indicates if the field holds a currency value in USD.
+	// IsCurrencyField Indicates if the field holds a currency value.
 	IsCurrencyField *bool `json:"is_currency_field,omitempty"`
 
 	// IsGroupable Whether the field is groupable in the UI.
@@ -14311,6 +14789,10 @@ type SchemaFieldUiMetadata struct {
 
 	// Unit Unit of measurment.
 	Unit *string `json:"unit,omitempty"`
+
+	// UseShorthandNotation Whether to use shorthand notation (only applicable for number
+	// fields).
+	UseShorthandNotation *bool `json:"use_shorthand_notation,omitempty"`
 }
 
 // SchemaIdFieldDescriptor defines model for schema-id-field-descriptor.
@@ -16255,10 +16737,10 @@ type StageDiagram struct {
 	// Id Globally unique object ID.
 	Id string `json:"id"`
 
-	// IsCustomLeafType True if this diagram corresponds to a custom leaf type.
+	// IsCustomLeafType True if this stage diagram corresponds to a custom leaf type.
 	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
 
-	// IsDefault True if this diagram is the default for the leaf type.
+	// IsDefault True if this stage diagram is the default for the leaf type.
 	IsDefault *bool `json:"is_default,omitempty"`
 
 	// LeafType The leaf type this stage diagram applies to.
@@ -16268,10 +16750,11 @@ type StageDiagram struct {
 	// ModifiedDate Timestamp when the object was last modified.
 	ModifiedDate *time.Time `json:"modified_date,omitempty"`
 
-	// Name The human readable name of the diagram.
+	// Name The human readable name of the stage diagram.
 	Name *string `json:"name,omitempty"`
 
-	// Stages Stage node.
+	// Stages List of stages with their allowed transitions in this stage
+	// diagram.
 	Stages []StageNode `json:"stages"`
 }
 
@@ -16283,7 +16766,7 @@ type StageDiagramSummary struct {
 	// Id Globally unique object ID.
 	Id string `json:"id"`
 
-	// Name The human readable name of the diagram.
+	// Name The human readable name of the stage diagram.
 	Name *string `json:"name,omitempty"`
 }
 
@@ -16405,7 +16888,7 @@ type StageNode struct {
 	IsStart *bool               `json:"is_start,omitempty"`
 	Stage   *CustomStageSummary `json:"stage,omitempty"`
 
-	// Transitions The list of stages that can be reached.
+	// Transitions List of allowed transitions from this stage.
 	Transitions *[]StageTransition `json:"transitions,omitempty"`
 }
 
@@ -16466,7 +16949,9 @@ type StockFieldOverride struct {
 
 // StockSchemaFragment defines model for stock-schema-fragment.
 type StockSchemaFragment struct {
-	CreatedBy *UserSummary `json:"created_by,omitempty"`
+	// CompositeSchemas List of composite schemas.
+	CompositeSchemas []CompositeSchema `json:"composite_schemas"`
+	CreatedBy        *UserSummary      `json:"created_by,omitempty"`
 
 	// CreatedDate Timestamp when the object was created.
 	CreatedDate *time.Time `json:"created_date,omitempty"`
@@ -17611,6 +18096,9 @@ type TaskSummary = WorkBaseSummary
 
 // TenantFragment defines model for tenant-fragment.
 type TenantFragment struct {
+	// CompositeSchemas List of composite schemas.
+	CompositeSchemas *[]CompositeSchema `json:"composite_schemas,omitempty"`
+
 	// Conditions The conditions associated with the fields.
 	Conditions *[]CustomSchemaFragmentCondition `json:"conditions,omitempty"`
 	CreatedBy  *UserSummary                     `json:"created_by,omitempty"`
@@ -17638,21 +18126,30 @@ type TenantFragment struct {
 	// Id Globally unique object ID.
 	Id string `json:"id"`
 
+	// IdPrefix The display ID prefix. For custom leaf types only.
+	IdPrefix *string `json:"id_prefix,omitempty"`
+
+	// IsCustomLeafType Indicates if the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
 	// IsDeprecated Indicates if the fragment is deprecated. Modifications to this
 	// field are done in-place and don't result in creation of a new
 	// fragment in chain.
 	IsDeprecated *bool `json:"is_deprecated,omitempty"`
 
 	// LeafType Leaf type this fragment applies to.
-	LeafType   *string      `json:"leaf_type,omitempty"`
-	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+	LeafType *string `json:"leaf_type,omitempty"`
+
+	// LeafTypeDisplayName The display name of the leaf type. For custom leaf types only.
+	LeafTypeDisplayName *string      `json:"leaf_type_display_name,omitempty"`
+	ModifiedBy          *UserSummary `json:"modified_by,omitempty"`
 
 	// ModifiedDate Timestamp when the object was last modified.
 	ModifiedDate   *time.Time                   `json:"modified_date,omitempty"`
 	NewFragmentRef *CustomSchemaFragmentSummary `json:"new_fragment_ref,omitempty"`
 	OldFragmentRef *CustomSchemaFragmentSummary `json:"old_fragment_ref,omitempty"`
 
-	// StockFieldOverrides The stock field overrides.
+	// StockFieldOverrides Optional overrides for properties of stock fields.
 	StockFieldOverrides *[]StockFieldOverride `json:"stock_field_overrides,omitempty"`
 }
 
@@ -19047,6 +19544,10 @@ type UserType string
 
 // ViewOverride UI hint overrides for a view.
 type ViewOverride struct {
+	// DecimalPlaces Number of decimal places to show. Only applicable for number
+	// fields.
+	DecimalPlaces *int32 `json:"decimal_places,omitempty"`
+
 	// DisplayName The display name of the field.
 	DisplayName *string `json:"display_name,omitempty"`
 
@@ -19059,14 +19560,55 @@ type ViewOverride struct {
 	// IsRequired Whether the field is mandatory.
 	IsRequired *bool `json:"is_required,omitempty"`
 
+	// Order Relative order in which the field is shown.
+	Order *int32 `json:"order,omitempty"`
+
 	// Placeholder A placeholder for the field.
 	Placeholder *string `json:"placeholder,omitempty"`
 
 	// Tooltip Tooltip for the field.
 	Tooltip *string `json:"tooltip,omitempty"`
 
+	// UseShorthandNotation Whether to use shorthand notation. Example, 1K instead of 1000.
+	// Only applicable for number fields.
+	UseShorthandNotation *bool `json:"use_shorthand_notation,omitempty"`
+
 	// ViewName The name of the view.
 	ViewName *string `json:"view_name,omitempty"`
+}
+
+// Vista Represents a collection of DevRev objects.
+type Vista struct {
+	// Type Type of vista object.
+	Type  VistaType `json:"type"`
+	union json.RawMessage
+}
+
+// VistaBase defines model for vista-base.
+type VistaBase struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault  *bool        `json:"is_default,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
 }
 
 // VistaBaseSummary defines model for vista-base-summary.
@@ -19080,6 +19622,56 @@ type VistaBaseSummary struct {
 	// Name Name of the vista.
 	Name string `json:"name"`
 }
+
+// VistaFlavor Denotes the use case of the vista.
+type VistaFlavor string
+
+// VistaGroup Represents a vista group item.
+type VistaGroup struct {
+	// ObjectType Type of DevRev object for which the grouped vista is applicable.
+	ObjectType GroupedVistaFilterType `json:"object_type"`
+	union      json.RawMessage
+}
+
+// VistaGroupBase defines model for vista-group-base.
+type VistaGroupBase struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+}
+
+// VistaGroupBaseVistaParentComposite defines model for vista-group-base-vista-parent-composite.
+type VistaGroupBaseVistaParentComposite struct {
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId string `json:"display_id"`
+
+	// Flavor Denotes the use case of the vista.
+	Flavor *VistaFlavor `json:"flavor,omitempty"`
+
+	// Id Parent vista ID.
+	Id string `json:"id"`
+
+	// Name Name of the parent vista.
+	Name string `json:"name"`
+
+	// Type Type of the parent vista.
+	Type string `json:"type"`
+}
+
+// VistaGroupItemGroupObjectType Type of DevRev object for which the vista group item is applicable.
+type VistaGroupItemGroupObjectType string
 
 // VistaGroupItemState Defines the state of the group item.
 type VistaGroupItemState string
@@ -19130,6 +19722,178 @@ type VistaSummary struct {
 
 // VistaType Type of vista object.
 type VistaType string
+
+// VistasDeleteRequest The request to delete a vista.
+type VistasDeleteRequest struct {
+	// Id The ID of the vista to delete.
+	Id string `json:"id"`
+}
+
+// VistasDeleteResponseBody The response when deleting a vista.
+type VistasDeleteResponseBody = map[string]interface{}
+
+// VistasGetRequest The request to get a vista's information.
+type VistasGetRequest struct {
+	// Id The vista's ID.
+	Id string `json:"id"`
+}
+
+// VistasGetResponseBody The response to getting a vista's information.
+type VistasGetResponseBody struct {
+	// Vista Represents a collection of DevRev objects.
+	Vista Vista `json:"vista"`
+}
+
+// VistasGroupsDeleteRequest defines model for vistas-groups-delete-request.
+type VistasGroupsDeleteRequest struct {
+	// Id ID of the vista group item to be deleted.
+	Id string `json:"id"`
+}
+
+// VistasGroupsDeleteResponseBody defines model for vistas-groups-delete-response.
+type VistasGroupsDeleteResponseBody = map[string]interface{}
+
+// VistasGroupsGetRequest The request to get a vista group item's information.
+type VistasGroupsGetRequest struct {
+	// Id The vista group item's ID.
+	Id string `json:"id"`
+}
+
+// VistasGroupsGetResponseBody The response to getting a vista group item's information.
+type VistasGroupsGetResponseBody struct {
+	// VistaGroup Represents a vista group item.
+	VistaGroup VistaGroup `json:"vista_group"`
+}
+
+// VistasGroupsListRequest defines model for vistas-groups-list-request.
+type VistasGroupsListRequest struct {
+	// AncestorPart Filters for vista group items which have one of the parts linked as
+	// its ancestor part or primary part.
+	AncestorPart *[]string `json:"ancestor_part,omitempty"`
+
+	// AppliesToPart The filter for applies to part.
+	AppliesToPart *AppliesToPartFilter `json:"applies_to_part,omitempty"`
+
+	// CreatedBy Filter for vistas group item created by any of these users.
+	CreatedBy *[]string `json:"created_by,omitempty"`
+
+	// CreatedDate Provides ways to specify date ranges on objects.
+	CreatedDate *DateFilter `json:"created_date,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// EndDate Provides ways to specify date ranges on objects.
+	EndDate *DateFilter `json:"end_date,omitempty"`
+
+	// GroupObjectType Filters for vista group items of the specific group object type.
+	GroupObjectType *[]VistaGroupItemGroupObjectType `json:"group_object_type,omitempty"`
+
+	// Limit The request to get information about a list of vista groups.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Mode The iteration mode to use. If "after", then entries after the provided
+	// cursor will be returned, or if no cursor is provided, then from the
+	// beginning. If "before", then entries before the provided cursor will be
+	// returned, or if no cursor is provided, then from the end. Entries will
+	// always be returned in the specified sort-by order.
+	Mode *ListMode `json:"mode,omitempty"`
+
+	// ModifiedDate Provides ways to specify date ranges on objects.
+	ModifiedDate *DateFilter `json:"modified_date,omitempty"`
+
+	// ParentId Parent ID of the vista group item.
+	ParentId *[]string `json:"parent_id,omitempty"`
+
+	// SortBy Comma-separated fields to sort the objects by.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
+	// StartDate Provides ways to specify date ranges on objects.
+	StartDate *DateFilter `json:"start_date,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Filters for vista group items of the specific type.
+	Type *[]GroupItemType `json:"type,omitempty"`
+}
+
+// VistasGroupsListResponseBody The response to listing the vistas group items.
+type VistasGroupsListResponseBody struct {
+	// NextCursor The cursor used to iterate subsequent results in accordance to the
+	// sort order. If not set, then no later elements exist.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor The cursor used to iterate preceding results in accordance to the
+	// sort order. If not set, then no prior elements exist.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// VistaGroup List of vista group items.
+	VistaGroup *[]VistaGroup `json:"vista_group,omitempty"`
+}
+
+// VistasListRequest The request to get information about a list of vistas.
+type VistasListRequest struct {
+	// CreatedBy Filters for vistas created by any of these users.
+	CreatedBy *[]string `json:"created_by,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Flavor Filters for vistas of specific flavor.
+	Flavor *[]GroupedVistaFlavor `json:"flavor,omitempty"`
+
+	// IsDefault Whether the default vistas should be fetched or not.
+	IsDefault *bool `json:"is_default,omitempty"`
+
+	// Limit The maximum number of vistas to return. The default is '50', the
+	// maximum is '100'.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Members Filters for vistas accessible to the input members.
+	Members *[]string `json:"members,omitempty"`
+
+	// Mode The iteration mode to use. If "after", then entries after the provided
+	// cursor will be returned, or if no cursor is provided, then from the
+	// beginning. If "before", then entries before the provided cursor will be
+	// returned, or if no cursor is provided, then from the end. Entries will
+	// always be returned in the specified sort-by order.
+	Mode *ListMode `json:"mode,omitempty"`
+
+	// ObjectType Filters for vistas of specific object types like works, parts etc.
+	ObjectType *[]DynamicVistaFilterType `json:"object_type,omitempty"`
+
+	// SharedWith Filter for vistas accessible to the input members.
+	SharedWith *[]SharedWithMembershipFilter `json:"shared_with,omitempty"`
+
+	// SkipItems Denotes whether to skip items of vista_group_item in response.
+	SkipItems *bool `json:"skip_items,omitempty"`
+
+	// SortBy Fields to sort the vistas by and the direction to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Filters for vistas of the specific type.
+	Type *[]VistaType `json:"type,omitempty"`
+}
+
+// VistasListResponseBody The response to listing the vistas.
+type VistasListResponseBody struct {
+	// NextCursor The cursor used to iterate subsequent results in accordance to the
+	// sort order. If not set, then no later elements exist.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor The cursor used to iterate preceding results in accordance to the
+	// sort order. If not set, then no prior elements exist.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// Vistas The list of vistas.
+	Vistas []Vista `json:"vistas"`
+}
 
 // VisualizationAxisColor The color for an axis. This can be a single color or a gradient.
 type VisualizationAxisColor struct {
@@ -19405,6 +20169,9 @@ type WebhookEventRequest struct {
 	AccountDeleted           *EventAccountDeleted      `json:"account_deleted,omitempty"`
 	AccountUpdated           *EventAccountUpdated      `json:"account_updated,omitempty"`
 	EventAiAgentResponseBody *EventAiAgentResponseBody `json:"ai_agent_response,omitempty"`
+	ArticleCreated           *EventArticleCreated      `json:"article_created,omitempty"`
+	ArticleDeleted           *EventArticleDeleted      `json:"article_deleted,omitempty"`
+	ArticleUpdated           *EventArticleUpdated      `json:"article_updated,omitempty"`
 	ConversationCreated      *EventConversationCreated `json:"conversation_created,omitempty"`
 	ConversationDeleted      *EventConversationDeleted `json:"conversation_deleted,omitempty"`
 	ConversationUpdated      *EventConversationUpdated `json:"conversation_updated,omitempty"`
@@ -20891,6 +21658,31 @@ type WorksUpdateResponseBody struct {
 	Work Work `json:"work"`
 }
 
+// WorksVistaGroupItem defines model for works-vista-group-item.
+type WorksVistaGroupItem struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Type of works vista group item.
+	Type WorksVistaGroupItemType `json:"type"`
+}
+
+// WorksVistaGroupItemType Type of works vista group item.
+type WorksVistaGroupItemType string
+
 // BadRequest Describes a error due to a bad request by the client.
 type BadRequest = ErrorBadRequest
 
@@ -21121,9 +21913,6 @@ type ArticlesCountParams struct {
 type GetArticleParams struct {
 	// Id The ID of the required article.
 	Id string `form:"id" json:"id"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 }
 
 // ListArticlesParams defines parameters for ListArticles.
@@ -21147,9 +21936,6 @@ type ListArticlesParams struct {
 	// Cursor The cursor to resume iteration from. If not provided, then iteration
 	// starts from the beginning.
 	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 
 	// Limit The maximum number of articles to return. The default is '50'.
 	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
@@ -21620,9 +22406,6 @@ type DirectoriesCountParams struct {
 type DirectoriesGetParams struct {
 	// Id The ID of the requested directory.
 	Id string `form:"id" json:"id"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 }
 
 // DirectoriesListParams defines parameters for DirectoriesList.
@@ -21633,9 +22416,6 @@ type DirectoriesListParams struct {
 	// Cursor The cursor to resume iteration from. If not provided, then iteration
 	// starts from the beginning.
 	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 
 	// Limit The maximum number of directories to return. The default is '50'.
 	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
@@ -22349,6 +23129,9 @@ type PartsListParams struct {
 	// fields are provided.
 	ParentPartParts *[]string `form:"parent_part.parts,omitempty" json:"parent_part.parts,omitempty"`
 
+	// SortBy Fields to sort the parts by and the direction to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+
 	// Subtype Filters for subtypes.
 	Subtype *[]string `form:"subtype,omitempty" json:"subtype,omitempty"`
 
@@ -22633,9 +23416,6 @@ type RevUsersScanParams struct {
 
 // AggregatedSchemaGetParams defines parameters for AggregatedSchemaGet.
 type AggregatedSchemaGetParams struct {
-	// CustomSchemaFragmentIds The list of custom schema fragment DONs which are to be aggregated.
-	CustomSchemaFragmentIds *[]string `form:"custom_schema_fragment_ids,omitempty" json:"custom_schema_fragment_ids,omitempty"`
-
 	// CustomSchemaSpecApps List of apps.
 	CustomSchemaSpecApps *[]string `form:"custom_schema_spec.apps,omitempty" json:"custom_schema_spec.apps,omitempty"`
 
@@ -22648,9 +23428,6 @@ type AggregatedSchemaGetParams struct {
 	// LeafType The leaf type. Used for inferring the default stage diagram and
 	// tenant fragment ID.
 	LeafType *string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
-
-	// StockSchemaFragmentId The stock schema fragment which is to be aggregated.
-	StockSchemaFragmentId *string `form:"stock_schema_fragment_id,omitempty" json:"stock_schema_fragment_id,omitempty"`
 }
 
 // CustomSchemaFragmentsGetParams defines parameters for CustomSchemaFragmentsGet.
@@ -23204,6 +23981,110 @@ type UomsListParams struct {
 
 	// UnitTypes List of unit types for filtering list of UOMs.
 	UnitTypes *[]UnitType `form:"unit_types,omitempty" json:"unit_types,omitempty"`
+}
+
+// VistasGetParams defines parameters for VistasGet.
+type VistasGetParams struct {
+	// Id The vista's ID.
+	Id string `form:"id" json:"id"`
+}
+
+// VistasGroupsGetParams defines parameters for VistasGroupsGet.
+type VistasGroupsGetParams struct {
+	// Id The vista group item's ID.
+	Id string `form:"id" json:"id"`
+}
+
+// VistasGroupsListParams defines parameters for VistasGroupsList.
+type VistasGroupsListParams struct {
+	// AncestorPart Filters for vista group items which have one of the parts linked as
+	// its ancestor part or primary part.
+	AncestorPart *[]string `form:"ancestor_part,omitempty" json:"ancestor_part,omitempty"`
+
+	// AppliesToPartIncludeChildParts Whether to include items belonging to children of any of the provided
+	// parts.
+	AppliesToPartIncludeChildParts *bool `form:"applies_to_part.include_child_parts,omitempty" json:"applies_to_part.include_child_parts,omitempty"`
+
+	// AppliesToPartParts Part IDs to filter on. Required if any applies_to_part.* fields are
+	// provided.
+	AppliesToPartParts *[]string `form:"applies_to_part.parts,omitempty" json:"applies_to_part.parts,omitempty"`
+
+	// CreatedBy Filter for vistas group item created by any of these users.
+	CreatedBy *[]string `form:"created_by,omitempty" json:"created_by,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then iteration
+	// starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// GroupObjectType Filters for vista group items of the specific group object type.
+	GroupObjectType *[]VistaGroupItemGroupObjectType `form:"group_object_type,omitempty" json:"group_object_type,omitempty"`
+
+	// Limit The request to get information about a list of vista groups.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Mode The iteration mode to use, otherwise if not set, then "after" is
+	// used.
+	Mode *ListMode `form:"mode,omitempty" json:"mode,omitempty"`
+
+	// ParentId Parent ID of the vista group item.
+	ParentId *[]string `form:"parent_id,omitempty" json:"parent_id,omitempty"`
+
+	// SortBy Comma-separated fields to sort the objects by.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `form:"state,omitempty" json:"state,omitempty"`
+
+	// Type Filters for vista group items of the specific type.
+	Type *[]GroupItemType `form:"type,omitempty" json:"type,omitempty"`
+}
+
+// VistasListParams defines parameters for VistasList.
+type VistasListParams struct {
+	// CreatedBy Filters for vistas created by any of these users.
+	CreatedBy *[]string `form:"created_by,omitempty" json:"created_by,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then iteration
+	// starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Flavor Filters for vistas of specific flavor.
+	Flavor *[]GroupedVistaFlavor `form:"flavor,omitempty" json:"flavor,omitempty"`
+
+	// IsDefault Whether the default vistas should be fetched or not.
+	IsDefault *bool `form:"is_default,omitempty" json:"is_default,omitempty"`
+
+	// Limit The maximum number of vistas to return. The default is '50', the
+	// maximum is '100'.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Members Filters for vistas accessible to the input members.
+	Members *[]string `form:"members,omitempty" json:"members,omitempty"`
+
+	// Mode The iteration mode to use, otherwise if not set, then "after" is
+	// used.
+	Mode *ListMode `form:"mode,omitempty" json:"mode,omitempty"`
+
+	// ObjectType Filters for vistas of specific object types like works, parts etc.
+	ObjectType *[]DynamicVistaFilterType `form:"object_type,omitempty" json:"object_type,omitempty"`
+
+	// SharedWithMember ID of the group/member with whom the item is shared.
+	SharedWithMember *string `form:"shared_with.member,omitempty" json:"shared_with.member,omitempty"`
+
+	// SharedWithRole Role ID of the group/member with whom the item is shared.
+	SharedWithRole *string `form:"shared_with.role,omitempty" json:"shared_with.role,omitempty"`
+
+	// SkipItems Denotes whether to skip items of vista_group_item in response.
+	SkipItems *bool `form:"skip_items,omitempty" json:"skip_items,omitempty"`
+
+	// SortBy Fields to sort the vistas by and the direction to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `form:"state,omitempty" json:"state,omitempty"`
+
+	// Type Filters for vistas of the specific type.
+	Type *[]VistaType `form:"type,omitempty" json:"type,omitempty"`
 }
 
 // GetWebCrawlerJobParams defines parameters for GetWebCrawlerJob.
@@ -24289,6 +25170,24 @@ type UomsListPostJSONRequestBody = UomsListRequest
 // UomsUpdateJSONRequestBody defines body for UomsUpdate for application/json ContentType.
 type UomsUpdateJSONRequestBody = UomsUpdateRequest
 
+// VistasDeleteJSONRequestBody defines body for VistasDelete for application/json ContentType.
+type VistasDeleteJSONRequestBody = VistasDeleteRequest
+
+// VistasGetPostJSONRequestBody defines body for VistasGetPost for application/json ContentType.
+type VistasGetPostJSONRequestBody = VistasGetRequest
+
+// VistasGroupsDeleteJSONRequestBody defines body for VistasGroupsDelete for application/json ContentType.
+type VistasGroupsDeleteJSONRequestBody = VistasGroupsDeleteRequest
+
+// VistasGroupsGetPostJSONRequestBody defines body for VistasGroupsGetPost for application/json ContentType.
+type VistasGroupsGetPostJSONRequestBody = VistasGroupsGetRequest
+
+// VistasGroupsListPostJSONRequestBody defines body for VistasGroupsListPost for application/json ContentType.
+type VistasGroupsListPostJSONRequestBody = VistasGroupsListRequest
+
+// VistasListPostJSONRequestBody defines body for VistasListPost for application/json ContentType.
+type VistasListPostJSONRequestBody = VistasListRequest
+
 // WebCrawlerJobsControlJSONRequestBody defines body for WebCrawlerJobsControl for application/json ContentType.
 type WebCrawlerJobsControlJSONRequestBody = WebCrawlerJobsControlRequest
 
@@ -24518,6 +25417,36 @@ func (t *Atom) FromAppFragment(v AppFragment) error {
 // MergeAppFragment performs a merge with any union data inside the Atom, using the provided AppFragment
 func (t *Atom) MergeAppFragment(v AppFragment) error {
 	t.Type = "app_fragment"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsArticle returns the union data inside the Atom as a Article
+func (t Atom) AsArticle() (Article, error) {
+	var body Article
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArticle overwrites any union data inside the Atom as the provided Article
+func (t *Atom) FromArticle(v Article) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArticle performs a merge with any union data inside the Atom, using the provided Article
+func (t *Atom) MergeArticle(v Article) error {
+	t.Type = "article"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -25088,6 +26017,36 @@ func (t *Atom) FromMeeting(v Meeting) error {
 // MergeMeeting performs a merge with any union data inside the Atom, using the provided Meeting
 func (t *Atom) MergeMeeting(v Meeting) error {
 	t.Type = "meeting"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsNotificationContentTemplate returns the union data inside the Atom as a NotificationContentTemplate
+func (t Atom) AsNotificationContentTemplate() (NotificationContentTemplate, error) {
+	var body NotificationContentTemplate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromNotificationContentTemplate overwrites any union data inside the Atom as the provided NotificationContentTemplate
+func (t *Atom) FromNotificationContentTemplate(v NotificationContentTemplate) error {
+	t.Type = "notification_content_template"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeNotificationContentTemplate performs a merge with any union data inside the Atom, using the provided NotificationContentTemplate
+func (t *Atom) MergeNotificationContentTemplate(v NotificationContentTemplate) error {
+	t.Type = "notification_content_template"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -25807,6 +26766,8 @@ func (t Atom) ValueByDiscriminator() (interface{}, error) {
 		return t.AsAccount()
 	case "app_fragment":
 		return t.AsAppFragment()
+	case "article":
+		return t.AsArticle()
 	case "auth_token":
 		return t.AsAuthToken()
 	case "capability":
@@ -25845,6 +26806,8 @@ func (t Atom) ValueByDiscriminator() (interface{}, error) {
 		return t.AsLinkable()
 	case "meeting":
 		return t.AsMeeting()
+	case "notification_content_template":
+		return t.AsNotificationContentTemplate()
 	case "object_member":
 		return t.AsObjectMember()
 	case "opportunity":
@@ -25988,6 +26951,36 @@ func (t *AtomSummary) FromAppFragmentSummary(v AppFragmentSummary) error {
 // MergeAppFragmentSummary performs a merge with any union data inside the AtomSummary, using the provided AppFragmentSummary
 func (t *AtomSummary) MergeAppFragmentSummary(v AppFragmentSummary) error {
 	t.Type = "app_fragment"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsArticleSummary returns the union data inside the AtomSummary as a ArticleSummary
+func (t AtomSummary) AsArticleSummary() (ArticleSummary, error) {
+	var body ArticleSummary
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArticleSummary overwrites any union data inside the AtomSummary as the provided ArticleSummary
+func (t *AtomSummary) FromArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArticleSummary performs a merge with any union data inside the AtomSummary, using the provided ArticleSummary
+func (t *AtomSummary) MergeArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -26558,6 +27551,36 @@ func (t *AtomSummary) FromMeetingSummary(v MeetingSummary) error {
 // MergeMeetingSummary performs a merge with any union data inside the AtomSummary, using the provided MeetingSummary
 func (t *AtomSummary) MergeMeetingSummary(v MeetingSummary) error {
 	t.Type = "meeting"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsNotificationContentTemplateSummary returns the union data inside the AtomSummary as a NotificationContentTemplateSummary
+func (t AtomSummary) AsNotificationContentTemplateSummary() (NotificationContentTemplateSummary, error) {
+	var body NotificationContentTemplateSummary
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromNotificationContentTemplateSummary overwrites any union data inside the AtomSummary as the provided NotificationContentTemplateSummary
+func (t *AtomSummary) FromNotificationContentTemplateSummary(v NotificationContentTemplateSummary) error {
+	t.Type = "notification_content_template"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeNotificationContentTemplateSummary performs a merge with any union data inside the AtomSummary, using the provided NotificationContentTemplateSummary
+func (t *AtomSummary) MergeNotificationContentTemplateSummary(v NotificationContentTemplateSummary) error {
+	t.Type = "notification_content_template"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -27277,6 +28300,8 @@ func (t AtomSummary) ValueByDiscriminator() (interface{}, error) {
 		return t.AsAccountSummary()
 	case "app_fragment":
 		return t.AsAppFragmentSummary()
+	case "article":
+		return t.AsArticleSummary()
 	case "auth_token":
 		return t.AsAuthTokenSummary()
 	case "capability":
@@ -27315,6 +28340,8 @@ func (t AtomSummary) ValueByDiscriminator() (interface{}, error) {
 		return t.AsLinkableSummary()
 	case "meeting":
 		return t.AsMeetingSummary()
+	case "notification_content_template":
+		return t.AsNotificationContentTemplateSummary()
 	case "object_member":
 		return t.AsObjectMemberSummary()
 	case "opportunity":
@@ -28443,6 +29470,100 @@ func (t *ChatsUpdateRequest) UnmarshalJSON(b []byte) error {
 		if err != nil {
 			return fmt.Errorf("error reading 'title': %w", err)
 		}
+	}
+
+	if raw, found := object["type"]; found {
+		err = json.Unmarshal(raw, &t.Type)
+		if err != nil {
+			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsNotificationContentTemplate returns the union data inside the ContentTemplate as a NotificationContentTemplate
+func (t ContentTemplate) AsNotificationContentTemplate() (NotificationContentTemplate, error) {
+	var body NotificationContentTemplate
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromNotificationContentTemplate overwrites any union data inside the ContentTemplate as the provided NotificationContentTemplate
+func (t *ContentTemplate) FromNotificationContentTemplate(v NotificationContentTemplate) error {
+	t.Type = "notification_content_template"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeNotificationContentTemplate performs a merge with any union data inside the ContentTemplate, using the provided NotificationContentTemplate
+func (t *ContentTemplate) MergeNotificationContentTemplate(v NotificationContentTemplate) error {
+	t.Type = "notification_content_template"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t ContentTemplate) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t ContentTemplate) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "notification_content_template":
+		return t.AsNotificationContentTemplate()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t ContentTemplate) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	object["type"], err = json.Marshal(t.Type)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *ContentTemplate) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
 	}
 
 	if raw, found := object["type"]; found {
@@ -32744,6 +33865,36 @@ func (t *LinkEndpointSummary) MergeAccountSummary(v AccountSummary) error {
 	return err
 }
 
+// AsArticleSummary returns the union data inside the LinkEndpointSummary as a ArticleSummary
+func (t LinkEndpointSummary) AsArticleSummary() (ArticleSummary, error) {
+	var body ArticleSummary
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArticleSummary overwrites any union data inside the LinkEndpointSummary as the provided ArticleSummary
+func (t *LinkEndpointSummary) FromArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArticleSummary performs a merge with any union data inside the LinkEndpointSummary, using the provided ArticleSummary
+func (t *LinkEndpointSummary) MergeArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
 // AsCapabilitySummary returns the union data inside the LinkEndpointSummary as a CapabilitySummary
 func (t LinkEndpointSummary) AsCapabilitySummary() (CapabilitySummary, error) {
 	var body CapabilitySummary
@@ -33330,6 +34481,8 @@ func (t LinkEndpointSummary) ValueByDiscriminator() (interface{}, error) {
 	switch discriminator {
 	case "account":
 		return t.AsAccountSummary()
+	case "article":
+		return t.AsArticleSummary()
 	case "capability":
 		return t.AsCapabilitySummary()
 	case "code_change":
@@ -38703,6 +39856,322 @@ func (t *UserSummary) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsCuratedVista returns the union data inside the Vista as a CuratedVista
+func (t Vista) AsCuratedVista() (CuratedVista, error) {
+	var body CuratedVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCuratedVista overwrites any union data inside the Vista as the provided CuratedVista
+func (t *Vista) FromCuratedVista(v CuratedVista) error {
+	t.Type = "curated"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCuratedVista performs a merge with any union data inside the Vista, using the provided CuratedVista
+func (t *Vista) MergeCuratedVista(v CuratedVista) error {
+	t.Type = "curated"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDynamicVista returns the union data inside the Vista as a DynamicVista
+func (t Vista) AsDynamicVista() (DynamicVista, error) {
+	var body DynamicVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDynamicVista overwrites any union data inside the Vista as the provided DynamicVista
+func (t *Vista) FromDynamicVista(v DynamicVista) error {
+	t.Type = "dynamic"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDynamicVista performs a merge with any union data inside the Vista, using the provided DynamicVista
+func (t *Vista) MergeDynamicVista(v DynamicVista) error {
+	t.Type = "dynamic"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsGroupedVista returns the union data inside the Vista as a GroupedVista
+func (t Vista) AsGroupedVista() (GroupedVista, error) {
+	var body GroupedVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupedVista overwrites any union data inside the Vista as the provided GroupedVista
+func (t *Vista) FromGroupedVista(v GroupedVista) error {
+	t.Type = "grouped"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupedVista performs a merge with any union data inside the Vista, using the provided GroupedVista
+func (t *Vista) MergeGroupedVista(v GroupedVista) error {
+	t.Type = "grouped"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t Vista) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t Vista) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "curated":
+		return t.AsCuratedVista()
+	case "dynamic":
+		return t.AsDynamicVista()
+	case "grouped":
+		return t.AsGroupedVista()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t Vista) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	object["type"], err = json.Marshal(t.Type)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *Vista) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["type"]; found {
+		err = json.Unmarshal(raw, &t.Type)
+		if err != nil {
+			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsConversationsVistaGroupItem returns the union data inside the VistaGroup as a ConversationsVistaGroupItem
+func (t VistaGroup) AsConversationsVistaGroupItem() (ConversationsVistaGroupItem, error) {
+	var body ConversationsVistaGroupItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromConversationsVistaGroupItem overwrites any union data inside the VistaGroup as the provided ConversationsVistaGroupItem
+func (t *VistaGroup) FromConversationsVistaGroupItem(v ConversationsVistaGroupItem) error {
+	t.ObjectType = "conversations"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeConversationsVistaGroupItem performs a merge with any union data inside the VistaGroup, using the provided ConversationsVistaGroupItem
+func (t *VistaGroup) MergeConversationsVistaGroupItem(v ConversationsVistaGroupItem) error {
+	t.ObjectType = "conversations"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPartsVistaGroupItem returns the union data inside the VistaGroup as a PartsVistaGroupItem
+func (t VistaGroup) AsPartsVistaGroupItem() (PartsVistaGroupItem, error) {
+	var body PartsVistaGroupItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPartsVistaGroupItem overwrites any union data inside the VistaGroup as the provided PartsVistaGroupItem
+func (t *VistaGroup) FromPartsVistaGroupItem(v PartsVistaGroupItem) error {
+	t.ObjectType = "parts"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePartsVistaGroupItem performs a merge with any union data inside the VistaGroup, using the provided PartsVistaGroupItem
+func (t *VistaGroup) MergePartsVistaGroupItem(v PartsVistaGroupItem) error {
+	t.ObjectType = "parts"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsWorksVistaGroupItem returns the union data inside the VistaGroup as a WorksVistaGroupItem
+func (t VistaGroup) AsWorksVistaGroupItem() (WorksVistaGroupItem, error) {
+	var body WorksVistaGroupItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromWorksVistaGroupItem overwrites any union data inside the VistaGroup as the provided WorksVistaGroupItem
+func (t *VistaGroup) FromWorksVistaGroupItem(v WorksVistaGroupItem) error {
+	t.ObjectType = "works"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeWorksVistaGroupItem performs a merge with any union data inside the VistaGroup, using the provided WorksVistaGroupItem
+func (t *VistaGroup) MergeWorksVistaGroupItem(v WorksVistaGroupItem) error {
+	t.ObjectType = "works"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t VistaGroup) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"object_type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t VistaGroup) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "conversations":
+		return t.AsConversationsVistaGroupItem()
+	case "parts":
+		return t.AsPartsVistaGroupItem()
+	case "works":
+		return t.AsWorksVistaGroupItem()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t VistaGroup) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	object["object_type"], err = json.Marshal(t.ObjectType)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'object_type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *VistaGroup) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["object_type"]; found {
+		err = json.Unmarshal(raw, &t.ObjectType)
+		if err != nil {
+			return fmt.Errorf("error reading 'object_type': %w", err)
+		}
+	}
+
+	return err
+}
+
 // AsCuratedVistaSummary returns the union data inside the VistaSummary as a CuratedVistaSummary
 func (t VistaSummary) AsCuratedVistaSummary() (CuratedVistaSummary, error) {
 	var body CuratedVistaSummary
@@ -41687,6 +43156,48 @@ type ClientInterface interface {
 	UomsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	UomsUpdate(ctx context.Context, body UomsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasDeleteWithBody request with any body
+	VistasDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasDelete(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGet request
+	VistasGet(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGetPostWithBody request with any body
+	VistasGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGetPost(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsDeleteWithBody request with any body
+	VistasGroupsDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGroupsDelete(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsGet request
+	VistasGroupsGet(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsGetPostWithBody request with any body
+	VistasGroupsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGroupsGetPost(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsList request
+	VistasGroupsList(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsListPostWithBody request with any body
+	VistasGroupsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGroupsListPost(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasList request
+	VistasList(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasListPostWithBody request with any body
+	VistasListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasListPost(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// WebCrawlerJobsControlWithBody request with any body
 	WebCrawlerJobsControlWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -49111,6 +50622,198 @@ func (c *Client) UomsUpdate(ctx context.Context, body UomsUpdateJSONRequestBody,
 	return c.Client.Do(req)
 }
 
+func (c *Client) VistasDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasDeleteRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasDelete(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasDeleteRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGet(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGetPost(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsDeleteRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsDelete(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsDeleteRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsGet(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsGetPost(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsList(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsListPost(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasList(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasListPost(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) WebCrawlerJobsControlWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewWebCrawlerJobsControlRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -51307,22 +53010,6 @@ func NewGetArticleRequest(server string, params *GetArticleParams) (*http.Reques
 			}
 		}
 
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -51479,22 +53166,6 @@ func NewListArticlesRequest(server string, params *ListArticlesParams) (*http.Re
 		if params.Cursor != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -57122,22 +58793,6 @@ func NewDirectoriesGetRequest(server string, params *DirectoriesGetParams) (*htt
 			}
 		}
 
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -57230,22 +58885,6 @@ func NewDirectoriesListRequest(server string, params *DirectoriesListParams) (*h
 		if params.Cursor != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -63706,6 +65345,22 @@ func NewPartsListRequest(server string, params *PartsListParams) (*http.Request,
 
 		}
 
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		if params.Subtype != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "subtype", runtime.ParamLocationQuery, *params.Subtype); err != nil {
@@ -66654,22 +68309,6 @@ func NewAggregatedSchemaGetRequest(server string, params *AggregatedSchemaGetPar
 	if params != nil {
 		queryValues := queryURL.Query()
 
-		if params.CustomSchemaFragmentIds != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_fragment_ids", runtime.ParamLocationQuery, *params.CustomSchemaFragmentIds); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
 		if params.CustomSchemaSpecApps != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_spec.apps", runtime.ParamLocationQuery, *params.CustomSchemaSpecApps); err != nil {
@@ -66721,22 +68360,6 @@ func NewAggregatedSchemaGetRequest(server string, params *AggregatedSchemaGetPar
 		if params.LeafType != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.StockSchemaFragmentId != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "stock_schema_fragment_id", runtime.ParamLocationQuery, *params.StockSchemaFragmentId); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -72612,6 +74235,818 @@ func NewUomsUpdateRequestWithBody(server string, contentType string, body io.Rea
 	return req, nil
 }
 
+// NewVistasDeleteRequest calls the generic VistasDelete builder with application/json body
+func NewVistasDeleteRequest(server string, body VistasDeleteJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasDeleteRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasDeleteRequestWithBody generates requests for VistasDelete with any type of body
+func NewVistasDeleteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.delete")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGetRequest generates requests for VistasGet
+func NewVistasGetRequest(server string, params *VistasGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, params.Id); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasGetPostRequest calls the generic VistasGetPost builder with application/json body
+func NewVistasGetPostRequest(server string, body VistasGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGetPostRequestWithBody generates requests for VistasGetPost with any type of body
+func NewVistasGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGroupsDeleteRequest calls the generic VistasGroupsDelete builder with application/json body
+func NewVistasGroupsDeleteRequest(server string, body VistasGroupsDeleteJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGroupsDeleteRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGroupsDeleteRequestWithBody generates requests for VistasGroupsDelete with any type of body
+func NewVistasGroupsDeleteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.delete")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGroupsGetRequest generates requests for VistasGroupsGet
+func NewVistasGroupsGetRequest(server string, params *VistasGroupsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, params.Id); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasGroupsGetPostRequest calls the generic VistasGroupsGetPost builder with application/json body
+func NewVistasGroupsGetPostRequest(server string, body VistasGroupsGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGroupsGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGroupsGetPostRequestWithBody generates requests for VistasGroupsGetPost with any type of body
+func NewVistasGroupsGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGroupsListRequest generates requests for VistasGroupsList
+func NewVistasGroupsListRequest(server string, params *VistasGroupsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.AncestorPart != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "ancestor_part", runtime.ParamLocationQuery, *params.AncestorPart); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.AppliesToPartIncludeChildParts != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "applies_to_part.include_child_parts", runtime.ParamLocationQuery, *params.AppliesToPartIncludeChildParts); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.AppliesToPartParts != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "applies_to_part.parts", runtime.ParamLocationQuery, *params.AppliesToPartParts); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.CreatedBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "created_by", runtime.ParamLocationQuery, *params.CreatedBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.GroupObjectType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "group_object_type", runtime.ParamLocationQuery, *params.GroupObjectType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Mode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "mode", runtime.ParamLocationQuery, *params.Mode); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ParentId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "parent_id", runtime.ParamLocationQuery, *params.ParentId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.State != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "state", runtime.ParamLocationQuery, *params.State); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "type", runtime.ParamLocationQuery, *params.Type); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasGroupsListPostRequest calls the generic VistasGroupsListPost builder with application/json body
+func NewVistasGroupsListPostRequest(server string, body VistasGroupsListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGroupsListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGroupsListPostRequestWithBody generates requests for VistasGroupsListPost with any type of body
+func NewVistasGroupsListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasListRequest generates requests for VistasList
+func NewVistasListRequest(server string, params *VistasListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.CreatedBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "created_by", runtime.ParamLocationQuery, *params.CreatedBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Flavor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "flavor", runtime.ParamLocationQuery, *params.Flavor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsDefault != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_default", runtime.ParamLocationQuery, *params.IsDefault); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Members != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "members", runtime.ParamLocationQuery, *params.Members); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Mode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "mode", runtime.ParamLocationQuery, *params.Mode); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ObjectType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "object_type", runtime.ParamLocationQuery, *params.ObjectType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SharedWithMember != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "shared_with.member", runtime.ParamLocationQuery, *params.SharedWithMember); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SharedWithRole != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "shared_with.role", runtime.ParamLocationQuery, *params.SharedWithRole); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SkipItems != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "skip_items", runtime.ParamLocationQuery, *params.SkipItems); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.State != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "state", runtime.ParamLocationQuery, *params.State); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "type", runtime.ParamLocationQuery, *params.Type); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasListPostRequest calls the generic VistasListPost builder with application/json body
+func NewVistasListPostRequest(server string, body VistasListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasListPostRequestWithBody generates requests for VistasListPost with any type of body
+func NewVistasListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewWebCrawlerJobsControlRequest calls the generic WebCrawlerJobsControl builder with application/json body
 func NewWebCrawlerJobsControlRequest(server string, body WebCrawlerJobsControlJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -76793,6 +79228,48 @@ type ClientWithResponsesInterface interface {
 	UomsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UomsUpdateResponse, error)
 
 	UomsUpdateWithResponse(ctx context.Context, body UomsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*UomsUpdateResponse, error)
+
+	// VistasDeleteWithBodyWithResponse request with any body
+	VistasDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error)
+
+	VistasDeleteWithResponse(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error)
+
+	// VistasGetWithResponse request
+	VistasGetWithResponse(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*VistasGetResponse, error)
+
+	// VistasGetPostWithBodyWithResponse request with any body
+	VistasGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error)
+
+	VistasGetPostWithResponse(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error)
+
+	// VistasGroupsDeleteWithBodyWithResponse request with any body
+	VistasGroupsDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error)
+
+	VistasGroupsDeleteWithResponse(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error)
+
+	// VistasGroupsGetWithResponse request
+	VistasGroupsGetWithResponse(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*VistasGroupsGetResponse, error)
+
+	// VistasGroupsGetPostWithBodyWithResponse request with any body
+	VistasGroupsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error)
+
+	VistasGroupsGetPostWithResponse(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error)
+
+	// VistasGroupsListWithResponse request
+	VistasGroupsListWithResponse(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*VistasGroupsListResponse, error)
+
+	// VistasGroupsListPostWithBodyWithResponse request with any body
+	VistasGroupsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error)
+
+	VistasGroupsListPostWithResponse(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error)
+
+	// VistasListWithResponse request
+	VistasListWithResponse(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*VistasListResponse, error)
+
+	// VistasListPostWithBodyWithResponse request with any body
+	VistasListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error)
+
+	VistasListPostWithResponse(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error)
 
 	// WebCrawlerJobsControlWithBodyWithResponse request with any body
 	WebCrawlerJobsControlWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*WebCrawlerJobsControlResponse, error)
@@ -87140,6 +89617,292 @@ func (r UomsUpdateResponse) StatusCode() int {
 	return 0
 }
 
+type VistasDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasDeleteResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasDeleteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsDeleteResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsDeleteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type WebCrawlerJobsControlResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -93109,6 +95872,144 @@ func (c *ClientWithResponses) UomsUpdateWithResponse(ctx context.Context, body U
 		return nil, err
 	}
 	return ParseUomsUpdateResponse(rsp)
+}
+
+// VistasDeleteWithBodyWithResponse request with arbitrary body returning *VistasDeleteResponse
+func (c *ClientWithResponses) VistasDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error) {
+	rsp, err := c.VistasDeleteWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasDeleteResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasDeleteWithResponse(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error) {
+	rsp, err := c.VistasDelete(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasDeleteResponse(rsp)
+}
+
+// VistasGetWithResponse request returning *VistasGetResponse
+func (c *ClientWithResponses) VistasGetWithResponse(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*VistasGetResponse, error) {
+	rsp, err := c.VistasGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGetResponse(rsp)
+}
+
+// VistasGetPostWithBodyWithResponse request with arbitrary body returning *VistasGetPostResponse
+func (c *ClientWithResponses) VistasGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error) {
+	rsp, err := c.VistasGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGetPostWithResponse(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error) {
+	rsp, err := c.VistasGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGetPostResponse(rsp)
+}
+
+// VistasGroupsDeleteWithBodyWithResponse request with arbitrary body returning *VistasGroupsDeleteResponse
+func (c *ClientWithResponses) VistasGroupsDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error) {
+	rsp, err := c.VistasGroupsDeleteWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsDeleteResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGroupsDeleteWithResponse(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error) {
+	rsp, err := c.VistasGroupsDelete(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsDeleteResponse(rsp)
+}
+
+// VistasGroupsGetWithResponse request returning *VistasGroupsGetResponse
+func (c *ClientWithResponses) VistasGroupsGetWithResponse(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*VistasGroupsGetResponse, error) {
+	rsp, err := c.VistasGroupsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsGetResponse(rsp)
+}
+
+// VistasGroupsGetPostWithBodyWithResponse request with arbitrary body returning *VistasGroupsGetPostResponse
+func (c *ClientWithResponses) VistasGroupsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error) {
+	rsp, err := c.VistasGroupsGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGroupsGetPostWithResponse(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error) {
+	rsp, err := c.VistasGroupsGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsGetPostResponse(rsp)
+}
+
+// VistasGroupsListWithResponse request returning *VistasGroupsListResponse
+func (c *ClientWithResponses) VistasGroupsListWithResponse(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*VistasGroupsListResponse, error) {
+	rsp, err := c.VistasGroupsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsListResponse(rsp)
+}
+
+// VistasGroupsListPostWithBodyWithResponse request with arbitrary body returning *VistasGroupsListPostResponse
+func (c *ClientWithResponses) VistasGroupsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error) {
+	rsp, err := c.VistasGroupsListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGroupsListPostWithResponse(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error) {
+	rsp, err := c.VistasGroupsListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsListPostResponse(rsp)
+}
+
+// VistasListWithResponse request returning *VistasListResponse
+func (c *ClientWithResponses) VistasListWithResponse(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*VistasListResponse, error) {
+	rsp, err := c.VistasList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasListResponse(rsp)
+}
+
+// VistasListPostWithBodyWithResponse request with arbitrary body returning *VistasListPostResponse
+func (c *ClientWithResponses) VistasListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error) {
+	rsp, err := c.VistasListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasListPostWithResponse(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error) {
+	rsp, err := c.VistasListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasListPostResponse(rsp)
 }
 
 // WebCrawlerJobsControlWithBodyWithResponse request with arbitrary body returning *WebCrawlerJobsControlResponse
@@ -119127,6 +122028,728 @@ func ParseUomsUpdateResponse(rsp *http.Response) (*UomsUpdateResponse, error) {
 			return nil, err
 		}
 		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasDeleteResponse parses an HTTP response from a VistasDeleteWithResponse call
+func ParseVistasDeleteResponse(rsp *http.Response) (*VistasDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasDeleteResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGetResponse parses an HTTP response from a VistasGetWithResponse call
+func ParseVistasGetResponse(rsp *http.Response) (*VistasGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGetPostResponse parses an HTTP response from a VistasGetPostWithResponse call
+func ParseVistasGetPostResponse(rsp *http.Response) (*VistasGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsDeleteResponse parses an HTTP response from a VistasGroupsDeleteWithResponse call
+func ParseVistasGroupsDeleteResponse(rsp *http.Response) (*VistasGroupsDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsDeleteResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsGetResponse parses an HTTP response from a VistasGroupsGetWithResponse call
+func ParseVistasGroupsGetResponse(rsp *http.Response) (*VistasGroupsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsGetPostResponse parses an HTTP response from a VistasGroupsGetPostWithResponse call
+func ParseVistasGroupsGetPostResponse(rsp *http.Response) (*VistasGroupsGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsListResponse parses an HTTP response from a VistasGroupsListWithResponse call
+func ParseVistasGroupsListResponse(rsp *http.Response) (*VistasGroupsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsListPostResponse parses an HTTP response from a VistasGroupsListPostWithResponse call
+func ParseVistasGroupsListPostResponse(rsp *http.Response) (*VistasGroupsListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasListResponse parses an HTTP response from a VistasListWithResponse call
+func ParseVistasListResponse(rsp *http.Response) (*VistasListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasListPostResponse parses an HTTP response from a VistasListPostWithResponse call
+func ParseVistasListPostResponse(rsp *http.Response) (*VistasListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
 		var dest TooManyRequests

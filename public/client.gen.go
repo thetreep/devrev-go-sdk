@@ -78,6 +78,7 @@ const (
 
 // Defines values for AtomType.
 const (
+	AtomTypeArticle         AtomType = "article"
 	AtomTypeAuthToken       AtomType = "auth_token"
 	AtomTypeCapability      AtomType = "capability"
 	AtomTypeConversation    AtomType = "conversation"
@@ -233,6 +234,24 @@ const (
 	ConversationsCreateRequestTypeValueSupport ConversationsCreateRequestTypeValue = "support"
 )
 
+// Defines values for ConversationsVistaGroupItemType.
+const (
+	ConversationsVistaGroupItemTypeCurated ConversationsVistaGroupItemType = "curated"
+	ConversationsVistaGroupItemTypeDynamic ConversationsVistaGroupItemType = "dynamic"
+)
+
+// Defines values for CustomSchemaFragmentsListRequestPrune.
+const (
+	CustomSchemaFragmentsListRequestPruneFields CustomSchemaFragmentsListRequestPrune = "fields"
+)
+
+// Defines values for CustomSchemaFragmentsSetRequestType.
+const (
+	AppFragment        CustomSchemaFragmentsSetRequestType = "app_fragment"
+	CustomTypeFragment CustomSchemaFragmentsSetRequestType = "custom_type_fragment"
+	TenantFragment     CustomSchemaFragmentsSetRequestType = "tenant_fragment"
+)
+
 // Defines values for DateFilterType.
 const (
 	Preset DateFilterType = "preset"
@@ -290,6 +309,24 @@ const (
 // Defines values for DevUsersCreateRequestStateEnumValue.
 const (
 	DevUsersCreateRequestStateEnumValueShadow DevUsersCreateRequestStateEnumValue = "shadow"
+)
+
+// Defines values for DynamicVistaFilterType.
+const (
+	DynamicVistaFilterTypeAccounts      DynamicVistaFilterType = "accounts"
+	DynamicVistaFilterTypeArticles      DynamicVistaFilterType = "articles"
+	DynamicVistaFilterTypeConversations DynamicVistaFilterType = "conversations"
+	DynamicVistaFilterTypeCredits       DynamicVistaFilterType = "credits"
+	DynamicVistaFilterTypeCustomObjects DynamicVistaFilterType = "custom_objects"
+	DynamicVistaFilterTypeDevUsers      DynamicVistaFilterType = "dev_users"
+	DynamicVistaFilterTypeIncidents     DynamicVistaFilterType = "incidents"
+	DynamicVistaFilterTypeInvoices      DynamicVistaFilterType = "invoices"
+	DynamicVistaFilterTypeMeetings      DynamicVistaFilterType = "meetings"
+	DynamicVistaFilterTypeParts         DynamicVistaFilterType = "parts"
+	DynamicVistaFilterTypeQuotes        DynamicVistaFilterType = "quotes"
+	DynamicVistaFilterTypeRevOrgs       DynamicVistaFilterType = "rev_orgs"
+	DynamicVistaFilterTypeRevUsers      DynamicVistaFilterType = "rev_users"
+	DynamicVistaFilterTypeWorks         DynamicVistaFilterType = "works"
 )
 
 // Defines values for ErrorBadRequestCustomizationValidationErrorSubtype.
@@ -424,6 +461,12 @@ const (
 	Scim    GroupIngestionSource = "scim"
 )
 
+// Defines values for GroupItemType.
+const (
+	GroupItemTypeCurated GroupItemType = "curated"
+	GroupItemTypeDynamic GroupItemType = "dynamic"
+)
+
 // Defines values for GroupMemberType.
 const (
 	GroupMemberTypeDevUser GroupMemberType = "dev_user"
@@ -436,6 +479,20 @@ const (
 	GroupTypeStatic  GroupType = "static"
 )
 
+// Defines values for GroupedVistaFilterType.
+const (
+	GroupedVistaFilterTypeConversations GroupedVistaFilterType = "conversations"
+	GroupedVistaFilterTypeParts         GroupedVistaFilterType = "parts"
+	GroupedVistaFilterTypeWorks         GroupedVistaFilterType = "works"
+)
+
+// Defines values for GroupedVistaFlavor.
+const (
+	GroupedVistaFlavorNnl          GroupedVistaFlavor = "nnl"
+	GroupedVistaFlavorSprintBoard  GroupedVistaFlavor = "sprint_board"
+	GroupedVistaFlavorSupportInbox GroupedVistaFlavor = "support_inbox"
+)
+
 // Defines values for IssuePriority.
 const (
 	IssuePriorityP0 IssuePriority = "p0"
@@ -446,6 +503,7 @@ const (
 
 // Defines values for LinkEndpointType.
 const (
+	LinkEndpointTypeArticle      LinkEndpointType = "article"
 	LinkEndpointTypeCapability   LinkEndpointType = "capability"
 	LinkEndpointTypeConversation LinkEndpointType = "conversation"
 	LinkEndpointTypeDevUser      LinkEndpointType = "dev_user"
@@ -579,6 +637,12 @@ const (
 	PartTypeProduct     PartType = "product"
 )
 
+// Defines values for PartsVistaGroupItemType.
+const (
+	PartsVistaGroupItemTypeCurated PartsVistaGroupItemType = "curated"
+	PartsVistaGroupItemTypeDynamic PartsVistaGroupItemType = "dynamic"
+)
+
 // Defines values for QuestionAnswerStatus.
 const (
 	QuestionAnswerStatusArchived     QuestionAnswerStatus = "archived"
@@ -630,6 +694,13 @@ const (
 	Tokens    SchemaFieldDescriptorFieldType = "tokens"
 	Uenum     SchemaFieldDescriptorFieldType = "uenum"
 	Unknown   SchemaFieldDescriptorFieldType = "unknown"
+)
+
+// Defines values for SchemasSubtypePrepareUpdateGetResponseConflictType.
+const (
+	AbsentInNew      SchemasSubtypePrepareUpdateGetResponseConflictType = "absent_in_new"
+	AbsentInOld      SchemasSubtypePrepareUpdateGetResponseConflictType = "absent_in_old"
+	IncompatibleType SchemasSubtypePrepareUpdateGetResponseConflictType = "incompatible_type"
 )
 
 // Defines values for SlaAppliesTo.
@@ -720,6 +791,18 @@ const (
 	AllowInvalidTransition StageValidationOptionForUpdate = "allow_invalid_transition"
 )
 
+// Defines values for StockSchemaFragmentsListRequestFilterPreset.
+const (
+	CustomizableTypesPreset StockSchemaFragmentsListRequestFilterPreset = "customizable_types_preset"
+	NoPreset                StockSchemaFragmentsListRequestFilterPreset = "no_preset"
+)
+
+// Defines values for StockSchemaFragmentsListRequestPrune.
+const (
+	StockSchemaFragmentsListRequestPruneCompositeSchemas StockSchemaFragmentsListRequestPrune = "composite_schemas"
+	StockSchemaFragmentsListRequestPruneFields           StockSchemaFragmentsListRequestPrune = "fields"
+)
+
 // Defines values for SyncMetadataFilterSyncInFilterStatus.
 const (
 	SyncMetadataFilterSyncInFilterStatusFailed    SyncMetadataFilterSyncInFilterStatus = "failed"
@@ -801,6 +884,7 @@ const (
 
 // Defines values for TimelineEntryObjectType.
 const (
+	TimelineEntryObjectTypeArticle         TimelineEntryObjectType = "article"
 	TimelineEntryObjectTypeCapability      TimelineEntryObjectType = "capability"
 	TimelineEntryObjectTypeConversation    TimelineEntryObjectType = "conversation"
 	TimelineEntryObjectTypeEnhancement     TimelineEntryObjectType = "enhancement"
@@ -844,6 +928,20 @@ const (
 	UserTypeSysUser        UserType = "sys_user"
 )
 
+// Defines values for VistaFlavor.
+const (
+	VistaFlavorNnl          VistaFlavor = "nnl"
+	VistaFlavorSprintBoard  VistaFlavor = "sprint_board"
+	VistaFlavorSupportInbox VistaFlavor = "support_inbox"
+)
+
+// Defines values for VistaGroupItemGroupObjectType.
+const (
+	VistaGroupItemGroupObjectTypeConversation VistaGroupItemGroupObjectType = "conversation"
+	VistaGroupItemGroupObjectTypePart         VistaGroupItemGroupObjectType = "part"
+	VistaGroupItemGroupObjectTypeWork         VistaGroupItemGroupObjectType = "work"
+)
+
 // Defines values for VistaGroupItemState.
 const (
 	VistaGroupItemStateActive    VistaGroupItemState = "active"
@@ -855,6 +953,13 @@ const (
 const (
 	VistaGroupItemTypeCurated VistaGroupItemType = "curated"
 	VistaGroupItemTypeDynamic VistaGroupItemType = "dynamic"
+)
+
+// Defines values for VistaType.
+const (
+	VistaTypeCurated VistaType = "curated"
+	VistaTypeDynamic VistaType = "dynamic"
+	VistaTypeGrouped VistaType = "grouped"
 )
 
 // Defines values for WebCrawlerJobState.
@@ -879,6 +984,9 @@ const (
 	AccountDeleted        WebhookEventType = "account_deleted"
 	AccountUpdated        WebhookEventType = "account_updated"
 	AiAgentResponse       WebhookEventType = "ai_agent_response"
+	ArticleCreated        WebhookEventType = "article_created"
+	ArticleDeleted        WebhookEventType = "article_deleted"
+	ArticleUpdated        WebhookEventType = "article_updated"
 	ConversationCreated   WebhookEventType = "conversation_created"
 	ConversationDeleted   WebhookEventType = "conversation_deleted"
 	ConversationUpdated   WebhookEventType = "conversation_updated"
@@ -964,6 +1072,12 @@ const (
 const (
 	WorkTypeIssue  WorkType = "issue"
 	WorkTypeTicket WorkType = "ticket"
+)
+
+// Defines values for WorksVistaGroupItemType.
+const (
+	Curated WorksVistaGroupItemType = "curated"
+	Dynamic WorksVistaGroupItemType = "dynamic"
 )
 
 // AccessLevel defines model for access-level.
@@ -1237,6 +1351,70 @@ type AddTagWithValue struct {
 	Value *string `json:"value,omitempty"`
 }
 
+// AggregatedSchema List of custom fields from multiple source fragments.
+type AggregatedSchema struct {
+	// Apps Apps corresponding to the app fragments used to populate the same
+	// in the object.
+	Apps *[]string `json:"apps,omitempty"`
+
+	// Conditions The conditions associated with the fields.
+	Conditions *[]CustomSchemaFragmentCondition `json:"conditions,omitempty"`
+
+	// CustomCompositeSchemas List of all composite schemas used by custom fields.
+	CustomCompositeSchemas []CompositeSchema `json:"custom_composite_schemas"`
+
+	// CustomFields List of all custom fields in this schema.
+	CustomFields []SchemaFieldDescriptor `json:"custom_fields"`
+
+	// Description Description of the schema.
+	Description *string `json:"description,omitempty"`
+
+	// IsCustomLeafType True when the fragments being aggregated correspond to a custom
+	// leaf type.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType Leaf type of the fragments being aggregated.
+	LeafType       *string              `json:"leaf_type,omitempty"`
+	StageDiagramId *StageDiagramSummary `json:"stage_diagram_id,omitempty"`
+
+	// StockCompositeSchemas List of all composite schemas used by stock fields.
+	StockCompositeSchemas []CompositeSchema `json:"stock_composite_schemas"`
+
+	// StockFieldOverrides Optional overrides for properties of stock fields. Overrides in the
+	// custom type fragment take precedence over those defined in the
+	// tenant fragment.
+	StockFieldOverrides *[]StockFieldOverride `json:"stock_field_overrides,omitempty"`
+
+	// StockFields List of all stock fields in this schema.
+	StockFields []SchemaFieldDescriptor `json:"stock_fields"`
+
+	// Subtype Subtype corresponding to the custom type fragment used to populate
+	// the same in the object.
+	Subtype *string `json:"subtype,omitempty"`
+
+	// SubtypeDisplayName Display name of the subtype.
+	SubtypeDisplayName *string `json:"subtype_display_name,omitempty"`
+}
+
+// AggregatedSchemaGetRequest defines model for aggregated-schema-get-request.
+type AggregatedSchemaGetRequest struct {
+	// CustomSchemaSpec Custom schemas described using identifiers
+	CustomSchemaSpec *CustomSchemaSpecForRead `json:"custom_schema_spec,omitempty"`
+
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType The leaf type. Used for inferring the default stage diagram and
+	// tenant fragment ID.
+	LeafType *string `json:"leaf_type,omitempty"`
+}
+
+// AggregatedSchemaGetResponseBody defines model for aggregated-schema-get-response.
+type AggregatedSchemaGetResponseBody struct {
+	// Schema List of custom fields from multiple source fragments.
+	Schema AggregatedSchema `json:"schema"`
+}
+
 // AiAgentEventExecuteError An error object providing the error message for the AI agent event
 // execution.
 type AiAgentEventExecuteError struct {
@@ -1310,6 +1488,16 @@ type AiAgentMessageGenerationStarted struct {
 type AiAgentSuggestion struct {
 	// Suggestion The text of the suggestion.
 	Suggestion string `json:"suggestion"`
+}
+
+// AppliesToPartFilter The filter for applies to part.
+type AppliesToPartFilter struct {
+	// IncludeChildParts Whether to include items belonging to children of any of the
+	// provided parts.
+	IncludeChildParts *bool `json:"include_child_parts,omitempty"`
+
+	// Parts Part IDs to filter on.
+	Parts []string `json:"parts"`
 }
 
 // ArchetypeMetricTarget Metric with corresponding target values.
@@ -1457,6 +1645,24 @@ type ArticleDataSourceCreate struct {
 // ArticleStatus Status of the article.
 type ArticleStatus string
 
+// ArticleSummary defines model for article-summary.
+type ArticleSummary struct {
+	// ArticleType Type of the article.
+	ArticleType *ArticleType `json:"article_type,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Resource Resource details.
+	Resource *ResourceSummary `json:"resource,omitempty"`
+
+	// Title Title of the article.
+	Title *string `json:"title,omitempty"`
+}
+
 // ArticleType Type of the article.
 type ArticleType string
 
@@ -1568,9 +1774,6 @@ type ArticlesDeleteResponseBody = map[string]interface{}
 
 // ArticlesGetRequest The request to get an article.
 type ArticlesGetRequest struct {
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
-
 	// Id The ID of the required article.
 	Id string `json:"id"`
 }
@@ -1601,9 +1804,6 @@ type ArticlesListRequest struct {
 	// Cursor The cursor to resume iteration from. If not provided, then
 	// iteration starts from the beginning.
 	Cursor *string `json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
 
 	// Limit The maximum number of articles to return. The default is '50'.
 	Limit *int32 `json:"limit,omitempty"`
@@ -2175,6 +2375,9 @@ type AuthTokenTokenType string
 
 // AuthTokensAccountTraits Carries account info.
 type AuthTokensAccountTraits struct {
+	// CustomFields Application-defined custom fields of the account.
+	CustomFields *map[string]interface{} `json:"custom_fields,omitempty"`
+
 	// DisplayName The display name of the account.
 	DisplayName *string `json:"display_name,omitempty"`
 
@@ -2609,6 +2812,41 @@ type ChatsUpdateResponseBody struct {
 	Chat Chat `json:"chat"`
 }
 
+// ClientOverride UI hint overrides for a client.
+type ClientOverride struct {
+	// ClientName The name of the client.
+	ClientName *string `json:"client_name,omitempty"`
+
+	// DecimalPlaces Number of decimal places to show. Only applicable for number
+	// fields.
+	DecimalPlaces *int32 `json:"decimal_places,omitempty"`
+
+	// DisplayName The display name of the field.
+	DisplayName *string `json:"display_name,omitempty"`
+
+	// IsGroupable Whether the field is groupable in the UI.
+	IsGroupable *bool `json:"is_groupable,omitempty"`
+
+	// IsHidden Whether the field is hidden in the UI.
+	IsHidden *bool `json:"is_hidden,omitempty"`
+
+	// Order Relative order in which the field is shown.
+	Order *int32 `json:"order,omitempty"`
+
+	// Placeholder A placeholder for the field.
+	Placeholder *string `json:"placeholder,omitempty"`
+
+	// Tooltip Tooltip for the field.
+	Tooltip *string `json:"tooltip,omitempty"`
+
+	// UseShorthandNotation Whether to use shorthand notation. Example, 1K instead of 1000.
+	// Only applicable for number fields.
+	UseShorthandNotation *bool `json:"use_shorthand_notation,omitempty"`
+
+	// ViewOverrides The view overrides for the client.
+	ViewOverrides *[]ViewOverride `json:"view_overrides,omitempty"`
+}
+
 // CodeChange defines model for code-change.
 type CodeChange struct {
 	// Branch Name of the code branch in the repo.
@@ -2970,6 +3208,18 @@ type CommandsListResponseBody struct {
 	PrevCursor *string `json:"prev_cursor,omitempty"`
 }
 
+// CompositeSchema The schema of a composite type.
+type CompositeSchema struct {
+	// Description Description of this composite type.
+	Description *string `json:"description,omitempty"`
+
+	// Fields List of all fields in this schema.
+	Fields []SchemaFieldDescriptor `json:"fields"`
+
+	// Name Name of this composite type.
+	Name *string `json:"name,omitempty"`
+}
+
 // Conversation defines model for conversation.
 type Conversation struct {
 	// Channels Channel IDs of the conversation.
@@ -3008,6 +3258,10 @@ type Conversation struct {
 	// SlaSummary SLA summary for the object.
 	SlaSummary *ArchetypeSlaSummary `json:"sla_summary,omitempty"`
 	SlaTracker *SlaTrackerSummary   `json:"sla_tracker,omitempty"`
+
+	// SourceChannel Source channel for the conversation.
+	SourceChannel   *string                              `json:"source_channel,omitempty"`
+	SourceChannelV2 *ExternalCommunicationChannelSummary `json:"source_channel_v2,omitempty"`
 
 	// Stage Describes the current stage of a work item.
 	Stage *LegacyStage `json:"stage,omitempty"`
@@ -3341,6 +3595,31 @@ type ConversationsUpdateResponseBody struct {
 	Conversation Conversation `json:"conversation"`
 }
 
+// ConversationsVistaGroupItem defines model for conversations-vista-group-item.
+type ConversationsVistaGroupItem struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Type of conversations vista group item.
+	Type ConversationsVistaGroupItemType `json:"type"`
+}
+
+// ConversationsVistaGroupItemType Type of conversations vista group item.
+type ConversationsVistaGroupItemType string
+
 // CreateCommandAction defines model for create-command-action.
 type CreateCommandAction struct {
 	ActionDetails *CreateCommandActionDetails `json:"action_details,omitempty"`
@@ -3404,6 +3683,34 @@ type CreateOrgScheduleInterval struct {
 	To *time.Time `json:"to,omitempty"`
 }
 
+// CreateStageNode defines model for create-stage-node.
+type CreateStageNode struct {
+	// IsDeprecated Whether this stage is deprecated.
+	IsDeprecated *bool `json:"is_deprecated,omitempty"`
+
+	// IsStart Whether this is the start stage.
+	IsStart *bool `json:"is_start,omitempty"`
+
+	// StageId The ID of the stage.
+	StageId string `json:"stage_id"`
+
+	// Transitions List of transitions from this stage.
+	Transitions *[]CreateStageTransition `json:"transitions,omitempty"`
+}
+
+// CreateStageTransition defines model for create-stage-transition.
+type CreateStageTransition struct {
+	// TargetStageId The ID of the target stage.
+	TargetStageId string                 `json:"target_stage_id"`
+	Ui            *CreateStageUiMetadata `json:"ui,omitempty"`
+}
+
+// CreateStageUiMetadata defines model for create-stage-ui-metadata.
+type CreateStageUiMetadata struct {
+	// IsHidden Whether the stage is hidden.
+	IsHidden *bool `json:"is_hidden,omitempty"`
+}
+
 // CreateWeeklyOrgScheduleInterval defines model for create-weekly-org-schedule-interval.
 type CreateWeeklyOrgScheduleInterval struct {
 	// From Duration in minutes of the week when the interval starts. 0 is
@@ -3414,6 +3721,418 @@ type CreateWeeklyOrgScheduleInterval struct {
 	// larger than 'from'). 0 is Sunday midnight, when Sunday ends and
 	// Monday begins.
 	To int64 `json:"to"`
+}
+
+// CuratedVista defines model for curated-vista.
+type CuratedVista struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault *bool `json:"is_default,omitempty"`
+
+	// Items Item list to store a curated list of DevRev objects.
+	Items      *[]AtomSummary `json:"items,omitempty"`
+	ModifiedBy *UserSummary   `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+}
+
+// CustomObject defines model for custom-object.
+type CustomObject struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// LeafType Type of the object.
+	LeafType   *string      `json:"leaf_type,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Stage Describes the current stage of a object.
+	Stage *Stage `json:"stage,omitempty"`
+
+	// Title Title of the object.
+	Title *string `json:"title,omitempty"`
+
+	// UniqueKey A unique key that, if provided, ensures the combination of
+	// {leaf_type, unique_key} is distinct across all objects in the
+	// system.
+	UniqueKey *string `json:"unique_key,omitempty"`
+}
+
+// CustomObjectsCountRequest defines model for custom-objects-count-request.
+type CustomObjectsCountRequest struct {
+	// Filters List of filters to apply.
+	Filters *[]interface{} `json:"filters,omitempty"`
+
+	// LeafType Leaf type to filter.
+	LeafType string `json:"leaf_type"`
+}
+
+// CustomObjectsCountResponseBody defines model for custom-objects-count-response.
+type CustomObjectsCountResponseBody struct {
+	// Count The count of custom objects.
+	Count int64 `json:"count"`
+}
+
+// CustomObjectsCreateRequest defines model for custom-objects-create-request.
+type CustomObjectsCreateRequest struct {
+	// CustomFields Custom fields of the custom object.
+	CustomFields *map[string]interface{} `json:"custom_fields,omitempty"`
+
+	// CustomSchemaSpec Custom schemas described using identifiers. Each custom field in the
+	// request must have the corresponding schema specified; omission results
+	// in a Bad Request error. If a custom schema is not included in the
+	// specifier, it remains unchanged. For surfaces with human interactors,
+	// it is recommended to provide tenant_fragment: true and
+	// validate_required_fields: true.
+	CustomSchemaSpec *CustomSchemaSpec `json:"custom_schema_spec,omitempty"`
+
+	// LeafType Leaf type of the custom object.
+	LeafType string `json:"leaf_type"`
+
+	// Stage The stage of the custom object.
+	Stage *string `json:"stage,omitempty"`
+
+	// StageValidationOptions The type of stage validations options when creating a custom
+	// object.
+	StageValidationOptions *[]StageValidationOptionForCreate `json:"stage_validation_options,omitempty"`
+
+	// Title Title of the custom object.
+	Title *string `json:"title,omitempty"`
+
+	// UniqueKey The unique key of the custom object.This can be used to hold an
+	// external reference to another object.
+	UniqueKey *string `json:"unique_key,omitempty"`
+}
+
+// CustomObjectsCreateResponseBody defines model for custom-objects-create-response.
+type CustomObjectsCreateResponseBody struct {
+	CustomObject CustomObject `json:"custom_object"`
+}
+
+// CustomObjectsDeleteRequest defines model for custom-objects-delete-request.
+type CustomObjectsDeleteRequest struct {
+	// Id The ID of the custom object to get.
+	Id string `json:"id"`
+}
+
+// CustomObjectsDeleteResponseBody defines model for custom-objects-delete-response.
+type CustomObjectsDeleteResponseBody = map[string]interface{}
+
+// CustomObjectsGetRequest defines model for custom-objects-get-request.
+type CustomObjectsGetRequest struct {
+	// Id The ID of the custom object to get.
+	Id *string `json:"id,omitempty"`
+}
+
+// CustomObjectsGetResponseBody defines model for custom-objects-get-response.
+type CustomObjectsGetResponseBody struct {
+	CustomObject CustomObject `json:"custom_object"`
+}
+
+// CustomObjectsListRequest defines model for custom-objects-list-request.
+type CustomObjectsListRequest struct {
+	// Cursor The cursor to resume iteration from. If not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Filter List of filters to apply.
+	Filter *[]interface{} `json:"filter,omitempty"`
+
+	// Filters List of filters to apply.
+	Filters *[]interface{} `json:"filters,omitempty"`
+
+	// LeafType Leaf type to filter.
+	LeafType string `json:"leaf_type"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Mode The iteration mode to use. If "after", then entries after the provided
+	// cursor will be returned, or if no cursor is provided, then from the
+	// beginning. If "before", then entries before the provided cursor will be
+	// returned, or if no cursor is provided, then from the end. Entries will
+	// always be returned in the specified sort-by order.
+	Mode *ListMode `json:"mode,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+}
+
+// CustomObjectsListResponseBody The response to listing all custom objects matching the filter
+// criteria.
+type CustomObjectsListResponseBody struct {
+	// NextCursor The cursor used to iterate subsequent results in accordance to the
+	// sort order. If not set, then no later elements exist.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor The cursor used to iterate preceding results in accordance to the
+	// sort order. If not set, then no prior elements exist.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// Result The custom objects.
+	Result []CustomObject `json:"result"`
+}
+
+// CustomObjectsUpdateRequest defines model for custom-objects-update-request.
+type CustomObjectsUpdateRequest struct {
+	// CustomFields Custom fields of the custom object.
+	CustomFields *map[string]interface{} `json:"custom_fields,omitempty"`
+
+	// CustomSchemaSpec Custom schemas described using identifiers. Each custom field in the
+	// request must have the corresponding schema specified; omission results
+	// in a Bad Request error. If a custom schema is not included in the
+	// specifier, it remains unchanged. For surfaces with human interactors,
+	// it is recommended to provide tenant_fragment: true and
+	// validate_required_fields: true.
+	CustomSchemaSpec *CustomSchemaSpec `json:"custom_schema_spec,omitempty"`
+
+	// Id The ID of the custom object to update.
+	Id string `json:"id"`
+
+	// Stage Updates the stage of the custom object.
+	Stage *string `json:"stage"`
+
+	// StageValidationOptions The type of stage validations options when updating the stage or
+	// the stage diagram of a custom object.
+	StageValidationOptions *[]StageValidationOptionForUpdate `json:"stage_validation_options,omitempty"`
+
+	// Title Updates the title of the custom object.
+	Title *string `json:"title"`
+}
+
+// CustomObjectsUpdateResponseBody defines model for custom-objects-update-response.
+type CustomObjectsUpdateResponseBody struct {
+	CustomObject CustomObject `json:"custom_object"`
+}
+
+// CustomSchemaFragment defines model for custom-schema-fragment.
+type CustomSchemaFragment struct {
+	Type CustomSchemaFragmentType `json:"type"`
+}
+
+// CustomSchemaFragmentCondition The condition associated with a field.
+type CustomSchemaFragmentCondition struct {
+	// Effects The associated effects when the expression evaluates to true.
+	Effects *[]CustomSchemaFragmentEffect `json:"effects,omitempty"`
+
+	// Expression The expression to evaluate.
+	Expression *string `json:"expression,omitempty"`
+}
+
+// CustomSchemaFragmentEffect An effect associated with a condition.
+type CustomSchemaFragmentEffect struct {
+	// AllowedValues Allowed values for the fields based on the condition. This takes
+	// precedence over allowed_values in field_descriptor.
+	AllowedValues *[]string `json:"allowed_values,omitempty"`
+
+	// Fields The fields which are affected by the condition.
+	Fields []string `json:"fields"`
+
+	// Immutable Whether the fields should be made immutable or not based on the
+	// condition.
+	Immutable *bool `json:"immutable,omitempty"`
+
+	// Require Whether the fields are required or not based on the condition. This
+	// takes precedence over is_required in field_descriptor.
+	Require *bool `json:"require,omitempty"`
+
+	// Show Whether the fields are shown or not based on the condition.
+	Show *bool `json:"show,omitempty"`
+}
+
+// CustomSchemaFragmentType defines model for custom-schema-fragment-type.
+type CustomSchemaFragmentType = string
+
+// CustomSchemaFragmentsGetRequest defines model for custom-schema-fragments-get-request.
+type CustomSchemaFragmentsGetRequest struct {
+	// Id The ID of the custom schema fragment.
+	Id string `json:"id"`
+}
+
+// CustomSchemaFragmentsGetResponseBody defines model for custom-schema-fragments-get-response.
+type CustomSchemaFragmentsGetResponseBody struct {
+	Fragment CustomSchemaFragment `json:"fragment"`
+}
+
+// CustomSchemaFragmentsListRequest defines model for custom-schema-fragments-list-request.
+type CustomSchemaFragmentsListRequest struct {
+	// App The list of app names.
+	App *[]string `json:"app,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Deprecated Whether only deprecated fragments should be filtered.
+	// Deprecated:
+	Deprecated *bool `json:"deprecated,omitempty"`
+
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// IsDeprecated Whether the fragment has been deprecated.
+	IsDeprecated *bool `json:"is_deprecated,omitempty"`
+
+	// LeafType The list of leaf types.
+	LeafType *[]string `json:"leaf_type,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Mode The iteration mode to use. If "after", then entries after the provided
+	// cursor will be returned, or if no cursor is provided, then from the
+	// beginning. If "before", then entries before the provided cursor will be
+	// returned, or if no cursor is provided, then from the end. Entries will
+	// always be returned in the specified sort-by order.
+	Mode *ListMode `json:"mode,omitempty"`
+
+	// Prune List of fields which are not required in the payload and can be
+	// pruned away.
+	Prune *[]CustomSchemaFragmentsListRequestPrune `json:"prune,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
+	// Subtype The list of subtypes.
+	Subtype *[]string `json:"subtype,omitempty"`
+
+	// Types Filters for custom schema fragment of the provided types.
+	Types *[]CustomSchemaFragmentType `json:"types,omitempty"`
+}
+
+// CustomSchemaFragmentsListRequestPrune defines model for custom-schema-fragments-list-request-prune.
+type CustomSchemaFragmentsListRequestPrune string
+
+// CustomSchemaFragmentsListResponseBody defines model for custom-schema-fragments-list-response.
+type CustomSchemaFragmentsListResponseBody struct {
+	// NextCursor The cursor used to iterate subsequent results in accordance to the
+	// sort order. If not set, then no later elements exist.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor The cursor used to iterate preceding results in accordance to the
+	// sort order. If not set, then no prior elements exist.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// Result The custom schema fragments.
+	Result []CustomSchemaFragment `json:"result"`
+}
+
+// CustomSchemaFragmentsSetRequest defines model for custom-schema-fragments-set-request.
+type CustomSchemaFragmentsSetRequest struct {
+	// CompositeSchemas List of all composite schemas used in this fragment.
+	CompositeSchemas *[]CustomSchemaFragmentsSetRequestCompositeSchema `json:"composite_schemas,omitempty"`
+
+	// Conditions List of conditions for this fragment.
+	Conditions *[]CustomSchemaFragmentCondition `json:"conditions,omitempty"`
+
+	// DeletedFields List of field names which are being dropped.
+	DeletedFields *[]string `json:"deleted_fields,omitempty"`
+
+	// Deprecated Whether this fragment has been deprecated.
+	// Deprecated:
+	Deprecated *bool `json:"deprecated,omitempty"`
+
+	// Description The description of the custom schema fragment.
+	Description string `json:"description"`
+
+	// Fields List of all fields in this fragment.
+	Fields *[]SchemaFieldDescriptor `json:"fields,omitempty"`
+
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// IsDeprecated Whether this fragment has been deprecated.
+	IsDeprecated *bool `json:"is_deprecated,omitempty"`
+
+	// LeafType The leaf type this fragment applies to.
+	LeafType string                              `json:"leaf_type"`
+	Type     CustomSchemaFragmentsSetRequestType `json:"type"`
+	union    json.RawMessage
+}
+
+// CustomSchemaFragmentsSetRequestAppFragment defines model for custom-schema-fragments-set-request-app-fragment.
+type CustomSchemaFragmentsSetRequestAppFragment struct {
+	// App The app this fragment applies to.
+	App string `json:"app"`
+
+	// AppDisplayName The display name of the app.
+	AppDisplayName *string `json:"app_display_name,omitempty"`
+}
+
+// CustomSchemaFragmentsSetRequestCompositeSchema defines model for custom-schema-fragments-set-request-composite-schema.
+type CustomSchemaFragmentsSetRequestCompositeSchema struct {
+	// Description Description of this composite type.
+	Description *string `json:"description,omitempty"`
+
+	// Fields List of fields in this composite type.
+	Fields []SchemaFieldDescriptor `json:"fields"`
+
+	// Name The name of this composite type.
+	Name *string `json:"name,omitempty"`
+}
+
+// CustomSchemaFragmentsSetRequestCustomTypeFragment defines model for custom-schema-fragments-set-request-custom-type-fragment.
+type CustomSchemaFragmentsSetRequestCustomTypeFragment struct {
+	// Path Path components used to display available custom types in tree
+	// form.
+	Path *[]CustomTypePathComponent `json:"path,omitempty"`
+
+	// StageDiagram The ID of the associated custom stage diagram.
+	StageDiagram *string `json:"stage_diagram,omitempty"`
+
+	// StockFieldOverrides List of Per-DevOrg stock field overrides.
+	StockFieldOverrides *[]StockFieldOverride `json:"stock_field_overrides,omitempty"`
+
+	// Subtype The string used to populate the subtype in the leaf type.
+	Subtype string `json:"subtype"`
+
+	// SubtypeDisplayName The display name of the subtype.
+	SubtypeDisplayName *string `json:"subtype_display_name,omitempty"`
+}
+
+// CustomSchemaFragmentsSetRequestTenantFragment defines model for custom-schema-fragments-set-request-tenant-fragment.
+type CustomSchemaFragmentsSetRequestTenantFragment struct {
+	// IdPrefix The display ID prefix for the custom object.
+	IdPrefix *string `json:"id_prefix,omitempty"`
+
+	// StockFieldOverrides List of Per-DevOrg stock field overrides.
+	StockFieldOverrides *[]StockFieldOverride `json:"stock_field_overrides,omitempty"`
+}
+
+// CustomSchemaFragmentsSetRequestType defines model for custom-schema-fragments-set-request-type.
+type CustomSchemaFragmentsSetRequestType string
+
+// CustomSchemaFragmentsSetResponseBody defines model for custom-schema-fragments-set-response.
+type CustomSchemaFragmentsSetResponseBody struct {
+	// Id The ID of the custom schema fragment.
+	Id string `json:"id"`
 }
 
 // CustomSchemaSpec Custom schemas described using identifiers. Each custom field in the
@@ -3435,6 +4154,258 @@ type CustomSchemaSpec struct {
 	// ValidateRequiredFields Whether to enforce required fields validation.
 	ValidateRequiredFields *bool `json:"validate_required_fields,omitempty"`
 }
+
+// CustomSchemaSpecForRead Custom schemas described using identifiers
+type CustomSchemaSpecForRead struct {
+	// Apps List of apps.
+	Apps *[]string `json:"apps,omitempty"`
+
+	// Subtype Name of the subtype.
+	Subtype *string `json:"subtype,omitempty"`
+}
+
+// CustomStage defines model for custom-stage.
+type CustomStage struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id         string       `json:"id"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name The human readable name of the stage.
+	Name *string `json:"name,omitempty"`
+
+	// Ordinal Position of the stage in the global stage ordering.
+	Ordinal *int32              `json:"ordinal,omitempty"`
+	State   *CustomStateSummary `json:"state,omitempty"`
+}
+
+// CustomStageSummary defines model for custom-stage-summary.
+type CustomStageSummary struct {
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name The human readable name of the stage.
+	Name *string `json:"name,omitempty"`
+}
+
+// CustomStagesCreateRequest defines model for custom-stages-create-request.
+type CustomStagesCreateRequest struct {
+	// MarketplaceRef A reference to the marketplace item from which this stage was
+	// imported.
+	MarketplaceRef *string `json:"marketplace_ref,omitempty"`
+
+	// Name The name of the custom stage.
+	Name string `json:"name"`
+
+	// Ordinal The ordinal of the custom stage used for ordering.
+	Ordinal int32 `json:"ordinal"`
+
+	// State The state ID.
+	State string `json:"state"`
+}
+
+// CustomStagesCreateResponseBody defines model for custom-stages-create-response.
+type CustomStagesCreateResponseBody struct {
+	CustomStage CustomStage `json:"custom_stage"`
+}
+
+// CustomStagesGetRequest defines model for custom-stages-get-request.
+type CustomStagesGetRequest struct {
+	// Id The ID of the custom stage to get.
+	Id string `json:"id"`
+}
+
+// CustomStagesGetResponseBody defines model for custom-stages-get-response.
+type CustomStagesGetResponseBody struct {
+	CustomStage CustomStage `json:"custom_stage"`
+}
+
+// CustomStagesListRequest defines model for custom-stages-list-request.
+type CustomStagesListRequest struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided,
+	// then iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Name The list of stage names.
+	Name *[]string `json:"name,omitempty"`
+
+	// Ordinal The list of stage ordinals.
+	Ordinal *[]int32 `json:"ordinal,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+}
+
+// CustomStagesListResponseBody defines model for custom-stages-list-response.
+type CustomStagesListResponseBody struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided,
+	// then iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Result The custom stages.
+	Result []CustomStage `json:"result"`
+}
+
+// CustomStagesUpdateRequest defines model for custom-stages-update-request.
+type CustomStagesUpdateRequest struct {
+	// Id The ID of the custom stage to update.
+	Id string `json:"id"`
+
+	// Name The updated name of the custom stage.
+	Name *string `json:"name,omitempty"`
+
+	// Ordinal The ordinal of the custom stage.
+	Ordinal *int32 `json:"ordinal,omitempty"`
+
+	// StateId The state ID.
+	StateId *string `json:"state_id,omitempty"`
+}
+
+// CustomStagesUpdateResponseBody defines model for custom-stages-update-response.
+type CustomStagesUpdateResponseBody struct {
+	CustomStage CustomStage `json:"custom_stage"`
+}
+
+// CustomState defines model for custom-state.
+type CustomState struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsFinal True if this is a final state.
+	IsFinal    *bool        `json:"is_final,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name The human readable name of the state.
+	Name *string `json:"name,omitempty"`
+
+	// Ordinal Position of the state in the global state ordering.
+	Ordinal *int32 `json:"ordinal,omitempty"`
+}
+
+// CustomStateSummary defines model for custom-state-summary.
+type CustomStateSummary struct {
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsFinal True if this is a final state.
+	IsFinal *bool `json:"is_final,omitempty"`
+
+	// Name The human readable name of the state.
+	Name *string `json:"name,omitempty"`
+}
+
+// CustomStatesCreateRequest defines model for custom-states-create-request.
+type CustomStatesCreateRequest struct {
+	// IsFinal Whether this is a final state.
+	IsFinal *bool `json:"is_final,omitempty"`
+
+	// Name The name of the custom state.
+	Name string `json:"name"`
+
+	// Ordinal Ordinal of the custom state used to identify system states.
+	Ordinal int32 `json:"ordinal"`
+}
+
+// CustomStatesCreateResponseBody defines model for custom-states-create-response.
+type CustomStatesCreateResponseBody struct {
+	CustomState CustomState `json:"custom_state"`
+}
+
+// CustomStatesGetRequest defines model for custom-states-get-request.
+type CustomStatesGetRequest struct {
+	// Id The ID of the custom state to get.
+	Id string `json:"id"`
+}
+
+// CustomStatesGetResponseBody defines model for custom-states-get-response.
+type CustomStatesGetResponseBody struct {
+	CustomState CustomState `json:"custom_state"`
+}
+
+// CustomStatesListRequest defines model for custom-states-list-request.
+type CustomStatesListRequest struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided,
+	// then iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// IsFinal Whether only final states should be filtered.
+	IsFinal *bool `json:"is_final,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Name The list of state names.
+	Name *[]string `json:"name,omitempty"`
+
+	// Ordinal The list of state ordinals.
+	Ordinal *[]int32 `json:"ordinal,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+}
+
+// CustomStatesListResponseBody defines model for custom-states-list-response.
+type CustomStatesListResponseBody struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided,
+	// then iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Result The custom states.
+	Result []CustomState `json:"result"`
+}
+
+// CustomStatesUpdateRequest defines model for custom-states-update-request.
+type CustomStatesUpdateRequest struct {
+	// Id The ID of the custom state to update.
+	Id string `json:"id"`
+
+	// IsFinal Whether this is a final state.
+	IsFinal *bool `json:"is_final,omitempty"`
+
+	// Name The name of the custom state.
+	Name *string `json:"name,omitempty"`
+
+	// Ordinal Ordinal of the custom state used to identify system states.
+	Ordinal *int32 `json:"ordinal,omitempty"`
+}
+
+// CustomStatesUpdateResponseBody defines model for custom-states-update-response.
+type CustomStatesUpdateResponseBody struct {
+	CustomState CustomState `json:"custom_state"`
+}
+
+// CustomTypePathComponent Path component for rendering custom type lists in tree form.
+type CustomTypePathComponent = map[string]interface{}
 
 // Dashboard defines model for dashboard.
 type Dashboard = AtomBase
@@ -3989,6 +4960,9 @@ type DevUsersSelfUpdateRequest struct {
 
 	// JobTitle Job title of the Dev User.
 	JobTitle *DevUserJobTitle `json:"job_title,omitempty"`
+
+	// ReportsTo The ID of the Dev user that the user reports to.
+	ReportsTo *string `json:"reports_to,omitempty"`
 }
 
 // DevUsersUpdateJobHistoryItem defines model for dev-users-update-job-history-item.
@@ -4043,6 +5017,9 @@ type DevUsersUpdateRequest struct {
 
 	// JobTitle Job title of the Dev User.
 	JobTitle *DevUserJobTitle `json:"job_title,omitempty"`
+
+	// ReportsTo The ID of the Dev user that the user reports to.
+	ReportsTo *string `json:"reports_to,omitempty"`
 }
 
 // DevUsersUpdateResponseBody The response to update a Dev user.
@@ -4108,9 +5085,6 @@ type DirectoriesDeleteResponseBody = map[string]interface{}
 
 // DirectoriesGetRequest The request to get a directory.
 type DirectoriesGetRequest struct {
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
-
 	// Id The ID of the requested directory.
 	Id string `json:"id"`
 }
@@ -4128,9 +5102,6 @@ type DirectoriesListRequest struct {
 	// Cursor The cursor to resume iteration from. If not provided, then
 	// iteration starts from the beginning.
 	Cursor *string `json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `json:"dev_org,omitempty"`
 
 	// Limit The maximum number of directories to return. The default is '50'.
 	Limit *int32 `json:"limit,omitempty"`
@@ -4250,6 +5221,39 @@ type DirectorySummary = AtomBaseSummary
 
 // DynamicGroupInfo Information to define dynamic groups.
 type DynamicGroupInfo = map[string]interface{}
+
+// DynamicVista defines model for dynamic-vista.
+type DynamicVista struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// FilterType Type of DevRev object for which the vista is applicable.
+	FilterType DynamicVistaFilterType `json:"filter_type"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault  *bool        `json:"is_default,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+}
+
+// DynamicVistaFilterType Type of DevRev object for which the vista is applicable.
+type DynamicVistaFilterType string
 
 // Empty defines model for empty.
 type Empty = map[string]interface{}
@@ -4858,6 +5862,24 @@ type EventAiAgentResponseBody struct {
 // EventAiAgentResponseAgentResponse defines model for EventAiAgentResponse.AgentResponse.
 type EventAiAgentResponseAgentResponse string
 
+// EventArticleCreated defines model for event-article-created.
+type EventArticleCreated struct {
+	Article Article `json:"article"`
+}
+
+// EventArticleDeleted defines model for event-article-deleted.
+type EventArticleDeleted struct {
+	// Id The ID of the article that was deleted.
+	Id         string   `json:"id"`
+	OldArticle *Article `json:"old_article,omitempty"`
+}
+
+// EventArticleUpdated defines model for event-article-updated.
+type EventArticleUpdated struct {
+	Article    Article  `json:"article"`
+	OldArticle *Article `json:"old_article,omitempty"`
+}
+
 // EventConversationCreated defines model for event-conversation-created.
 type EventConversationCreated struct {
 	Conversation Conversation `json:"conversation"`
@@ -5277,13 +6299,101 @@ type Feature = PartBase
 type FeatureSummary = PartBaseSummary
 
 // FieldDescriptor Set of field attributes.
-type FieldDescriptor = map[string]interface{}
+type FieldDescriptor struct {
+	// DefaultValue The default value for this field.
+	DefaultValue *map[string]interface{} `json:"default_value,omitempty"`
+
+	// Description Description of the field.
+	Description *string `json:"description,omitempty"`
+
+	// IsFilterable Whether this field is filterable, groupable and sortable.
+	IsFilterable *bool `json:"is_filterable,omitempty"`
+
+	// IsImmutable Whether this field is immutable or not.
+	IsImmutable *bool `json:"is_immutable,omitempty"`
+
+	// IsOverridable Whether a stock unified enum can be extended with new values.
+	IsOverridable *bool `json:"is_overridable,omitempty"`
+
+	// IsRequired Whether this field is required or not.
+	IsRequired *bool `json:"is_required,omitempty"`
+
+	// IsSensitive Whether this field can hold PII or sensitive information that
+	// should not be logged.
+	IsSensitive *bool `json:"is_sensitive,omitempty"`
+
+	// IsSystem Whether this field is a system field or not.
+	IsSystem *bool `json:"is_system,omitempty"`
+
+	// Name Name of the field.
+	Name *string `json:"name,omitempty"`
+
+	// UenumValues Allowed values for a unified enum.
+	UenumValues *[]SchemaFieldUenumValue `json:"uenum_values,omitempty"`
+
+	// Ui The schema of ui specific fields.
+	Ui *SchemaFieldUiMetadata `json:"ui,omitempty"`
+
+	// Validation Validation annotations.
+	Validation *FieldValidation `json:"validation,omitempty"`
+}
+
+// FieldValidation Validation annotations.
+type FieldValidation struct {
+	// Contains string contains.
+	Contains *string `json:"contains,omitempty"`
+
+	// Disabled disables validations for this field.
+	Disabled *bool `json:"disabled,omitempty"`
+
+	// EqItems exact array length.
+	EqItems *int32 `json:"eq_items,omitempty"`
+
+	// EqLen exact string length.
+	EqLen *int32 `json:"eq_len,omitempty"`
+
+	// Gt int must be greater than this.
+	Gt *int32 `json:"gt,omitempty"`
+
+	// Gte int must be greater or equal than this.
+	Gte *int32 `json:"gte,omitempty"`
+
+	// Lt int must be less than this.
+	Lt *int32 `json:"lt,omitempty"`
+
+	// Lte int must be less or equal than this.
+	Lte *int32 `json:"lte,omitempty"`
+
+	// MaxItems maximum array length.
+	MaxItems *int32 `json:"max_items,omitempty"`
+
+	// MaxLen maximum string length.
+	MaxLen *int32 `json:"max_len,omitempty"`
+
+	// MinItems minimum array length.
+	MinItems *int32 `json:"min_items,omitempty"`
+
+	// MinLen minimum string length.
+	MinLen *int32 `json:"min_len,omitempty"`
+
+	// Pattern string pattern (re).
+	Pattern *string `json:"pattern,omitempty"`
+
+	// Prefix string prefix.
+	Prefix *string `json:"prefix,omitempty"`
+
+	// Suffix string suffix.
+	Suffix *string `json:"suffix,omitempty"`
+}
 
 // Group defines model for group.
 type Group = AtomBase
 
 // GroupIngestionSource Creation source of the group.
 type GroupIngestionSource string
+
+// GroupItemType Type of the vista group item object.
+type GroupItemType string
 
 // GroupMemberType Type of the members in the group.
 type GroupMemberType string
@@ -5366,6 +6476,45 @@ type GroupSummary = AtomBaseSummary
 
 // GroupType Type of the group.
 type GroupType string
+
+// GroupedVista defines model for grouped-vista.
+type GroupedVista struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// FilterType Type of DevRev object for which the grouped vista is applicable.
+	FilterType GroupedVistaFilterType `json:"filter_type"`
+
+	// Flavor Denotes the use case of the grouped vista.
+	Flavor *GroupedVistaFlavor `json:"flavor,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault  *bool        `json:"is_default,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+}
+
+// GroupedVistaFilterType Type of DevRev object for which the grouped vista is applicable.
+type GroupedVistaFilterType string
+
+// GroupedVistaFlavor Denotes the use case of the grouped vista.
+type GroupedVistaFlavor string
 
 // GroupsCreateRequest A request to create a new group.
 type GroupsCreateRequest struct {
@@ -6974,6 +8123,9 @@ type PartsListRequest struct {
 	// ParentPart The filter for specifying parent part.
 	ParentPart *ParentPartFilter `json:"parent_part,omitempty"`
 
+	// SortBy Fields to sort the parts by and the direction to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
 	// Tags Filters for part with any of the provided tags.
 	Tags *[]string `json:"tags,omitempty"`
 
@@ -7055,6 +8207,31 @@ type PartsUpdateRequestTags struct {
 type PartsUpdateResponseBody struct {
 	Part Part `json:"part"`
 }
+
+// PartsVistaGroupItem defines model for parts-vista-group-item.
+type PartsVistaGroupItem struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Type of parts vista group item.
+	Type PartsVistaGroupItemType `json:"type"`
+}
+
+// PartsVistaGroupItemType Type of parts vista group item.
+type PartsVistaGroupItemType string
 
 // Product defines model for product.
 type Product = PartBase
@@ -7167,6 +8344,15 @@ type RemovedSlaMetricHistory = map[string]interface{}
 
 // Resource Resource details.
 type Resource struct {
+	// Artifacts Artifacts of the resource (relevant only for type artifact).
+	Artifacts *[]ArtifactSummary `json:"artifacts,omitempty"`
+
+	// Url URL of the resource (relevant only for type url).
+	Url *string `json:"url,omitempty"`
+}
+
+// ResourceSummary Resource details.
+type ResourceSummary struct {
 	// Artifacts Artifacts of the resource (relevant only for type artifact).
 	Artifacts *[]ArtifactSummary `json:"artifacts,omitempty"`
 
@@ -8121,10 +9307,63 @@ type SchemaFieldMfzMetadata = map[string]interface{}
 type SchemaFieldOasisMetadata = map[string]interface{}
 
 // SchemaFieldUenumValue A unified enum value.
-type SchemaFieldUenumValue = map[string]interface{}
+type SchemaFieldUenumValue struct {
+	// Id The immutable id of the enum value.
+	Id int64 `json:"id"`
+
+	// IsDeprecated True if this value is deprecated.
+	IsDeprecated *bool `json:"is_deprecated,omitempty"`
+
+	// Label The human readable name of the enum value.
+	Label string `json:"label"`
+
+	// Ordinal The order value of the enum.
+	Ordinal int64 `json:"ordinal"`
+
+	// Tooltip Tooltip shown in the UI for this value.
+	Tooltip *string `json:"tooltip,omitempty"`
+}
 
 // SchemaFieldUiMetadata The schema of ui specific fields.
-type SchemaFieldUiMetadata = map[string]interface{}
+type SchemaFieldUiMetadata struct {
+	// ClientOverrides The client overrides for the field.
+	ClientOverrides *[]ClientOverride `json:"client_overrides,omitempty"`
+
+	// DecimalPlaces Number of decimal places to show (only applicable for number
+	// fields).
+	DecimalPlaces *int32 `json:"decimal_places,omitempty"`
+
+	// DisplayName The display name of the field.
+	DisplayName *string `json:"display_name,omitempty"`
+
+	// GroupName An optional group name for the field.
+	GroupName *string `json:"group_name,omitempty"`
+
+	// IsGroupable Whether the field is groupable in the UI.
+	IsGroupable *bool `json:"is_groupable,omitempty"`
+
+	// IsHidden Whether the field is hidden in the UI.
+	IsHidden *bool `json:"is_hidden,omitempty"`
+
+	// IsSortable Whether the field is sortable in the UI.
+	IsSortable *bool `json:"is_sortable,omitempty"`
+
+	// Order Order in which field is shown.
+	Order *int32 `json:"order,omitempty"`
+
+	// Placeholder A placeholder for the field.
+	Placeholder *string `json:"placeholder,omitempty"`
+
+	// Tooltip Tooltip for the field.
+	Tooltip *string `json:"tooltip,omitempty"`
+
+	// Unit Unit of measurment.
+	Unit *string `json:"unit,omitempty"`
+
+	// UseShorthandNotation Whether to use shorthand notation (only applicable for number
+	// fields).
+	UseShorthandNotation *bool `json:"use_shorthand_notation,omitempty"`
+}
 
 // SchemaIdFieldDescriptor defines model for schema-id-field-descriptor.
 type SchemaIdFieldDescriptor struct {
@@ -8957,6 +10196,61 @@ type SchemaUenumListFieldDescriptor struct {
 // SchemaUnknownFieldDescriptor defines model for schema-unknown-field-descriptor.
 type SchemaUnknownFieldDescriptor = SchemaFieldDescriptorBase
 
+// SchemasSubtypePrepareUpdateGetRequest defines model for schemas-subtype-prepare-update-get-request.
+type SchemasSubtypePrepareUpdateGetRequest struct {
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType Leaf type of the object.
+	LeafType string `json:"leaf_type"`
+
+	// NewSubtype Name of the new subtype for the object.
+	NewSubtype *string `json:"new_subtype,omitempty"`
+
+	// Object ID of the object of which subtype is to be changed. Used to fetch
+	// the object's custom schema fragments and custom fields
+	Object *string `json:"object,omitempty"`
+}
+
+// SchemasSubtypePrepareUpdateGetResponseBody defines model for schemas-subtype-prepare-update-get-response.
+type SchemasSubtypePrepareUpdateGetResponseBody struct {
+	// AddedFields List of fields that have a default value and need to be set.
+	AddedFields *[]SchemasSubtypePrepareUpdateGetResponseAddedField `json:"added_fields,omitempty"`
+
+	// DroppedFields List of fields that will be dropped from the object.
+	DroppedFields *[]SchemasSubtypePrepareUpdateGetResponseDroppedField `json:"dropped_fields,omitempty"`
+
+	// NewCustomSchemaFragments List of new custom schema fragment IDs of the object.
+	NewCustomSchemaFragments *[]string `json:"new_custom_schema_fragments,omitempty"`
+
+	// NewStartStage ID of the start stage of the new diagram if the subtype change
+	// results in a change in the stage diagram.
+	NewStartStage *string `json:"new_start_stage,omitempty"`
+}
+
+// SchemasSubtypePrepareUpdateGetResponseAddedField defines model for schemas-subtype-prepare-update-get-response-added-field.
+type SchemasSubtypePrepareUpdateGetResponseAddedField struct {
+	// DefaultValue Default value of the added field.
+	DefaultValue *interface{} `json:"default_value,omitempty"`
+
+	// Name API-compliant qualified name of the added field.
+	Name string `json:"name"`
+}
+
+// SchemasSubtypePrepareUpdateGetResponseConflictType defines model for schemas-subtype-prepare-update-get-response-conflict-type.
+type SchemasSubtypePrepareUpdateGetResponseConflictType string
+
+// SchemasSubtypePrepareUpdateGetResponseDroppedField defines model for schemas-subtype-prepare-update-get-response-dropped-field.
+type SchemasSubtypePrepareUpdateGetResponseDroppedField struct {
+	ConflictType SchemasSubtypePrepareUpdateGetResponseConflictType `json:"conflict_type"`
+
+	// Message Conflict message for the field being dropped.
+	Message string `json:"message"`
+
+	// Name API-compliant qualified name of the dropped field.
+	Name string `json:"name"`
+}
+
 // ServiceAccount defines model for service-account.
 type ServiceAccount = UserBase
 
@@ -9618,6 +10912,145 @@ type SnapWidgetsCreateResponseBody struct {
 // Stage Describes the current stage of a object.
 type Stage = map[string]interface{}
 
+// StageDiagram defines model for stage-diagram.
+type StageDiagram struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsCustomLeafType True if this stage diagram corresponds to a custom leaf type.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// IsDefault True if this stage diagram is the default for the leaf type.
+	IsDefault *bool `json:"is_default,omitempty"`
+
+	// LeafType The leaf type this stage diagram applies to.
+	LeafType   *string      `json:"leaf_type,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name The human readable name of the stage diagram.
+	Name *string `json:"name,omitempty"`
+
+	// Stages List of stages with their allowed transitions in this stage
+	// diagram.
+	Stages []StageNode `json:"stages"`
+}
+
+// StageDiagramSummary defines model for stage-diagram-summary.
+type StageDiagramSummary struct {
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name The human readable name of the stage diagram.
+	Name *string `json:"name,omitempty"`
+}
+
+// StageDiagramsCreateRequest defines model for stage-diagrams-create-request.
+type StageDiagramsCreateRequest struct {
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// IsDefault Whether this is a default stage diagram.
+	IsDefault *bool `json:"is_default,omitempty"`
+
+	// LeafType The leaf type this stage diagram applies to.
+	LeafType string `json:"leaf_type"`
+
+	// Name The name of the stage diagram. Stage diagram is used for defining
+	// stage transitions.
+	Name string `json:"name"`
+
+	// Stages List of stages in the diagram.
+	Stages []CreateStageNode `json:"stages"`
+}
+
+// StageDiagramsCreateResponseBody defines model for stage-diagrams-create-response.
+type StageDiagramsCreateResponseBody struct {
+	StageDiagram StageDiagram `json:"stage_diagram"`
+}
+
+// StageDiagramsGetRequest defines model for stage-diagrams-get-request.
+type StageDiagramsGetRequest struct {
+	// Id The ID of the stage diagram to get.
+	Id *string `json:"id,omitempty"`
+
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object. Specify this
+	// along with leaf_type to get the default custom object stage
+	// diagram.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType The leaf type. Should be specified to retrieve the default stage
+	// diagram for the leaf type. If not provided, then id is used.
+	LeafType *string `json:"leaf_type,omitempty"`
+}
+
+// StageDiagramsGetResponseBody defines model for stage-diagrams-get-response.
+type StageDiagramsGetResponseBody struct {
+	StageDiagram StageDiagram `json:"stage_diagram"`
+}
+
+// StageDiagramsListRequest defines model for stage-diagrams-list-request.
+type StageDiagramsListRequest struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided,
+	// then iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// IsCustomLeafType Whether only custom object stage diagrams should be filtered.
+	IsCustomLeafType *bool `json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType The list of leaf types.
+	LeafType *[]string `json:"leaf_type,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Name The list of stage diagram names.
+	Name *[]string `json:"name,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+}
+
+// StageDiagramsListResponseBody defines model for stage-diagrams-list-response.
+type StageDiagramsListResponseBody struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided,
+	// then iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Result The stage diagram.
+	Result []StageDiagram `json:"result"`
+}
+
+// StageDiagramsUpdateRequest defines model for stage-diagrams-update-request.
+type StageDiagramsUpdateRequest struct {
+	// Id The ID of the stage diagram to update.
+	Id string `json:"id"`
+
+	// Name The updated name of the stage diagram.
+	Name *string `json:"name,omitempty"`
+
+	// Stages List of stages in the stage diagram.
+	Stages *[]UpdateStageNode `json:"stages,omitempty"`
+}
+
+// StageDiagramsUpdateResponseBody defines model for stage-diagrams-update-response.
+type StageDiagramsUpdateResponseBody struct {
+	StageDiagram StageDiagram `json:"stage_diagram"`
+}
+
 // StageFilter The filter for stages.
 type StageFilter struct {
 	// Name Filters for records in the provided stage(s) by name.
@@ -9628,6 +11061,24 @@ type StageFilter struct {
 type StageInit struct {
 	// Name The name of the stage.
 	Name *string `json:"name,omitempty"`
+}
+
+// StageNode Diagram stage.
+type StageNode struct {
+	// IsDeprecated True if this stage has been deprecated.
+	IsDeprecated *bool `json:"is_deprecated,omitempty"`
+
+	// IsStart True if this stage is the starting stage of the stage diagram.
+	IsStart *bool               `json:"is_start,omitempty"`
+	Stage   *CustomStageSummary `json:"stage,omitempty"`
+
+	// Transitions List of allowed transitions from this stage.
+	Transitions *[]StageTransition `json:"transitions,omitempty"`
+}
+
+// StageTransition Stage transition.
+type StageTransition struct {
+	TargetStage *CustomStageSummary `json:"target_stage,omitempty"`
 }
 
 // StageUpdate Updates an object's stage.
@@ -9646,6 +11097,111 @@ type StageValidationOptionForUpdate string
 type StagedInfoFilter struct {
 	// IsStaged Filters for issues that are staged.
 	IsStaged *bool `json:"is_staged,omitempty"`
+}
+
+// StockFieldOverride A stock field override.
+type StockFieldOverride struct {
+	// IsRequired Whether the field is required.
+	IsRequired *bool `json:"is_required,omitempty"`
+
+	// Name Name of the stock field to be overridden.
+	Name *string `json:"name,omitempty"`
+
+	// Ui The schema of ui specific fields.
+	Ui *SchemaFieldUiMetadata `json:"ui,omitempty"`
+}
+
+// StockSchemaFragment defines model for stock-schema-fragment.
+type StockSchemaFragment struct {
+	// CompositeSchemas List of composite schemas.
+	CompositeSchemas []CompositeSchema `json:"composite_schemas"`
+	CreatedBy        *UserSummary      `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// Description Description of the schema.
+	Description *string `json:"description,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Fields List of all fields in this schema.
+	Fields []SchemaFieldDescriptor `json:"fields"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// LeafType Leaf type this fragment applies to.
+	LeafType   *string      `json:"leaf_type,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate   *time.Time   `json:"modified_date,omitempty"`
+	NewFragmentRef *AtomSummary `json:"new_fragment_ref,omitempty"`
+	OldFragmentRef *AtomSummary `json:"old_fragment_ref,omitempty"`
+}
+
+// StockSchemaFragmentsGetRequest defines model for stock-schema-fragments-get-request.
+type StockSchemaFragmentsGetRequest struct {
+	// Id The ID of the stock schema fragment.
+	Id *string `json:"id,omitempty"`
+
+	// LeafType The leaf type this fragment applies to.
+	LeafType *string `json:"leaf_type,omitempty"`
+}
+
+// StockSchemaFragmentsGetResponseBody defines model for stock-schema-fragments-get-response.
+type StockSchemaFragmentsGetResponseBody struct {
+	Fragment StockSchemaFragment `json:"fragment"`
+}
+
+// StockSchemaFragmentsListRequest defines model for stock-schema-fragments-list-request.
+type StockSchemaFragmentsListRequest struct {
+	// Cursor The cursor to resume iteration from. If not provided, then
+	// iteration starts from the beginning.
+	Cursor       *string                                      `json:"cursor,omitempty"`
+	FilterPreset *StockSchemaFragmentsListRequestFilterPreset `json:"filter_preset,omitempty"`
+
+	// LeafType The list of leaf types.
+	LeafType *[]string `json:"leaf_type,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Mode The iteration mode to use. If "after", then entries after the provided
+	// cursor will be returned, or if no cursor is provided, then from the
+	// beginning. If "before", then entries before the provided cursor will be
+	// returned, or if no cursor is provided, then from the end. Entries will
+	// always be returned in the specified sort-by order.
+	Mode *ListMode `json:"mode,omitempty"`
+
+	// Prune List of fields which are not required in the payload and can be
+	// pruned away.
+	Prune *[]StockSchemaFragmentsListRequestPrune `json:"prune,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+}
+
+// StockSchemaFragmentsListRequestFilterPreset defines model for stock-schema-fragments-list-request-filter-preset.
+type StockSchemaFragmentsListRequestFilterPreset string
+
+// StockSchemaFragmentsListRequestPrune defines model for stock-schema-fragments-list-request-prune.
+type StockSchemaFragmentsListRequestPrune string
+
+// StockSchemaFragmentsListResponseBody defines model for stock-schema-fragments-list-response.
+type StockSchemaFragmentsListResponseBody struct {
+	// NextCursor The cursor used to iterate subsequent results in accordance to the
+	// sort order. If not set, then no later elements exist.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor The cursor used to iterate preceding results in accordance to the
+	// sort order. If not set, then no prior elements exist.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// Result The stock schema fragments.
+	Result []StockSchemaFragment `json:"result"`
 }
 
 // Survey defines model for survey.
@@ -10805,6 +12361,34 @@ type UpdateCommandSurface struct {
 	Surface *CommandSurfaceSurface `json:"surface,omitempty"`
 }
 
+// UpdateStageNode defines model for update-stage-node.
+type UpdateStageNode struct {
+	// IsDeprecated Whether this stage is deprecated.
+	IsDeprecated *bool `json:"is_deprecated,omitempty"`
+
+	// IsStart Whether this is the start stage.
+	IsStart *bool `json:"is_start,omitempty"`
+
+	// StageId The ID of the stage.
+	StageId string `json:"stage_id"`
+
+	// Transitions List of transitions from this stage.
+	Transitions *[]UpdateStageTransition `json:"transitions,omitempty"`
+}
+
+// UpdateStageTransition defines model for update-stage-transition.
+type UpdateStageTransition struct {
+	// TargetStageId The ID of the target stage.
+	TargetStageId string                 `json:"target_stage_id"`
+	Ui            *UpdateStageUiMetadata `json:"ui,omitempty"`
+}
+
+// UpdateStageUiMetadata defines model for update-stage-ui-metadata.
+type UpdateStageUiMetadata struct {
+	// IsHidden Whether the stage is hidden.
+	IsHidden *bool `json:"is_hidden,omitempty"`
+}
+
 // UserBase defines model for user-base.
 type UserBase struct {
 	CreatedBy *UserSummary `json:"created_by,omitempty"`
@@ -10880,6 +12464,122 @@ type UserSummary struct {
 // UserType defines model for user-type.
 type UserType string
 
+// ViewOverride UI hint overrides for a view.
+type ViewOverride struct {
+	// DecimalPlaces Number of decimal places to show. Only applicable for number
+	// fields.
+	DecimalPlaces *int32 `json:"decimal_places,omitempty"`
+
+	// DisplayName The display name of the field.
+	DisplayName *string `json:"display_name,omitempty"`
+
+	// IsGroupable Whether the field is groupable in the UI.
+	IsGroupable *bool `json:"is_groupable,omitempty"`
+
+	// IsHidden Whether the field is hidden in the UI.
+	IsHidden *bool `json:"is_hidden,omitempty"`
+
+	// Order Relative order in which the field is shown.
+	Order *int32 `json:"order,omitempty"`
+
+	// Placeholder A placeholder for the field.
+	Placeholder *string `json:"placeholder,omitempty"`
+
+	// Tooltip Tooltip for the field.
+	Tooltip *string `json:"tooltip,omitempty"`
+
+	// UseShorthandNotation Whether to use shorthand notation. Example, 1K instead of 1000.
+	// Only applicable for number fields.
+	UseShorthandNotation *bool `json:"use_shorthand_notation,omitempty"`
+
+	// ViewName The name of the view.
+	ViewName *string `json:"view_name,omitempty"`
+}
+
+// Vista Represents a collection of DevRev objects.
+type Vista struct {
+	// Type Type of vista object.
+	Type  VistaType `json:"type"`
+	union json.RawMessage
+}
+
+// VistaBase defines model for vista-base.
+type VistaBase struct {
+	CreatedBy *UserSummary `json:"created_by,omitempty"`
+
+	// CreatedDate Timestamp when the object was created.
+	CreatedDate *time.Time `json:"created_date,omitempty"`
+
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId *string `json:"display_id,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// IsDefault Boolean to specify whether it's a default Vista or not.
+	IsDefault  *bool        `json:"is_default,omitempty"`
+	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
+
+	// ModifiedDate Timestamp when the object was last modified.
+	ModifiedDate *time.Time `json:"modified_date,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+}
+
+// VistaFlavor Denotes the use case of the vista.
+type VistaFlavor string
+
+// VistaGroup Represents a vista group item.
+type VistaGroup struct {
+	// ObjectType Type of DevRev object for which the grouped vista is applicable.
+	ObjectType GroupedVistaFilterType `json:"object_type"`
+	union      json.RawMessage
+}
+
+// VistaGroupBase defines model for vista-group-base.
+type VistaGroupBase struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+}
+
+// VistaGroupBaseVistaParentComposite defines model for vista-group-base-vista-parent-composite.
+type VistaGroupBaseVistaParentComposite struct {
+	// DisplayId Human-readable object ID unique to the Dev organization.
+	DisplayId string `json:"display_id"`
+
+	// Flavor Denotes the use case of the vista.
+	Flavor *VistaFlavor `json:"flavor,omitempty"`
+
+	// Id Parent vista ID.
+	Id string `json:"id"`
+
+	// Name Name of the parent vista.
+	Name string `json:"name"`
+
+	// Type Type of the parent vista.
+	Type string `json:"type"`
+}
+
+// VistaGroupItemGroupObjectType Type of DevRev object for which the vista group item is applicable.
+type VistaGroupItemGroupObjectType string
+
 // VistaGroupItemState Defines the state of the group item.
 type VistaGroupItemState string
 
@@ -10906,6 +12606,181 @@ type VistaGroupItemSummary struct {
 
 // VistaGroupItemType Type of the group object.
 type VistaGroupItemType string
+
+// VistaType Type of vista object.
+type VistaType string
+
+// VistasDeleteRequest The request to delete a vista.
+type VistasDeleteRequest struct {
+	// Id The ID of the vista to delete.
+	Id string `json:"id"`
+}
+
+// VistasDeleteResponseBody The response when deleting a vista.
+type VistasDeleteResponseBody = map[string]interface{}
+
+// VistasGetRequest The request to get a vista's information.
+type VistasGetRequest struct {
+	// Id The vista's ID.
+	Id string `json:"id"`
+}
+
+// VistasGetResponseBody The response to getting a vista's information.
+type VistasGetResponseBody struct {
+	// Vista Represents a collection of DevRev objects.
+	Vista Vista `json:"vista"`
+}
+
+// VistasGroupsDeleteRequest defines model for vistas-groups-delete-request.
+type VistasGroupsDeleteRequest struct {
+	// Id ID of the vista group item to be deleted.
+	Id string `json:"id"`
+}
+
+// VistasGroupsDeleteResponseBody defines model for vistas-groups-delete-response.
+type VistasGroupsDeleteResponseBody = map[string]interface{}
+
+// VistasGroupsGetRequest The request to get a vista group item's information.
+type VistasGroupsGetRequest struct {
+	// Id The vista group item's ID.
+	Id string `json:"id"`
+}
+
+// VistasGroupsGetResponseBody The response to getting a vista group item's information.
+type VistasGroupsGetResponseBody struct {
+	// VistaGroup Represents a vista group item.
+	VistaGroup VistaGroup `json:"vista_group"`
+}
+
+// VistasGroupsListRequest defines model for vistas-groups-list-request.
+type VistasGroupsListRequest struct {
+	// AncestorPart Filters for vista group items which have one of the parts linked as
+	// its ancestor part or primary part.
+	AncestorPart *[]string `json:"ancestor_part,omitempty"`
+
+	// AppliesToPart The filter for applies to part.
+	AppliesToPart *AppliesToPartFilter `json:"applies_to_part,omitempty"`
+
+	// CreatedBy Filter for vistas group item created by any of these users.
+	CreatedBy *[]string `json:"created_by,omitempty"`
+
+	// CreatedDate Provides ways to specify date ranges on objects.
+	CreatedDate *DateFilter `json:"created_date,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// EndDate Provides ways to specify date ranges on objects.
+	EndDate *DateFilter `json:"end_date,omitempty"`
+
+	// GroupObjectType Filters for vista group items of the specific group object type.
+	GroupObjectType *[]VistaGroupItemGroupObjectType `json:"group_object_type,omitempty"`
+
+	// Limit The request to get information about a list of vista groups.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Mode The iteration mode to use. If "after", then entries after the provided
+	// cursor will be returned, or if no cursor is provided, then from the
+	// beginning. If "before", then entries before the provided cursor will be
+	// returned, or if no cursor is provided, then from the end. Entries will
+	// always be returned in the specified sort-by order.
+	Mode *ListMode `json:"mode,omitempty"`
+
+	// ModifiedDate Provides ways to specify date ranges on objects.
+	ModifiedDate *DateFilter `json:"modified_date,omitempty"`
+
+	// ParentId Parent ID of the vista group item.
+	ParentId *[]string `json:"parent_id,omitempty"`
+
+	// SortBy Comma-separated fields to sort the objects by.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
+	// StartDate Provides ways to specify date ranges on objects.
+	StartDate *DateFilter `json:"start_date,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Filters for vista group items of the specific type.
+	Type *[]GroupItemType `json:"type,omitempty"`
+}
+
+// VistasGroupsListResponseBody The response to listing the vistas group items.
+type VistasGroupsListResponseBody struct {
+	// NextCursor The cursor used to iterate subsequent results in accordance to the
+	// sort order. If not set, then no later elements exist.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor The cursor used to iterate preceding results in accordance to the
+	// sort order. If not set, then no prior elements exist.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// VistaGroup List of vista group items.
+	VistaGroup *[]VistaGroup `json:"vista_group,omitempty"`
+}
+
+// VistasListRequest The request to get information about a list of vistas.
+type VistasListRequest struct {
+	// CreatedBy Filters for vistas created by any of these users.
+	CreatedBy *[]string `json:"created_by,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `json:"cursor,omitempty"`
+
+	// Flavor Filters for vistas of specific flavor.
+	Flavor *[]GroupedVistaFlavor `json:"flavor,omitempty"`
+
+	// IsDefault Whether the default vistas should be fetched or not.
+	IsDefault *bool `json:"is_default,omitempty"`
+
+	// Limit The maximum number of vistas to return. The default is '50', the
+	// maximum is '100'.
+	Limit *int32 `json:"limit,omitempty"`
+
+	// Members Filters for vistas accessible to the input members.
+	Members *[]string `json:"members,omitempty"`
+
+	// Mode The iteration mode to use. If "after", then entries after the provided
+	// cursor will be returned, or if no cursor is provided, then from the
+	// beginning. If "before", then entries before the provided cursor will be
+	// returned, or if no cursor is provided, then from the end. Entries will
+	// always be returned in the specified sort-by order.
+	Mode *ListMode `json:"mode,omitempty"`
+
+	// ObjectType Filters for vistas of specific object types like works, parts etc.
+	ObjectType *[]DynamicVistaFilterType `json:"object_type,omitempty"`
+
+	// SharedWith Filter for vistas accessible to the input members.
+	SharedWith *[]SharedWithMembershipFilter `json:"shared_with,omitempty"`
+
+	// SkipItems Denotes whether to skip items of vista_group_item in response.
+	SkipItems *bool `json:"skip_items,omitempty"`
+
+	// SortBy Fields to sort the vistas by and the direction to sort them.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Filters for vistas of the specific type.
+	Type *[]VistaType `json:"type,omitempty"`
+}
+
+// VistasListResponseBody The response to listing the vistas.
+type VistasListResponseBody struct {
+	// NextCursor The cursor used to iterate subsequent results in accordance to the
+	// sort order. If not set, then no later elements exist.
+	NextCursor *string `json:"next_cursor,omitempty"`
+
+	// PrevCursor The cursor used to iterate preceding results in accordance to the
+	// sort order. If not set, then no prior elements exist.
+	PrevCursor *string `json:"prev_cursor,omitempty"`
+
+	// Vistas The list of vistas.
+	Vistas []Vista `json:"vistas"`
+}
 
 // WebCrawlerJob defines model for web-crawler-job.
 type WebCrawlerJob struct {
@@ -11147,6 +13022,9 @@ type WebhookEventRequest struct {
 	AccountDeleted           *EventAccountDeleted      `json:"account_deleted,omitempty"`
 	AccountUpdated           *EventAccountUpdated      `json:"account_updated,omitempty"`
 	EventAiAgentResponseBody *EventAiAgentResponseBody `json:"ai_agent_response,omitempty"`
+	ArticleCreated           *EventArticleCreated      `json:"article_created,omitempty"`
+	ArticleDeleted           *EventArticleDeleted      `json:"article_deleted,omitempty"`
+	ArticleUpdated           *EventArticleUpdated      `json:"article_updated,omitempty"`
 	ConversationCreated      *EventConversationCreated `json:"conversation_created,omitempty"`
 	ConversationDeleted      *EventConversationDeleted `json:"conversation_deleted,omitempty"`
 	ConversationUpdated      *EventConversationUpdated `json:"conversation_updated,omitempty"`
@@ -11995,6 +13873,31 @@ type WorksUpdateResponseBody struct {
 	Work Work `json:"work"`
 }
 
+// WorksVistaGroupItem defines model for works-vista-group-item.
+type WorksVistaGroupItem struct {
+	// EndDate Timestamp when the vista group item ends.
+	EndDate *time.Time `json:"end_date,omitempty"`
+
+	// Id Globally unique object ID.
+	Id string `json:"id"`
+
+	// Name Name of the group.
+	Name   string                              `json:"name"`
+	Parent *VistaGroupBaseVistaParentComposite `json:"parent,omitempty"`
+
+	// StartDate Timestamp when the vista group item starts.
+	StartDate *time.Time `json:"start_date,omitempty"`
+
+	// State Defines the state of the group item.
+	State *VistaGroupItemState `json:"state,omitempty"`
+
+	// Type Type of works vista group item.
+	Type WorksVistaGroupItemType `json:"type"`
+}
+
+// WorksVistaGroupItemType Type of works vista group item.
+type WorksVistaGroupItemType string
+
 // BadRequest Describes a error due to a bad request by the client.
 type BadRequest = ErrorBadRequest
 
@@ -12120,9 +14023,6 @@ type AccountsListParams struct {
 type GetArticleParams struct {
 	// Id The ID of the required article.
 	Id string `form:"id" json:"id"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 }
 
 // ListArticlesParams defines parameters for ListArticles.
@@ -12146,9 +14046,6 @@ type ListArticlesParams struct {
 	// Cursor The cursor to resume iteration from. If not provided, then iteration
 	// starts from the beginning.
 	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 
 	// Limit The maximum number of articles to return. The default is '50'.
 	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
@@ -12383,6 +14280,47 @@ type ConversationsListParams struct {
 	TagsV2Value *string `form:"tags_v2.value,omitempty" json:"tags_v2.value,omitempty"`
 }
 
+// CustomObjectsCountParams defines parameters for CustomObjectsCount.
+type CustomObjectsCountParams struct {
+	// LeafType Leaf type to filter.
+	LeafType string `form:"leaf_type" json:"leaf_type"`
+
+	// Filters List of filters to apply.
+	Filters *[]interface{} `form:"filters,omitempty" json:"filters,omitempty"`
+}
+
+// CustomObjectsGetParams defines parameters for CustomObjectsGet.
+type CustomObjectsGetParams struct {
+	// Id The ID of the custom object to get.
+	Id *string `form:"id,omitempty" json:"id,omitempty"`
+}
+
+// CustomObjectsListParams defines parameters for CustomObjectsList.
+type CustomObjectsListParams struct {
+	// LeafType Leaf type to filter.
+	LeafType string `form:"leaf_type" json:"leaf_type"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then iteration
+	// starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Filter List of filters to apply.
+	Filter *[]interface{} `form:"filter,omitempty" json:"filter,omitempty"`
+
+	// Filters List of filters to apply.
+	Filters *[]interface{} `form:"filters,omitempty" json:"filters,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Mode The iteration mode to use, otherwise if not set, then "after" is
+	// used.
+	Mode *ListMode `form:"mode,omitempty" json:"mode,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+}
+
 // DevOrgAuthConnectionsGetParams defines parameters for DevOrgAuthConnectionsGet.
 type DevOrgAuthConnectionsGetParams struct {
 	// Id ID of the authentication connection.
@@ -12437,9 +14375,6 @@ type DirectoriesCountParams struct {
 type DirectoriesGetParams struct {
 	// Id The ID of the requested directory.
 	Id string `form:"id" json:"id"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 }
 
 // DirectoriesListParams defines parameters for DirectoriesList.
@@ -12450,9 +14385,6 @@ type DirectoriesListParams struct {
 	// Cursor The cursor to resume iteration from. If not provided, then iteration
 	// starts from the beginning.
 	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
-
-	// DevOrg Optional Dev Org ID for the unauthenticated user.
-	DevOrg *string `form:"dev_org,omitempty" json:"dev_org,omitempty"`
 
 	// Limit The maximum number of directories to return. The default is '50'.
 	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
@@ -12811,6 +14743,9 @@ type PartsListParams struct {
 	// fields are provided.
 	ParentPartParts *[]string `form:"parent_part.parts,omitempty" json:"parent_part.parts,omitempty"`
 
+	// SortBy Fields to sort the parts by and the direction to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+
 	// Tags Filters for part with any of the provided tags.
 	Tags *[]string `form:"tags,omitempty" json:"tags,omitempty"`
 
@@ -12988,6 +14923,107 @@ type RevUsersScanParams struct {
 	RevOrg *[]string `form:"rev_org,omitempty" json:"rev_org,omitempty"`
 }
 
+// AggregatedSchemaGetParams defines parameters for AggregatedSchemaGet.
+type AggregatedSchemaGetParams struct {
+	// CustomSchemaSpecApps List of apps.
+	CustomSchemaSpecApps *[]string `form:"custom_schema_spec.apps,omitempty" json:"custom_schema_spec.apps,omitempty"`
+
+	// CustomSchemaSpecSubtype Name of the subtype.
+	CustomSchemaSpecSubtype *string `form:"custom_schema_spec.subtype,omitempty" json:"custom_schema_spec.subtype,omitempty"`
+
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object.
+	IsCustomLeafType *bool `form:"is_custom_leaf_type,omitempty" json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType The leaf type. Used for inferring the default stage diagram and
+	// tenant fragment ID.
+	LeafType *string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+}
+
+// CustomSchemaFragmentsGetParams defines parameters for CustomSchemaFragmentsGet.
+type CustomSchemaFragmentsGetParams struct {
+	// Id The ID of the custom schema fragment.
+	Id string `form:"id" json:"id"`
+}
+
+// CustomSchemaFragmentsListParams defines parameters for CustomSchemaFragmentsList.
+type CustomSchemaFragmentsListParams struct {
+	// App The list of app names.
+	App *[]string `form:"app,omitempty" json:"app,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then iteration
+	// starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Deprecated Whether only deprecated fragments should be filtered.
+	Deprecated *bool `form:"deprecated,omitempty" json:"deprecated,omitempty"`
+
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object
+	IsCustomLeafType *bool `form:"is_custom_leaf_type,omitempty" json:"is_custom_leaf_type,omitempty"`
+
+	// IsDeprecated Whether the fragment has been deprecated.
+	IsDeprecated *bool `form:"is_deprecated,omitempty" json:"is_deprecated,omitempty"`
+
+	// LeafType The list of leaf types.
+	LeafType *[]string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Mode The iteration mode to use, otherwise if not set, then "after" is
+	// used.
+	Mode *ListMode `form:"mode,omitempty" json:"mode,omitempty"`
+
+	// Prune List of fields which are not required in the payload and can be
+	// pruned away.
+	Prune *[]CustomSchemaFragmentsListRequestPrune `form:"prune,omitempty" json:"prune,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+
+	// Subtype The list of subtypes.
+	Subtype *[]string `form:"subtype,omitempty" json:"subtype,omitempty"`
+
+	// Types Filters for custom schema fragment of the provided types.
+	Types *[]CustomSchemaFragmentType `form:"types,omitempty" json:"types,omitempty"`
+}
+
+// StockSchemaFragmentsGetParams defines parameters for StockSchemaFragmentsGet.
+type StockSchemaFragmentsGetParams struct {
+	// Id The ID of the stock schema fragment.
+	Id *string `form:"id,omitempty" json:"id,omitempty"`
+
+	// LeafType The leaf type this fragment applies to.
+	LeafType *string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+}
+
+// StockSchemaFragmentsListParams defines parameters for StockSchemaFragmentsList.
+type StockSchemaFragmentsListParams struct {
+	// Cursor The cursor to resume iteration from. If not provided, then iteration
+	// starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// FilterPreset Filter preset to specify whether to filter only customization enabled
+	// leaf types.
+	FilterPreset *StockSchemaFragmentsListRequestFilterPreset `form:"filter_preset,omitempty" json:"filter_preset,omitempty"`
+
+	// LeafType The list of leaf types.
+	LeafType *[]string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Mode The iteration mode to use, otherwise if not set, then "after" is
+	// used.
+	Mode *ListMode `form:"mode,omitempty" json:"mode,omitempty"`
+
+	// Prune List of fields which are not required in the payload and can be
+	// pruned away.
+	Prune *[]StockSchemaFragmentsListRequestPrune `form:"prune,omitempty" json:"prune,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+}
+
 // ServiceAccountsGetParams defines parameters for ServiceAccountsGet.
 type ServiceAccountsGetParams struct {
 	// Id The ID of the requested service account.
@@ -13071,6 +15107,95 @@ type SlasListParams struct {
 
 	// Status The SLA statuses the filter matches.
 	Status *[]SlaStatus `form:"status,omitempty" json:"status,omitempty"`
+}
+
+// StageDiagramsGetParams defines parameters for StageDiagramsGet.
+type StageDiagramsGetParams struct {
+	// Id The ID of the stage diagram to get.
+	Id *string `form:"id,omitempty" json:"id,omitempty"`
+
+	// IsCustomLeafType Whether the leaf type corresponds to a custom object. Specify this
+	// along with leaf_type to get the default custom object stage diagram.
+	IsCustomLeafType *bool `form:"is_custom_leaf_type,omitempty" json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType The leaf type. Should be specified to retrieve the default stage
+	// diagram for the leaf type. If not provided, then id is used.
+	LeafType *string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+}
+
+// StageDiagramsListParams defines parameters for StageDiagramsList.
+type StageDiagramsListParams struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// IsCustomLeafType Whether only custom object stage diagrams should be filtered.
+	IsCustomLeafType *bool `form:"is_custom_leaf_type,omitempty" json:"is_custom_leaf_type,omitempty"`
+
+	// LeafType The list of leaf types.
+	LeafType *[]string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Name The list of stage diagram names.
+	Name *[]string `form:"name,omitempty" json:"name,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+}
+
+// CustomStagesGetParams defines parameters for CustomStagesGet.
+type CustomStagesGetParams struct {
+	// Id The ID of the custom stage to get.
+	Id string `form:"id" json:"id"`
+}
+
+// CustomStagesListParams defines parameters for CustomStagesList.
+type CustomStagesListParams struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Name The list of stage names.
+	Name *[]string `form:"name,omitempty" json:"name,omitempty"`
+
+	// Ordinal The list of stage ordinals.
+	Ordinal *[]int32 `form:"ordinal,omitempty" json:"ordinal,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+}
+
+// CustomStatesGetParams defines parameters for CustomStatesGet.
+type CustomStatesGetParams struct {
+	// Id The ID of the custom state to get.
+	Id string `form:"id" json:"id"`
+}
+
+// CustomStatesListParams defines parameters for CustomStatesList.
+type CustomStatesListParams struct {
+	// Cursor The cursor to resume iteration from, otherwise if not provided, then
+	// iteration starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// IsFinal Whether only final states should be filtered.
+	IsFinal *bool `form:"is_final,omitempty" json:"is_final,omitempty"`
+
+	// Limit The maximum number of items.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Name The list of state names.
+	Name *[]string `form:"name,omitempty" json:"name,omitempty"`
+
+	// Ordinal The list of state ordinals.
+	Ordinal *[]int32 `form:"ordinal,omitempty" json:"ordinal,omitempty"`
+
+	// SortBy The list of fields to sort the items by and how to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
 }
 
 // SurveysGetParams defines parameters for SurveysGet.
@@ -13211,6 +15336,110 @@ type TimelineEntriesListParams struct {
 	// strict filter, such that only entries with the exact visibilities
 	// specified will be returned.
 	Visibility *[]TimelineEntryVisibility `form:"visibility,omitempty" json:"visibility,omitempty"`
+}
+
+// VistasGetParams defines parameters for VistasGet.
+type VistasGetParams struct {
+	// Id The vista's ID.
+	Id string `form:"id" json:"id"`
+}
+
+// VistasGroupsGetParams defines parameters for VistasGroupsGet.
+type VistasGroupsGetParams struct {
+	// Id The vista group item's ID.
+	Id string `form:"id" json:"id"`
+}
+
+// VistasGroupsListParams defines parameters for VistasGroupsList.
+type VistasGroupsListParams struct {
+	// AncestorPart Filters for vista group items which have one of the parts linked as
+	// its ancestor part or primary part.
+	AncestorPart *[]string `form:"ancestor_part,omitempty" json:"ancestor_part,omitempty"`
+
+	// AppliesToPartIncludeChildParts Whether to include items belonging to children of any of the provided
+	// parts.
+	AppliesToPartIncludeChildParts *bool `form:"applies_to_part.include_child_parts,omitempty" json:"applies_to_part.include_child_parts,omitempty"`
+
+	// AppliesToPartParts Part IDs to filter on. Required if any applies_to_part.* fields are
+	// provided.
+	AppliesToPartParts *[]string `form:"applies_to_part.parts,omitempty" json:"applies_to_part.parts,omitempty"`
+
+	// CreatedBy Filter for vistas group item created by any of these users.
+	CreatedBy *[]string `form:"created_by,omitempty" json:"created_by,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then iteration
+	// starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// GroupObjectType Filters for vista group items of the specific group object type.
+	GroupObjectType *[]VistaGroupItemGroupObjectType `form:"group_object_type,omitempty" json:"group_object_type,omitempty"`
+
+	// Limit The request to get information about a list of vista groups.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Mode The iteration mode to use, otherwise if not set, then "after" is
+	// used.
+	Mode *ListMode `form:"mode,omitempty" json:"mode,omitempty"`
+
+	// ParentId Parent ID of the vista group item.
+	ParentId *[]string `form:"parent_id,omitempty" json:"parent_id,omitempty"`
+
+	// SortBy Comma-separated fields to sort the objects by.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `form:"state,omitempty" json:"state,omitempty"`
+
+	// Type Filters for vista group items of the specific type.
+	Type *[]GroupItemType `form:"type,omitempty" json:"type,omitempty"`
+}
+
+// VistasListParams defines parameters for VistasList.
+type VistasListParams struct {
+	// CreatedBy Filters for vistas created by any of these users.
+	CreatedBy *[]string `form:"created_by,omitempty" json:"created_by,omitempty"`
+
+	// Cursor The cursor to resume iteration from. If not provided, then iteration
+	// starts from the beginning.
+	Cursor *string `form:"cursor,omitempty" json:"cursor,omitempty"`
+
+	// Flavor Filters for vistas of specific flavor.
+	Flavor *[]GroupedVistaFlavor `form:"flavor,omitempty" json:"flavor,omitempty"`
+
+	// IsDefault Whether the default vistas should be fetched or not.
+	IsDefault *bool `form:"is_default,omitempty" json:"is_default,omitempty"`
+
+	// Limit The maximum number of vistas to return. The default is '50', the
+	// maximum is '100'.
+	Limit *int32 `form:"limit,omitempty" json:"limit,omitempty"`
+
+	// Members Filters for vistas accessible to the input members.
+	Members *[]string `form:"members,omitempty" json:"members,omitempty"`
+
+	// Mode The iteration mode to use, otherwise if not set, then "after" is
+	// used.
+	Mode *ListMode `form:"mode,omitempty" json:"mode,omitempty"`
+
+	// ObjectType Filters for vistas of specific object types like works, parts etc.
+	ObjectType *[]DynamicVistaFilterType `form:"object_type,omitempty" json:"object_type,omitempty"`
+
+	// SharedWithMember ID of the group/member with whom the item is shared.
+	SharedWithMember *string `form:"shared_with.member,omitempty" json:"shared_with.member,omitempty"`
+
+	// SharedWithRole Role ID of the group/member with whom the item is shared.
+	SharedWithRole *string `form:"shared_with.role,omitempty" json:"shared_with.role,omitempty"`
+
+	// SkipItems Denotes whether to skip items of vista_group_item in response.
+	SkipItems *bool `form:"skip_items,omitempty" json:"skip_items,omitempty"`
+
+	// SortBy Fields to sort the vistas by and the direction to sort them.
+	SortBy *[]string `form:"sort_by,omitempty" json:"sort_by,omitempty"`
+
+	// State Denotes the state of the vista group item.
+	State *[]VistaGroupItemState `form:"state,omitempty" json:"state,omitempty"`
+
+	// Type Filters for vistas of the specific type.
+	Type *[]VistaType `form:"type,omitempty" json:"type,omitempty"`
 }
 
 // GetWebCrawlerJobParams defines parameters for GetWebCrawlerJob.
@@ -13622,6 +15851,24 @@ type ConversationsListPostJSONRequestBody = ConversationsListRequest
 // ConversationsUpdateJSONRequestBody defines body for ConversationsUpdate for application/json ContentType.
 type ConversationsUpdateJSONRequestBody = ConversationsUpdateRequest
 
+// CustomObjectsCountPostJSONRequestBody defines body for CustomObjectsCountPost for application/json ContentType.
+type CustomObjectsCountPostJSONRequestBody = CustomObjectsCountRequest
+
+// CustomObjectsCreateJSONRequestBody defines body for CustomObjectsCreate for application/json ContentType.
+type CustomObjectsCreateJSONRequestBody = CustomObjectsCreateRequest
+
+// CustomObjectsDeleteJSONRequestBody defines body for CustomObjectsDelete for application/json ContentType.
+type CustomObjectsDeleteJSONRequestBody = CustomObjectsDeleteRequest
+
+// CustomObjectsGetPostJSONRequestBody defines body for CustomObjectsGetPost for application/json ContentType.
+type CustomObjectsGetPostJSONRequestBody = CustomObjectsGetRequest
+
+// CustomObjectsListPostJSONRequestBody defines body for CustomObjectsListPost for application/json ContentType.
+type CustomObjectsListPostJSONRequestBody = CustomObjectsListRequest
+
+// CustomObjectsUpdateJSONRequestBody defines body for CustomObjectsUpdate for application/json ContentType.
+type CustomObjectsUpdateJSONRequestBody = CustomObjectsUpdateRequest
+
 // DevOrgAuthConnectionsCreateJSONRequestBody defines body for DevOrgAuthConnectionsCreate for application/json ContentType.
 type DevOrgAuthConnectionsCreateJSONRequestBody = DevOrgAuthConnectionsCreateRequest
 
@@ -13859,6 +16106,27 @@ type RevUsersScanPostJSONRequestBody = RevUsersScanRequest
 // RevUsersUpdateJSONRequestBody defines body for RevUsersUpdate for application/json ContentType.
 type RevUsersUpdateJSONRequestBody = RevUsersUpdateRequest
 
+// AggregatedSchemaGetPostJSONRequestBody defines body for AggregatedSchemaGetPost for application/json ContentType.
+type AggregatedSchemaGetPostJSONRequestBody = AggregatedSchemaGetRequest
+
+// CustomSchemaFragmentsGetPostJSONRequestBody defines body for CustomSchemaFragmentsGetPost for application/json ContentType.
+type CustomSchemaFragmentsGetPostJSONRequestBody = CustomSchemaFragmentsGetRequest
+
+// CustomSchemaFragmentsListPostJSONRequestBody defines body for CustomSchemaFragmentsListPost for application/json ContentType.
+type CustomSchemaFragmentsListPostJSONRequestBody = CustomSchemaFragmentsListRequest
+
+// CustomSchemaFragmentsSetJSONRequestBody defines body for CustomSchemaFragmentsSet for application/json ContentType.
+type CustomSchemaFragmentsSetJSONRequestBody = CustomSchemaFragmentsSetRequest
+
+// StockSchemaFragmentsGetPostJSONRequestBody defines body for StockSchemaFragmentsGetPost for application/json ContentType.
+type StockSchemaFragmentsGetPostJSONRequestBody = StockSchemaFragmentsGetRequest
+
+// StockSchemaFragmentsListPostJSONRequestBody defines body for StockSchemaFragmentsListPost for application/json ContentType.
+type StockSchemaFragmentsListPostJSONRequestBody = StockSchemaFragmentsListRequest
+
+// SchemasSubtypePrepareUpdateGetJSONRequestBody defines body for SchemasSubtypePrepareUpdateGet for application/json ContentType.
+type SchemasSubtypePrepareUpdateGetJSONRequestBody = SchemasSubtypePrepareUpdateGetRequest
+
 // ServiceAccountsCreateJSONRequestBody defines body for ServiceAccountsCreate for application/json ContentType.
 type ServiceAccountsCreateJSONRequestBody = ServiceAccountsCreateRequest
 
@@ -13894,6 +16162,42 @@ type SnapKitActionExecuteDeferredJSONRequestBody = SnapKitActionExecuteDeferredR
 
 // SnapWidgetsCreateJSONRequestBody defines body for SnapWidgetsCreate for application/json ContentType.
 type SnapWidgetsCreateJSONRequestBody = SnapWidgetsCreateRequest
+
+// StageDiagramsCreateJSONRequestBody defines body for StageDiagramsCreate for application/json ContentType.
+type StageDiagramsCreateJSONRequestBody = StageDiagramsCreateRequest
+
+// StageDiagramsGetPostJSONRequestBody defines body for StageDiagramsGetPost for application/json ContentType.
+type StageDiagramsGetPostJSONRequestBody = StageDiagramsGetRequest
+
+// StageDiagramsListPostJSONRequestBody defines body for StageDiagramsListPost for application/json ContentType.
+type StageDiagramsListPostJSONRequestBody = StageDiagramsListRequest
+
+// StageDiagramsUpdateJSONRequestBody defines body for StageDiagramsUpdate for application/json ContentType.
+type StageDiagramsUpdateJSONRequestBody = StageDiagramsUpdateRequest
+
+// CustomStagesCreateJSONRequestBody defines body for CustomStagesCreate for application/json ContentType.
+type CustomStagesCreateJSONRequestBody = CustomStagesCreateRequest
+
+// CustomStagesGetPostJSONRequestBody defines body for CustomStagesGetPost for application/json ContentType.
+type CustomStagesGetPostJSONRequestBody = CustomStagesGetRequest
+
+// CustomStagesListPostJSONRequestBody defines body for CustomStagesListPost for application/json ContentType.
+type CustomStagesListPostJSONRequestBody = CustomStagesListRequest
+
+// CustomStagesUpdateJSONRequestBody defines body for CustomStagesUpdate for application/json ContentType.
+type CustomStagesUpdateJSONRequestBody = CustomStagesUpdateRequest
+
+// CustomStatesCreateJSONRequestBody defines body for CustomStatesCreate for application/json ContentType.
+type CustomStatesCreateJSONRequestBody = CustomStatesCreateRequest
+
+// CustomStatesGetPostJSONRequestBody defines body for CustomStatesGetPost for application/json ContentType.
+type CustomStatesGetPostJSONRequestBody = CustomStatesGetRequest
+
+// CustomStatesListPostJSONRequestBody defines body for CustomStatesListPost for application/json ContentType.
+type CustomStatesListPostJSONRequestBody = CustomStatesListRequest
+
+// CustomStatesUpdateJSONRequestBody defines body for CustomStatesUpdate for application/json ContentType.
+type CustomStatesUpdateJSONRequestBody = CustomStatesUpdateRequest
 
 // SurveysCreateJSONRequestBody defines body for SurveysCreate for application/json ContentType.
 type SurveysCreateJSONRequestBody = SurveysCreateRequest
@@ -13958,6 +16262,24 @@ type TimelineEntriesListPostJSONRequestBody = TimelineEntriesListRequest
 // TimelineEntriesUpdateJSONRequestBody defines body for TimelineEntriesUpdate for application/json ContentType.
 type TimelineEntriesUpdateJSONRequestBody = TimelineEntriesUpdateRequest
 
+// VistasDeleteJSONRequestBody defines body for VistasDelete for application/json ContentType.
+type VistasDeleteJSONRequestBody = VistasDeleteRequest
+
+// VistasGetPostJSONRequestBody defines body for VistasGetPost for application/json ContentType.
+type VistasGetPostJSONRequestBody = VistasGetRequest
+
+// VistasGroupsDeleteJSONRequestBody defines body for VistasGroupsDelete for application/json ContentType.
+type VistasGroupsDeleteJSONRequestBody = VistasGroupsDeleteRequest
+
+// VistasGroupsGetPostJSONRequestBody defines body for VistasGroupsGetPost for application/json ContentType.
+type VistasGroupsGetPostJSONRequestBody = VistasGroupsGetRequest
+
+// VistasGroupsListPostJSONRequestBody defines body for VistasGroupsListPost for application/json ContentType.
+type VistasGroupsListPostJSONRequestBody = VistasGroupsListRequest
+
+// VistasListPostJSONRequestBody defines body for VistasListPost for application/json ContentType.
+type VistasListPostJSONRequestBody = VistasListRequest
+
 // WebCrawlerJobsControlJSONRequestBody defines body for WebCrawlerJobsControl for application/json ContentType.
 type WebCrawlerJobsControlJSONRequestBody = WebCrawlerJobsControlRequest
 
@@ -14005,6 +16327,36 @@ type WorksListPostJSONRequestBody = WorksListRequest
 
 // WorksUpdateJSONRequestBody defines body for WorksUpdate for application/json ContentType.
 type WorksUpdateJSONRequestBody = WorksUpdateRequest
+
+// AsArticle returns the union data inside the Atom as a Article
+func (t Atom) AsArticle() (Article, error) {
+	var body Article
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArticle overwrites any union data inside the Atom as the provided Article
+func (t *Atom) FromArticle(v Article) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArticle performs a merge with any union data inside the Atom, using the provided Article
+func (t *Atom) MergeArticle(v Article) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
 
 // AsAuthToken returns the union data inside the Atom as a AuthToken
 func (t Atom) AsAuthToken() (AuthToken, error) {
@@ -14620,6 +16972,8 @@ func (t Atom) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
+	case "article":
+		return t.AsArticle()
 	case "auth_token":
 		return t.AsAuthToken()
 	case "capability":
@@ -14705,6 +17059,36 @@ func (t *Atom) UnmarshalJSON(b []byte) error {
 		}
 	}
 
+	return err
+}
+
+// AsArticleSummary returns the union data inside the AtomSummary as a ArticleSummary
+func (t AtomSummary) AsArticleSummary() (ArticleSummary, error) {
+	var body ArticleSummary
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArticleSummary overwrites any union data inside the AtomSummary as the provided ArticleSummary
+func (t *AtomSummary) FromArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArticleSummary performs a merge with any union data inside the AtomSummary, using the provided ArticleSummary
+func (t *AtomSummary) MergeArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
 	return err
 }
 
@@ -15322,6 +17706,8 @@ func (t AtomSummary) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
+	case "article":
+		return t.AsArticleSummary()
 	case "auth_token":
 		return t.AsAuthTokenSummary()
 	case "capability":
@@ -16349,6 +18735,286 @@ func (t *ChatsUpdateRequest) UnmarshalJSON(b []byte) error {
 		err = json.Unmarshal(raw, &t.Title)
 		if err != nil {
 			return fmt.Errorf("error reading 'title': %w", err)
+		}
+	}
+
+	if raw, found := object["type"]; found {
+		err = json.Unmarshal(raw, &t.Type)
+		if err != nil {
+			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsCustomSchemaFragmentsSetRequestAppFragment returns the union data inside the CustomSchemaFragmentsSetRequest as a CustomSchemaFragmentsSetRequestAppFragment
+func (t CustomSchemaFragmentsSetRequest) AsCustomSchemaFragmentsSetRequestAppFragment() (CustomSchemaFragmentsSetRequestAppFragment, error) {
+	var body CustomSchemaFragmentsSetRequestAppFragment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomSchemaFragmentsSetRequestAppFragment overwrites any union data inside the CustomSchemaFragmentsSetRequest as the provided CustomSchemaFragmentsSetRequestAppFragment
+func (t *CustomSchemaFragmentsSetRequest) FromCustomSchemaFragmentsSetRequestAppFragment(v CustomSchemaFragmentsSetRequestAppFragment) error {
+	t.Type = "app_fragment"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomSchemaFragmentsSetRequestAppFragment performs a merge with any union data inside the CustomSchemaFragmentsSetRequest, using the provided CustomSchemaFragmentsSetRequestAppFragment
+func (t *CustomSchemaFragmentsSetRequest) MergeCustomSchemaFragmentsSetRequestAppFragment(v CustomSchemaFragmentsSetRequestAppFragment) error {
+	t.Type = "app_fragment"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomSchemaFragmentsSetRequestCustomTypeFragment returns the union data inside the CustomSchemaFragmentsSetRequest as a CustomSchemaFragmentsSetRequestCustomTypeFragment
+func (t CustomSchemaFragmentsSetRequest) AsCustomSchemaFragmentsSetRequestCustomTypeFragment() (CustomSchemaFragmentsSetRequestCustomTypeFragment, error) {
+	var body CustomSchemaFragmentsSetRequestCustomTypeFragment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomSchemaFragmentsSetRequestCustomTypeFragment overwrites any union data inside the CustomSchemaFragmentsSetRequest as the provided CustomSchemaFragmentsSetRequestCustomTypeFragment
+func (t *CustomSchemaFragmentsSetRequest) FromCustomSchemaFragmentsSetRequestCustomTypeFragment(v CustomSchemaFragmentsSetRequestCustomTypeFragment) error {
+	t.Type = "custom_type_fragment"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomSchemaFragmentsSetRequestCustomTypeFragment performs a merge with any union data inside the CustomSchemaFragmentsSetRequest, using the provided CustomSchemaFragmentsSetRequestCustomTypeFragment
+func (t *CustomSchemaFragmentsSetRequest) MergeCustomSchemaFragmentsSetRequestCustomTypeFragment(v CustomSchemaFragmentsSetRequestCustomTypeFragment) error {
+	t.Type = "custom_type_fragment"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsCustomSchemaFragmentsSetRequestTenantFragment returns the union data inside the CustomSchemaFragmentsSetRequest as a CustomSchemaFragmentsSetRequestTenantFragment
+func (t CustomSchemaFragmentsSetRequest) AsCustomSchemaFragmentsSetRequestTenantFragment() (CustomSchemaFragmentsSetRequestTenantFragment, error) {
+	var body CustomSchemaFragmentsSetRequestTenantFragment
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCustomSchemaFragmentsSetRequestTenantFragment overwrites any union data inside the CustomSchemaFragmentsSetRequest as the provided CustomSchemaFragmentsSetRequestTenantFragment
+func (t *CustomSchemaFragmentsSetRequest) FromCustomSchemaFragmentsSetRequestTenantFragment(v CustomSchemaFragmentsSetRequestTenantFragment) error {
+	t.Type = "tenant_fragment"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCustomSchemaFragmentsSetRequestTenantFragment performs a merge with any union data inside the CustomSchemaFragmentsSetRequest, using the provided CustomSchemaFragmentsSetRequestTenantFragment
+func (t *CustomSchemaFragmentsSetRequest) MergeCustomSchemaFragmentsSetRequestTenantFragment(v CustomSchemaFragmentsSetRequestTenantFragment) error {
+	t.Type = "tenant_fragment"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t CustomSchemaFragmentsSetRequest) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t CustomSchemaFragmentsSetRequest) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "app_fragment":
+		return t.AsCustomSchemaFragmentsSetRequestAppFragment()
+	case "custom_type_fragment":
+		return t.AsCustomSchemaFragmentsSetRequestCustomTypeFragment()
+	case "tenant_fragment":
+		return t.AsCustomSchemaFragmentsSetRequestTenantFragment()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t CustomSchemaFragmentsSetRequest) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	if t.CompositeSchemas != nil {
+		object["composite_schemas"], err = json.Marshal(t.CompositeSchemas)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'composite_schemas': %w", err)
+		}
+	}
+
+	if t.Conditions != nil {
+		object["conditions"], err = json.Marshal(t.Conditions)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'conditions': %w", err)
+		}
+	}
+
+	if t.DeletedFields != nil {
+		object["deleted_fields"], err = json.Marshal(t.DeletedFields)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'deleted_fields': %w", err)
+		}
+	}
+
+	if t.Deprecated != nil {
+		object["deprecated"], err = json.Marshal(t.Deprecated)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'deprecated': %w", err)
+		}
+	}
+
+	object["description"], err = json.Marshal(t.Description)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'description': %w", err)
+	}
+
+	if t.Fields != nil {
+		object["fields"], err = json.Marshal(t.Fields)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'fields': %w", err)
+		}
+	}
+
+	if t.IsCustomLeafType != nil {
+		object["is_custom_leaf_type"], err = json.Marshal(t.IsCustomLeafType)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'is_custom_leaf_type': %w", err)
+		}
+	}
+
+	if t.IsDeprecated != nil {
+		object["is_deprecated"], err = json.Marshal(t.IsDeprecated)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'is_deprecated': %w", err)
+		}
+	}
+
+	object["leaf_type"], err = json.Marshal(t.LeafType)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'leaf_type': %w", err)
+	}
+
+	object["type"], err = json.Marshal(t.Type)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *CustomSchemaFragmentsSetRequest) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["composite_schemas"]; found {
+		err = json.Unmarshal(raw, &t.CompositeSchemas)
+		if err != nil {
+			return fmt.Errorf("error reading 'composite_schemas': %w", err)
+		}
+	}
+
+	if raw, found := object["conditions"]; found {
+		err = json.Unmarshal(raw, &t.Conditions)
+		if err != nil {
+			return fmt.Errorf("error reading 'conditions': %w", err)
+		}
+	}
+
+	if raw, found := object["deleted_fields"]; found {
+		err = json.Unmarshal(raw, &t.DeletedFields)
+		if err != nil {
+			return fmt.Errorf("error reading 'deleted_fields': %w", err)
+		}
+	}
+
+	if raw, found := object["deprecated"]; found {
+		err = json.Unmarshal(raw, &t.Deprecated)
+		if err != nil {
+			return fmt.Errorf("error reading 'deprecated': %w", err)
+		}
+	}
+
+	if raw, found := object["description"]; found {
+		err = json.Unmarshal(raw, &t.Description)
+		if err != nil {
+			return fmt.Errorf("error reading 'description': %w", err)
+		}
+	}
+
+	if raw, found := object["fields"]; found {
+		err = json.Unmarshal(raw, &t.Fields)
+		if err != nil {
+			return fmt.Errorf("error reading 'fields': %w", err)
+		}
+	}
+
+	if raw, found := object["is_custom_leaf_type"]; found {
+		err = json.Unmarshal(raw, &t.IsCustomLeafType)
+		if err != nil {
+			return fmt.Errorf("error reading 'is_custom_leaf_type': %w", err)
+		}
+	}
+
+	if raw, found := object["is_deprecated"]; found {
+		err = json.Unmarshal(raw, &t.IsDeprecated)
+		if err != nil {
+			return fmt.Errorf("error reading 'is_deprecated': %w", err)
+		}
+	}
+
+	if raw, found := object["leaf_type"]; found {
+		err = json.Unmarshal(raw, &t.LeafType)
+		if err != nil {
+			return fmt.Errorf("error reading 'leaf_type': %w", err)
 		}
 	}
 
@@ -18936,7 +21602,7 @@ func (t EventSlaTrackerFetched) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the EventSlaTrackerFetched as the provided Empty
 func (t *EventSlaTrackerFetched) FromEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -18945,7 +21611,7 @@ func (t *EventSlaTrackerFetched) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the EventSlaTrackerFetched, using the provided Empty
 func (t *EventSlaTrackerFetched) MergeEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -19001,7 +21667,7 @@ func (t EventSlaTrackerFetched) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
-	case "not_found":
+	case "forbidden":
 		return t.AsEmpty()
 	case "ok":
 		return t.AsEventSlaTrackerFetchedOk()
@@ -19074,7 +21740,7 @@ func (t EventWorkFetched) AsEmpty() (Empty, error) {
 
 // FromEmpty overwrites any union data inside the EventWorkFetched as the provided Empty
 func (t *EventWorkFetched) FromEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	t.union = b
@@ -19083,7 +21749,7 @@ func (t *EventWorkFetched) FromEmpty(v Empty) error {
 
 // MergeEmpty performs a merge with any union data inside the EventWorkFetched, using the provided Empty
 func (t *EventWorkFetched) MergeEmpty(v Empty) error {
-	t.Result = "not_found"
+	t.Result = "forbidden"
 
 	b, err := json.Marshal(v)
 	if err != nil {
@@ -19139,7 +21805,7 @@ func (t EventWorkFetched) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
-	case "not_found":
+	case "forbidden":
 		return t.AsEmpty()
 	case "ok":
 		return t.AsEventWorkFetchedOk()
@@ -19200,6 +21866,36 @@ func (t *EventWorkFetched) UnmarshalJSON(b []byte) error {
 		}
 	}
 
+	return err
+}
+
+// AsArticleSummary returns the union data inside the LinkEndpointSummary as a ArticleSummary
+func (t LinkEndpointSummary) AsArticleSummary() (ArticleSummary, error) {
+	var body ArticleSummary
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromArticleSummary overwrites any union data inside the LinkEndpointSummary as the provided ArticleSummary
+func (t *LinkEndpointSummary) FromArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeArticleSummary performs a merge with any union data inside the LinkEndpointSummary, using the provided ArticleSummary
+func (t *LinkEndpointSummary) MergeArticleSummary(v ArticleSummary) error {
+	t.Type = "article"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
 	return err
 }
 
@@ -19517,6 +22213,8 @@ func (t LinkEndpointSummary) ValueByDiscriminator() (interface{}, error) {
 		return nil, err
 	}
 	switch discriminator {
+	case "article":
+		return t.AsArticleSummary()
 	case "capability":
 		return t.AsCapabilitySummary()
 	case "conversation":
@@ -22650,6 +25348,322 @@ func (t *UserSummary) UnmarshalJSON(b []byte) error {
 	return err
 }
 
+// AsCuratedVista returns the union data inside the Vista as a CuratedVista
+func (t Vista) AsCuratedVista() (CuratedVista, error) {
+	var body CuratedVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromCuratedVista overwrites any union data inside the Vista as the provided CuratedVista
+func (t *Vista) FromCuratedVista(v CuratedVista) error {
+	t.Type = "curated"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeCuratedVista performs a merge with any union data inside the Vista, using the provided CuratedVista
+func (t *Vista) MergeCuratedVista(v CuratedVista) error {
+	t.Type = "curated"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsDynamicVista returns the union data inside the Vista as a DynamicVista
+func (t Vista) AsDynamicVista() (DynamicVista, error) {
+	var body DynamicVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDynamicVista overwrites any union data inside the Vista as the provided DynamicVista
+func (t *Vista) FromDynamicVista(v DynamicVista) error {
+	t.Type = "dynamic"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDynamicVista performs a merge with any union data inside the Vista, using the provided DynamicVista
+func (t *Vista) MergeDynamicVista(v DynamicVista) error {
+	t.Type = "dynamic"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsGroupedVista returns the union data inside the Vista as a GroupedVista
+func (t Vista) AsGroupedVista() (GroupedVista, error) {
+	var body GroupedVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromGroupedVista overwrites any union data inside the Vista as the provided GroupedVista
+func (t *Vista) FromGroupedVista(v GroupedVista) error {
+	t.Type = "grouped"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeGroupedVista performs a merge with any union data inside the Vista, using the provided GroupedVista
+func (t *Vista) MergeGroupedVista(v GroupedVista) error {
+	t.Type = "grouped"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t Vista) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t Vista) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "curated":
+		return t.AsCuratedVista()
+	case "dynamic":
+		return t.AsDynamicVista()
+	case "grouped":
+		return t.AsGroupedVista()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t Vista) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	object["type"], err = json.Marshal(t.Type)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *Vista) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["type"]; found {
+		err = json.Unmarshal(raw, &t.Type)
+		if err != nil {
+			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsConversationsVistaGroupItem returns the union data inside the VistaGroup as a ConversationsVistaGroupItem
+func (t VistaGroup) AsConversationsVistaGroupItem() (ConversationsVistaGroupItem, error) {
+	var body ConversationsVistaGroupItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromConversationsVistaGroupItem overwrites any union data inside the VistaGroup as the provided ConversationsVistaGroupItem
+func (t *VistaGroup) FromConversationsVistaGroupItem(v ConversationsVistaGroupItem) error {
+	t.ObjectType = "conversations"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeConversationsVistaGroupItem performs a merge with any union data inside the VistaGroup, using the provided ConversationsVistaGroupItem
+func (t *VistaGroup) MergeConversationsVistaGroupItem(v ConversationsVistaGroupItem) error {
+	t.ObjectType = "conversations"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsPartsVistaGroupItem returns the union data inside the VistaGroup as a PartsVistaGroupItem
+func (t VistaGroup) AsPartsVistaGroupItem() (PartsVistaGroupItem, error) {
+	var body PartsVistaGroupItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromPartsVistaGroupItem overwrites any union data inside the VistaGroup as the provided PartsVistaGroupItem
+func (t *VistaGroup) FromPartsVistaGroupItem(v PartsVistaGroupItem) error {
+	t.ObjectType = "parts"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergePartsVistaGroupItem performs a merge with any union data inside the VistaGroup, using the provided PartsVistaGroupItem
+func (t *VistaGroup) MergePartsVistaGroupItem(v PartsVistaGroupItem) error {
+	t.ObjectType = "parts"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+// AsWorksVistaGroupItem returns the union data inside the VistaGroup as a WorksVistaGroupItem
+func (t VistaGroup) AsWorksVistaGroupItem() (WorksVistaGroupItem, error) {
+	var body WorksVistaGroupItem
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromWorksVistaGroupItem overwrites any union data inside the VistaGroup as the provided WorksVistaGroupItem
+func (t *VistaGroup) FromWorksVistaGroupItem(v WorksVistaGroupItem) error {
+	t.ObjectType = "works"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeWorksVistaGroupItem performs a merge with any union data inside the VistaGroup, using the provided WorksVistaGroupItem
+func (t *VistaGroup) MergeWorksVistaGroupItem(v WorksVistaGroupItem) error {
+	t.ObjectType = "works"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t VistaGroup) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"object_type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t VistaGroup) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "conversations":
+		return t.AsConversationsVistaGroupItem()
+	case "parts":
+		return t.AsPartsVistaGroupItem()
+	case "works":
+		return t.AsWorksVistaGroupItem()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t VistaGroup) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	object["object_type"], err = json.Marshal(t.ObjectType)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'object_type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *VistaGroup) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["object_type"]; found {
+		err = json.Unmarshal(raw, &t.ObjectType)
+		if err != nil {
+			return fmt.Errorf("error reading 'object_type': %w", err)
+		}
+	}
+
+	return err
+}
+
 // AsIssue returns the union data inside the Work as a Issue
 func (t Work) AsIssue() (Issue, error) {
 	var body Issue
@@ -23706,6 +26720,45 @@ type ClientInterface interface {
 
 	ConversationsUpdate(ctx context.Context, body ConversationsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// CustomObjectsCount request
+	CustomObjectsCount(ctx context.Context, params *CustomObjectsCountParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsCountPostWithBody request with any body
+	CustomObjectsCountPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomObjectsCountPost(ctx context.Context, body CustomObjectsCountPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsCreateWithBody request with any body
+	CustomObjectsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomObjectsCreate(ctx context.Context, body CustomObjectsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsDeleteWithBody request with any body
+	CustomObjectsDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomObjectsDelete(ctx context.Context, body CustomObjectsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsGet request
+	CustomObjectsGet(ctx context.Context, params *CustomObjectsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsGetPostWithBody request with any body
+	CustomObjectsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomObjectsGetPost(ctx context.Context, body CustomObjectsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsList request
+	CustomObjectsList(ctx context.Context, params *CustomObjectsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsListPostWithBody request with any body
+	CustomObjectsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomObjectsListPost(ctx context.Context, body CustomObjectsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomObjectsUpdateWithBody request with any body
+	CustomObjectsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomObjectsUpdate(ctx context.Context, body CustomObjectsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// DevOrgAuthConnectionsCreateWithBody request with any body
 	DevOrgAuthConnectionsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -24200,6 +27253,56 @@ type ClientInterface interface {
 
 	RevUsersUpdate(ctx context.Context, body RevUsersUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
+	// AggregatedSchemaGet request
+	AggregatedSchemaGet(ctx context.Context, params *AggregatedSchemaGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// AggregatedSchemaGetPostWithBody request with any body
+	AggregatedSchemaGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	AggregatedSchemaGetPost(ctx context.Context, body AggregatedSchemaGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomSchemaFragmentsGet request
+	CustomSchemaFragmentsGet(ctx context.Context, params *CustomSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomSchemaFragmentsGetPostWithBody request with any body
+	CustomSchemaFragmentsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomSchemaFragmentsGetPost(ctx context.Context, body CustomSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomSchemaFragmentsList request
+	CustomSchemaFragmentsList(ctx context.Context, params *CustomSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomSchemaFragmentsListPostWithBody request with any body
+	CustomSchemaFragmentsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomSchemaFragmentsListPost(ctx context.Context, body CustomSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomSchemaFragmentsSetWithBody request with any body
+	CustomSchemaFragmentsSetWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomSchemaFragmentsSet(ctx context.Context, body CustomSchemaFragmentsSetJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StockSchemaFragmentsGet request
+	StockSchemaFragmentsGet(ctx context.Context, params *StockSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StockSchemaFragmentsGetPostWithBody request with any body
+	StockSchemaFragmentsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	StockSchemaFragmentsGetPost(ctx context.Context, body StockSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StockSchemaFragmentsList request
+	StockSchemaFragmentsList(ctx context.Context, params *StockSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StockSchemaFragmentsListPostWithBody request with any body
+	StockSchemaFragmentsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	StockSchemaFragmentsListPost(ctx context.Context, body StockSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// SchemasSubtypePrepareUpdateGetWithBody request with any body
+	SchemasSubtypePrepareUpdateGetWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	SchemasSubtypePrepareUpdateGet(ctx context.Context, body SchemasSubtypePrepareUpdateGetJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
 	// ServiceAccountsCreateWithBody request with any body
 	ServiceAccountsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
@@ -24274,6 +27377,84 @@ type ClientInterface interface {
 	SnapWidgetsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	SnapWidgetsCreate(ctx context.Context, body SnapWidgetsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StageDiagramsCreateWithBody request with any body
+	StageDiagramsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	StageDiagramsCreate(ctx context.Context, body StageDiagramsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StageDiagramsGet request
+	StageDiagramsGet(ctx context.Context, params *StageDiagramsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StageDiagramsGetPostWithBody request with any body
+	StageDiagramsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	StageDiagramsGetPost(ctx context.Context, body StageDiagramsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StageDiagramsList request
+	StageDiagramsList(ctx context.Context, params *StageDiagramsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StageDiagramsListPostWithBody request with any body
+	StageDiagramsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	StageDiagramsListPost(ctx context.Context, body StageDiagramsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// StageDiagramsUpdateWithBody request with any body
+	StageDiagramsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	StageDiagramsUpdate(ctx context.Context, body StageDiagramsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStagesCreateWithBody request with any body
+	CustomStagesCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStagesCreate(ctx context.Context, body CustomStagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStagesGet request
+	CustomStagesGet(ctx context.Context, params *CustomStagesGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStagesGetPostWithBody request with any body
+	CustomStagesGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStagesGetPost(ctx context.Context, body CustomStagesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStagesList request
+	CustomStagesList(ctx context.Context, params *CustomStagesListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStagesListPostWithBody request with any body
+	CustomStagesListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStagesListPost(ctx context.Context, body CustomStagesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStagesUpdateWithBody request with any body
+	CustomStagesUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStagesUpdate(ctx context.Context, body CustomStagesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStatesCreateWithBody request with any body
+	CustomStatesCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStatesCreate(ctx context.Context, body CustomStatesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStatesGet request
+	CustomStatesGet(ctx context.Context, params *CustomStatesGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStatesGetPostWithBody request with any body
+	CustomStatesGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStatesGetPost(ctx context.Context, body CustomStatesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStatesList request
+	CustomStatesList(ctx context.Context, params *CustomStatesListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStatesListPostWithBody request with any body
+	CustomStatesListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStatesListPost(ctx context.Context, body CustomStatesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// CustomStatesUpdateWithBody request with any body
+	CustomStatesUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	CustomStatesUpdate(ctx context.Context, body CustomStatesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// SurveysCreateWithBody request with any body
 	SurveysCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -24403,6 +27584,48 @@ type ClientInterface interface {
 	TimelineEntriesUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	TimelineEntriesUpdate(ctx context.Context, body TimelineEntriesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasDeleteWithBody request with any body
+	VistasDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasDelete(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGet request
+	VistasGet(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGetPostWithBody request with any body
+	VistasGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGetPost(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsDeleteWithBody request with any body
+	VistasGroupsDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGroupsDelete(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsGet request
+	VistasGroupsGet(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsGetPostWithBody request with any body
+	VistasGroupsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGroupsGetPost(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsList request
+	VistasGroupsList(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasGroupsListPostWithBody request with any body
+	VistasGroupsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasGroupsListPost(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasList request
+	VistasList(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasListPostWithBody request with any body
+	VistasListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasListPost(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// WebCrawlerJobsControlWithBody request with any body
 	WebCrawlerJobsControlWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -25756,6 +28979,186 @@ func (c *Client) ConversationsUpdateWithBody(ctx context.Context, contentType st
 
 func (c *Client) ConversationsUpdate(ctx context.Context, body ConversationsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewConversationsUpdateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsCount(ctx context.Context, params *CustomObjectsCountParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsCountRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsCountPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsCountPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsCountPost(ctx context.Context, body CustomObjectsCountPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsCountPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsCreateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsCreate(ctx context.Context, body CustomObjectsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsDeleteRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsDelete(ctx context.Context, body CustomObjectsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsDeleteRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsGet(ctx context.Context, params *CustomObjectsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsGetPost(ctx context.Context, body CustomObjectsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsList(ctx context.Context, params *CustomObjectsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsListPost(ctx context.Context, body CustomObjectsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsUpdateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomObjectsUpdate(ctx context.Context, body CustomObjectsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomObjectsUpdateRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -28058,6 +31461,234 @@ func (c *Client) RevUsersUpdate(ctx context.Context, body RevUsersUpdateJSONRequ
 	return c.Client.Do(req)
 }
 
+func (c *Client) AggregatedSchemaGet(ctx context.Context, params *AggregatedSchemaGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAggregatedSchemaGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AggregatedSchemaGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAggregatedSchemaGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) AggregatedSchemaGetPost(ctx context.Context, body AggregatedSchemaGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewAggregatedSchemaGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsGet(ctx context.Context, params *CustomSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsGetPost(ctx context.Context, body CustomSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsList(ctx context.Context, params *CustomSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsListPost(ctx context.Context, body CustomSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsSetWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsSetRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomSchemaFragmentsSet(ctx context.Context, body CustomSchemaFragmentsSetJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomSchemaFragmentsSetRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StockSchemaFragmentsGet(ctx context.Context, params *StockSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStockSchemaFragmentsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StockSchemaFragmentsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStockSchemaFragmentsGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StockSchemaFragmentsGetPost(ctx context.Context, body StockSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStockSchemaFragmentsGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StockSchemaFragmentsList(ctx context.Context, params *StockSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStockSchemaFragmentsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StockSchemaFragmentsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStockSchemaFragmentsListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StockSchemaFragmentsListPost(ctx context.Context, body StockSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStockSchemaFragmentsListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SchemasSubtypePrepareUpdateGetWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSchemasSubtypePrepareUpdateGetRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) SchemasSubtypePrepareUpdateGet(ctx context.Context, body SchemasSubtypePrepareUpdateGetJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewSchemasSubtypePrepareUpdateGetRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) ServiceAccountsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewServiceAccountsCreateRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -28396,6 +32027,366 @@ func (c *Client) SnapWidgetsCreateWithBody(ctx context.Context, contentType stri
 
 func (c *Client) SnapWidgetsCreate(ctx context.Context, body SnapWidgetsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewSnapWidgetsCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsCreateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsCreate(ctx context.Context, body StageDiagramsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsGet(ctx context.Context, params *StageDiagramsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsGetPost(ctx context.Context, body StageDiagramsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsList(ctx context.Context, params *StageDiagramsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsListPost(ctx context.Context, body StageDiagramsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsUpdateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) StageDiagramsUpdate(ctx context.Context, body StageDiagramsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewStageDiagramsUpdateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesCreateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesCreate(ctx context.Context, body CustomStagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesGet(ctx context.Context, params *CustomStagesGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesGetPost(ctx context.Context, body CustomStagesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesList(ctx context.Context, params *CustomStagesListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesListPost(ctx context.Context, body CustomStagesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesUpdateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStagesUpdate(ctx context.Context, body CustomStagesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStagesUpdateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesCreateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesCreate(ctx context.Context, body CustomStatesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesGet(ctx context.Context, params *CustomStatesGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesGetPost(ctx context.Context, body CustomStatesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesList(ctx context.Context, params *CustomStatesListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesListPost(ctx context.Context, body CustomStatesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesUpdateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) CustomStatesUpdate(ctx context.Context, body CustomStatesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewCustomStatesUpdateRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -28996,6 +32987,198 @@ func (c *Client) TimelineEntriesUpdateWithBody(ctx context.Context, contentType 
 
 func (c *Client) TimelineEntriesUpdate(ctx context.Context, body TimelineEntriesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewTimelineEntriesUpdateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasDeleteRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasDelete(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasDeleteRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGet(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGetPost(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsDeleteRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsDelete(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsDeleteRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsGet(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsGetRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsGetPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsGetPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsGetPost(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsGetPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsList(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasGroupsListPost(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasGroupsListPostRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasList(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasListRequest(c.Server, params)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasListPostWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasListPostRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasListPost(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasListPostRequest(c.Server, body)
 	if err != nil {
 		return nil, err
 	}
@@ -30395,22 +34578,6 @@ func NewGetArticleRequest(server string, params *GetArticleParams) (*http.Reques
 			}
 		}
 
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -30567,22 +34734,6 @@ func NewListArticlesRequest(server string, params *ListArticlesParams) (*http.Re
 		if params.Cursor != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -33283,6 +37434,497 @@ func NewConversationsUpdateRequestWithBody(server string, contentType string, bo
 	return req, nil
 }
 
+// NewCustomObjectsCountRequest generates requests for CustomObjectsCount
+func NewCustomObjectsCountRequest(server string, params *CustomObjectsCountParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.count")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, params.LeafType); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		if params.Filters != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "filters", runtime.ParamLocationQuery, *params.Filters); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomObjectsCountPostRequest calls the generic CustomObjectsCountPost builder with application/json body
+func NewCustomObjectsCountPostRequest(server string, body CustomObjectsCountPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomObjectsCountPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomObjectsCountPostRequestWithBody generates requests for CustomObjectsCountPost with any type of body
+func NewCustomObjectsCountPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.count")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomObjectsCreateRequest calls the generic CustomObjectsCreate builder with application/json body
+func NewCustomObjectsCreateRequest(server string, body CustomObjectsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomObjectsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomObjectsCreateRequestWithBody generates requests for CustomObjectsCreate with any type of body
+func NewCustomObjectsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomObjectsDeleteRequest calls the generic CustomObjectsDelete builder with application/json body
+func NewCustomObjectsDeleteRequest(server string, body CustomObjectsDeleteJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomObjectsDeleteRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomObjectsDeleteRequestWithBody generates requests for CustomObjectsDelete with any type of body
+func NewCustomObjectsDeleteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.delete")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomObjectsGetRequest generates requests for CustomObjectsGet
+func NewCustomObjectsGetRequest(server string, params *CustomObjectsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Id != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, *params.Id); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomObjectsGetPostRequest calls the generic CustomObjectsGetPost builder with application/json body
+func NewCustomObjectsGetPostRequest(server string, body CustomObjectsGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomObjectsGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomObjectsGetPostRequestWithBody generates requests for CustomObjectsGetPost with any type of body
+func NewCustomObjectsGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomObjectsListRequest generates requests for CustomObjectsList
+func NewCustomObjectsListRequest(server string, params *CustomObjectsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, params.LeafType); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Filter != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "filter", runtime.ParamLocationQuery, *params.Filter); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Filters != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "filters", runtime.ParamLocationQuery, *params.Filters); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Mode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "mode", runtime.ParamLocationQuery, *params.Mode); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomObjectsListPostRequest calls the generic CustomObjectsListPost builder with application/json body
+func NewCustomObjectsListPostRequest(server string, body CustomObjectsListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomObjectsListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomObjectsListPostRequestWithBody generates requests for CustomObjectsListPost with any type of body
+func NewCustomObjectsListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomObjectsUpdateRequest calls the generic CustomObjectsUpdate builder with application/json body
+func NewCustomObjectsUpdateRequest(server string, body CustomObjectsUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomObjectsUpdateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomObjectsUpdateRequestWithBody generates requests for CustomObjectsUpdate with any type of body
+func NewCustomObjectsUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/custom-objects.update")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewDevOrgAuthConnectionsCreateRequest calls the generic DevOrgAuthConnectionsCreate builder with application/json body
 func NewDevOrgAuthConnectionsCreateRequest(server string, body DevOrgAuthConnectionsCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -34554,22 +39196,6 @@ func NewDirectoriesGetRequest(server string, params *DirectoriesGetParams) (*htt
 			}
 		}
 
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -34662,22 +39288,6 @@ func NewDirectoriesListRequest(server string, params *DirectoriesListParams) (*h
 		if params.Cursor != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
-				return nil, err
-			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
-				return nil, err
-			} else {
-				for k, v := range parsed {
-					for _, v2 := range v {
-						queryValues.Add(k, v2)
-					}
-				}
-			}
-
-		}
-
-		if params.DevOrg != nil {
-
-			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "dev_org", runtime.ParamLocationQuery, *params.DevOrg); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -38357,6 +42967,22 @@ func NewPartsListRequest(server string, params *PartsListParams) (*http.Request,
 
 		}
 
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		if params.Tags != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "tags", runtime.ParamLocationQuery, *params.Tags); err != nil {
@@ -39946,6 +44572,863 @@ func NewRevUsersUpdateRequestWithBody(server string, contentType string, body io
 	return req, nil
 }
 
+// NewAggregatedSchemaGetRequest generates requests for AggregatedSchemaGet
+func NewAggregatedSchemaGetRequest(server string, params *AggregatedSchemaGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.aggregated.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.CustomSchemaSpecApps != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_spec.apps", runtime.ParamLocationQuery, *params.CustomSchemaSpecApps); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.CustomSchemaSpecSubtype != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_spec.subtype", runtime.ParamLocationQuery, *params.CustomSchemaSpecSubtype); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsCustomLeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_custom_leaf_type", runtime.ParamLocationQuery, *params.IsCustomLeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.LeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewAggregatedSchemaGetPostRequest calls the generic AggregatedSchemaGetPost builder with application/json body
+func NewAggregatedSchemaGetPostRequest(server string, body AggregatedSchemaGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewAggregatedSchemaGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewAggregatedSchemaGetPostRequestWithBody generates requests for AggregatedSchemaGetPost with any type of body
+func NewAggregatedSchemaGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.aggregated.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomSchemaFragmentsGetRequest generates requests for CustomSchemaFragmentsGet
+func NewCustomSchemaFragmentsGetRequest(server string, params *CustomSchemaFragmentsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.custom.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, params.Id); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomSchemaFragmentsGetPostRequest calls the generic CustomSchemaFragmentsGetPost builder with application/json body
+func NewCustomSchemaFragmentsGetPostRequest(server string, body CustomSchemaFragmentsGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomSchemaFragmentsGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomSchemaFragmentsGetPostRequestWithBody generates requests for CustomSchemaFragmentsGetPost with any type of body
+func NewCustomSchemaFragmentsGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.custom.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomSchemaFragmentsListRequest generates requests for CustomSchemaFragmentsList
+func NewCustomSchemaFragmentsListRequest(server string, params *CustomSchemaFragmentsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.custom.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.App != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "app", runtime.ParamLocationQuery, *params.App); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Deprecated != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "deprecated", runtime.ParamLocationQuery, *params.Deprecated); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsCustomLeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_custom_leaf_type", runtime.ParamLocationQuery, *params.IsCustomLeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsDeprecated != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_deprecated", runtime.ParamLocationQuery, *params.IsDeprecated); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.LeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Mode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "mode", runtime.ParamLocationQuery, *params.Mode); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Prune != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "prune", runtime.ParamLocationQuery, *params.Prune); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Subtype != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "subtype", runtime.ParamLocationQuery, *params.Subtype); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Types != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "types", runtime.ParamLocationQuery, *params.Types); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomSchemaFragmentsListPostRequest calls the generic CustomSchemaFragmentsListPost builder with application/json body
+func NewCustomSchemaFragmentsListPostRequest(server string, body CustomSchemaFragmentsListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomSchemaFragmentsListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomSchemaFragmentsListPostRequestWithBody generates requests for CustomSchemaFragmentsListPost with any type of body
+func NewCustomSchemaFragmentsListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.custom.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomSchemaFragmentsSetRequest calls the generic CustomSchemaFragmentsSet builder with application/json body
+func NewCustomSchemaFragmentsSetRequest(server string, body CustomSchemaFragmentsSetJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomSchemaFragmentsSetRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomSchemaFragmentsSetRequestWithBody generates requests for CustomSchemaFragmentsSet with any type of body
+func NewCustomSchemaFragmentsSetRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.custom.set")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewStockSchemaFragmentsGetRequest generates requests for StockSchemaFragmentsGet
+func NewStockSchemaFragmentsGetRequest(server string, params *StockSchemaFragmentsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.stock.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Id != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, *params.Id); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.LeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewStockSchemaFragmentsGetPostRequest calls the generic StockSchemaFragmentsGetPost builder with application/json body
+func NewStockSchemaFragmentsGetPostRequest(server string, body StockSchemaFragmentsGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewStockSchemaFragmentsGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewStockSchemaFragmentsGetPostRequestWithBody generates requests for StockSchemaFragmentsGetPost with any type of body
+func NewStockSchemaFragmentsGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.stock.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewStockSchemaFragmentsListRequest generates requests for StockSchemaFragmentsList
+func NewStockSchemaFragmentsListRequest(server string, params *StockSchemaFragmentsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.stock.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.FilterPreset != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "filter_preset", runtime.ParamLocationQuery, *params.FilterPreset); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.LeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Mode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "mode", runtime.ParamLocationQuery, *params.Mode); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Prune != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "prune", runtime.ParamLocationQuery, *params.Prune); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewStockSchemaFragmentsListPostRequest calls the generic StockSchemaFragmentsListPost builder with application/json body
+func NewStockSchemaFragmentsListPostRequest(server string, body StockSchemaFragmentsListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewStockSchemaFragmentsListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewStockSchemaFragmentsListPostRequestWithBody generates requests for StockSchemaFragmentsListPost with any type of body
+func NewStockSchemaFragmentsListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.stock.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewSchemasSubtypePrepareUpdateGetRequest calls the generic SchemasSubtypePrepareUpdateGet builder with application/json body
+func NewSchemasSubtypePrepareUpdateGetRequest(server string, body SchemasSubtypePrepareUpdateGetJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewSchemasSubtypePrepareUpdateGetRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewSchemasSubtypePrepareUpdateGetRequestWithBody generates requests for SchemasSubtypePrepareUpdateGet with any type of body
+func NewSchemasSubtypePrepareUpdateGetRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/schemas.subtypes.prepare-update")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewServiceAccountsCreateRequest calls the generic ServiceAccountsCreate builder with application/json body
 func NewServiceAccountsCreateRequest(server string, body ServiceAccountsCreateJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -40896,6 +46379,1028 @@ func NewSnapWidgetsCreateRequestWithBody(server string, contentType string, body
 	}
 
 	operationPath := fmt.Sprintf("/snap-widgets.create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewStageDiagramsCreateRequest calls the generic StageDiagramsCreate builder with application/json body
+func NewStageDiagramsCreateRequest(server string, body StageDiagramsCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewStageDiagramsCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewStageDiagramsCreateRequestWithBody generates requests for StageDiagramsCreate with any type of body
+func NewStageDiagramsCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stage-diagrams.create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewStageDiagramsGetRequest generates requests for StageDiagramsGet
+func NewStageDiagramsGetRequest(server string, params *StageDiagramsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stage-diagrams.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Id != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, *params.Id); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsCustomLeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_custom_leaf_type", runtime.ParamLocationQuery, *params.IsCustomLeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.LeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewStageDiagramsGetPostRequest calls the generic StageDiagramsGetPost builder with application/json body
+func NewStageDiagramsGetPostRequest(server string, body StageDiagramsGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewStageDiagramsGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewStageDiagramsGetPostRequestWithBody generates requests for StageDiagramsGetPost with any type of body
+func NewStageDiagramsGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stage-diagrams.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewStageDiagramsListRequest generates requests for StageDiagramsList
+func NewStageDiagramsListRequest(server string, params *StageDiagramsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stage-diagrams.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsCustomLeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_custom_leaf_type", runtime.ParamLocationQuery, *params.IsCustomLeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.LeafType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Name != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "name", runtime.ParamLocationQuery, *params.Name); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewStageDiagramsListPostRequest calls the generic StageDiagramsListPost builder with application/json body
+func NewStageDiagramsListPostRequest(server string, body StageDiagramsListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewStageDiagramsListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewStageDiagramsListPostRequestWithBody generates requests for StageDiagramsListPost with any type of body
+func NewStageDiagramsListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stage-diagrams.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewStageDiagramsUpdateRequest calls the generic StageDiagramsUpdate builder with application/json body
+func NewStageDiagramsUpdateRequest(server string, body StageDiagramsUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewStageDiagramsUpdateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewStageDiagramsUpdateRequestWithBody generates requests for StageDiagramsUpdate with any type of body
+func NewStageDiagramsUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stage-diagrams.update")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStagesCreateRequest calls the generic CustomStagesCreate builder with application/json body
+func NewCustomStagesCreateRequest(server string, body CustomStagesCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStagesCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStagesCreateRequestWithBody generates requests for CustomStagesCreate with any type of body
+func NewCustomStagesCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stages.custom.create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStagesGetRequest generates requests for CustomStagesGet
+func NewCustomStagesGetRequest(server string, params *CustomStagesGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stages.custom.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, params.Id); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomStagesGetPostRequest calls the generic CustomStagesGetPost builder with application/json body
+func NewCustomStagesGetPostRequest(server string, body CustomStagesGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStagesGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStagesGetPostRequestWithBody generates requests for CustomStagesGetPost with any type of body
+func NewCustomStagesGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stages.custom.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStagesListRequest generates requests for CustomStagesList
+func NewCustomStagesListRequest(server string, params *CustomStagesListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stages.custom.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Name != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "name", runtime.ParamLocationQuery, *params.Name); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Ordinal != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "ordinal", runtime.ParamLocationQuery, *params.Ordinal); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomStagesListPostRequest calls the generic CustomStagesListPost builder with application/json body
+func NewCustomStagesListPostRequest(server string, body CustomStagesListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStagesListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStagesListPostRequestWithBody generates requests for CustomStagesListPost with any type of body
+func NewCustomStagesListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stages.custom.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStagesUpdateRequest calls the generic CustomStagesUpdate builder with application/json body
+func NewCustomStagesUpdateRequest(server string, body CustomStagesUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStagesUpdateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStagesUpdateRequestWithBody generates requests for CustomStagesUpdate with any type of body
+func NewCustomStagesUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/stages.custom.update")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStatesCreateRequest calls the generic CustomStatesCreate builder with application/json body
+func NewCustomStatesCreateRequest(server string, body CustomStatesCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStatesCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStatesCreateRequestWithBody generates requests for CustomStatesCreate with any type of body
+func NewCustomStatesCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/states.custom.create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStatesGetRequest generates requests for CustomStatesGet
+func NewCustomStatesGetRequest(server string, params *CustomStatesGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/states.custom.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, params.Id); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomStatesGetPostRequest calls the generic CustomStatesGetPost builder with application/json body
+func NewCustomStatesGetPostRequest(server string, body CustomStatesGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStatesGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStatesGetPostRequestWithBody generates requests for CustomStatesGetPost with any type of body
+func NewCustomStatesGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/states.custom.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStatesListRequest generates requests for CustomStatesList
+func NewCustomStatesListRequest(server string, params *CustomStatesListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/states.custom.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsFinal != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_final", runtime.ParamLocationQuery, *params.IsFinal); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Name != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "name", runtime.ParamLocationQuery, *params.Name); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Ordinal != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "ordinal", runtime.ParamLocationQuery, *params.Ordinal); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewCustomStatesListPostRequest calls the generic CustomStatesListPost builder with application/json body
+func NewCustomStatesListPostRequest(server string, body CustomStatesListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStatesListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStatesListPostRequestWithBody generates requests for CustomStatesListPost with any type of body
+func NewCustomStatesListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/states.custom.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewCustomStatesUpdateRequest calls the generic CustomStatesUpdate builder with application/json body
+func NewCustomStatesUpdateRequest(server string, body CustomStatesUpdateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewCustomStatesUpdateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewCustomStatesUpdateRequestWithBody generates requests for CustomStatesUpdate with any type of body
+func NewCustomStatesUpdateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/states.custom.update")
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}
@@ -42512,6 +49017,818 @@ func NewTimelineEntriesUpdateRequestWithBody(server string, contentType string, 
 	}
 
 	operationPath := fmt.Sprintf("/timeline-entries.update")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasDeleteRequest calls the generic VistasDelete builder with application/json body
+func NewVistasDeleteRequest(server string, body VistasDeleteJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasDeleteRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasDeleteRequestWithBody generates requests for VistasDelete with any type of body
+func NewVistasDeleteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.delete")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGetRequest generates requests for VistasGet
+func NewVistasGetRequest(server string, params *VistasGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, params.Id); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasGetPostRequest calls the generic VistasGetPost builder with application/json body
+func NewVistasGetPostRequest(server string, body VistasGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGetPostRequestWithBody generates requests for VistasGetPost with any type of body
+func NewVistasGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGroupsDeleteRequest calls the generic VistasGroupsDelete builder with application/json body
+func NewVistasGroupsDeleteRequest(server string, body VistasGroupsDeleteJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGroupsDeleteRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGroupsDeleteRequestWithBody generates requests for VistasGroupsDelete with any type of body
+func NewVistasGroupsDeleteRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.delete")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGroupsGetRequest generates requests for VistasGroupsGet
+func NewVistasGroupsGetRequest(server string, params *VistasGroupsGetParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if queryFrag, err := runtime.StyleParamWithLocation("form", false, "id", runtime.ParamLocationQuery, params.Id); err != nil {
+			return nil, err
+		} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+			return nil, err
+		} else {
+			for k, v := range parsed {
+				for _, v2 := range v {
+					queryValues.Add(k, v2)
+				}
+			}
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasGroupsGetPostRequest calls the generic VistasGroupsGetPost builder with application/json body
+func NewVistasGroupsGetPostRequest(server string, body VistasGroupsGetPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGroupsGetPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGroupsGetPostRequestWithBody generates requests for VistasGroupsGetPost with any type of body
+func NewVistasGroupsGetPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.get")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasGroupsListRequest generates requests for VistasGroupsList
+func NewVistasGroupsListRequest(server string, params *VistasGroupsListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.AncestorPart != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "ancestor_part", runtime.ParamLocationQuery, *params.AncestorPart); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.AppliesToPartIncludeChildParts != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "applies_to_part.include_child_parts", runtime.ParamLocationQuery, *params.AppliesToPartIncludeChildParts); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.AppliesToPartParts != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "applies_to_part.parts", runtime.ParamLocationQuery, *params.AppliesToPartParts); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.CreatedBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "created_by", runtime.ParamLocationQuery, *params.CreatedBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.GroupObjectType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "group_object_type", runtime.ParamLocationQuery, *params.GroupObjectType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Mode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "mode", runtime.ParamLocationQuery, *params.Mode); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ParentId != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "parent_id", runtime.ParamLocationQuery, *params.ParentId); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.State != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "state", runtime.ParamLocationQuery, *params.State); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "type", runtime.ParamLocationQuery, *params.Type); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasGroupsListPostRequest calls the generic VistasGroupsListPost builder with application/json body
+func NewVistasGroupsListPostRequest(server string, body VistasGroupsListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasGroupsListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasGroupsListPostRequestWithBody generates requests for VistasGroupsListPost with any type of body
+func NewVistasGroupsListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.groups.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
+// NewVistasListRequest generates requests for VistasList
+func NewVistasListRequest(server string, params *VistasListParams) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.list")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	if params != nil {
+		queryValues := queryURL.Query()
+
+		if params.CreatedBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "created_by", runtime.ParamLocationQuery, *params.CreatedBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Cursor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "cursor", runtime.ParamLocationQuery, *params.Cursor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Flavor != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "flavor", runtime.ParamLocationQuery, *params.Flavor); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.IsDefault != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "is_default", runtime.ParamLocationQuery, *params.IsDefault); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Limit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "limit", runtime.ParamLocationQuery, *params.Limit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Members != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "members", runtime.ParamLocationQuery, *params.Members); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Mode != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "mode", runtime.ParamLocationQuery, *params.Mode); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.ObjectType != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "object_type", runtime.ParamLocationQuery, *params.ObjectType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SharedWithMember != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "shared_with.member", runtime.ParamLocationQuery, *params.SharedWithMember); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SharedWithRole != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "shared_with.role", runtime.ParamLocationQuery, *params.SharedWithRole); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SkipItems != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "skip_items", runtime.ParamLocationQuery, *params.SkipItems); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SortBy != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sort_by", runtime.ParamLocationQuery, *params.SortBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.State != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "state", runtime.ParamLocationQuery, *params.State); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Type != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "type", runtime.ParamLocationQuery, *params.Type); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		queryURL.RawQuery = queryValues.Encode()
+	}
+
+	req, err := http.NewRequest("GET", queryURL.String(), nil)
+	if err != nil {
+		return nil, err
+	}
+
+	return req, nil
+}
+
+// NewVistasListPostRequest calls the generic VistasListPost builder with application/json body
+func NewVistasListPostRequest(server string, body VistasListPostJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasListPostRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasListPostRequestWithBody generates requests for VistasListPost with any type of body
+func NewVistasListPostRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.list")
 	if operationPath[0] == '/' {
 		operationPath = "." + operationPath
 	}
@@ -45043,6 +52360,45 @@ type ClientWithResponsesInterface interface {
 
 	ConversationsUpdateWithResponse(ctx context.Context, body ConversationsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*ConversationsUpdateResponse, error)
 
+	// CustomObjectsCountWithResponse request
+	CustomObjectsCountWithResponse(ctx context.Context, params *CustomObjectsCountParams, reqEditors ...RequestEditorFn) (*CustomObjectsCountResponse, error)
+
+	// CustomObjectsCountPostWithBodyWithResponse request with any body
+	CustomObjectsCountPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsCountPostResponse, error)
+
+	CustomObjectsCountPostWithResponse(ctx context.Context, body CustomObjectsCountPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsCountPostResponse, error)
+
+	// CustomObjectsCreateWithBodyWithResponse request with any body
+	CustomObjectsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsCreateResponse, error)
+
+	CustomObjectsCreateWithResponse(ctx context.Context, body CustomObjectsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsCreateResponse, error)
+
+	// CustomObjectsDeleteWithBodyWithResponse request with any body
+	CustomObjectsDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsDeleteResponse, error)
+
+	CustomObjectsDeleteWithResponse(ctx context.Context, body CustomObjectsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsDeleteResponse, error)
+
+	// CustomObjectsGetWithResponse request
+	CustomObjectsGetWithResponse(ctx context.Context, params *CustomObjectsGetParams, reqEditors ...RequestEditorFn) (*CustomObjectsGetResponse, error)
+
+	// CustomObjectsGetPostWithBodyWithResponse request with any body
+	CustomObjectsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsGetPostResponse, error)
+
+	CustomObjectsGetPostWithResponse(ctx context.Context, body CustomObjectsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsGetPostResponse, error)
+
+	// CustomObjectsListWithResponse request
+	CustomObjectsListWithResponse(ctx context.Context, params *CustomObjectsListParams, reqEditors ...RequestEditorFn) (*CustomObjectsListResponse, error)
+
+	// CustomObjectsListPostWithBodyWithResponse request with any body
+	CustomObjectsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsListPostResponse, error)
+
+	CustomObjectsListPostWithResponse(ctx context.Context, body CustomObjectsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsListPostResponse, error)
+
+	// CustomObjectsUpdateWithBodyWithResponse request with any body
+	CustomObjectsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsUpdateResponse, error)
+
+	CustomObjectsUpdateWithResponse(ctx context.Context, body CustomObjectsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsUpdateResponse, error)
+
 	// DevOrgAuthConnectionsCreateWithBodyWithResponse request with any body
 	DevOrgAuthConnectionsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*DevOrgAuthConnectionsCreateResponse, error)
 
@@ -45537,6 +52893,56 @@ type ClientWithResponsesInterface interface {
 
 	RevUsersUpdateWithResponse(ctx context.Context, body RevUsersUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*RevUsersUpdateResponse, error)
 
+	// AggregatedSchemaGetWithResponse request
+	AggregatedSchemaGetWithResponse(ctx context.Context, params *AggregatedSchemaGetParams, reqEditors ...RequestEditorFn) (*AggregatedSchemaGetResponse, error)
+
+	// AggregatedSchemaGetPostWithBodyWithResponse request with any body
+	AggregatedSchemaGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AggregatedSchemaGetPostResponse, error)
+
+	AggregatedSchemaGetPostWithResponse(ctx context.Context, body AggregatedSchemaGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AggregatedSchemaGetPostResponse, error)
+
+	// CustomSchemaFragmentsGetWithResponse request
+	CustomSchemaFragmentsGetWithResponse(ctx context.Context, params *CustomSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsGetResponse, error)
+
+	// CustomSchemaFragmentsGetPostWithBodyWithResponse request with any body
+	CustomSchemaFragmentsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsGetPostResponse, error)
+
+	CustomSchemaFragmentsGetPostWithResponse(ctx context.Context, body CustomSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsGetPostResponse, error)
+
+	// CustomSchemaFragmentsListWithResponse request
+	CustomSchemaFragmentsListWithResponse(ctx context.Context, params *CustomSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsListResponse, error)
+
+	// CustomSchemaFragmentsListPostWithBodyWithResponse request with any body
+	CustomSchemaFragmentsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsListPostResponse, error)
+
+	CustomSchemaFragmentsListPostWithResponse(ctx context.Context, body CustomSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsListPostResponse, error)
+
+	// CustomSchemaFragmentsSetWithBodyWithResponse request with any body
+	CustomSchemaFragmentsSetWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsSetResponse, error)
+
+	CustomSchemaFragmentsSetWithResponse(ctx context.Context, body CustomSchemaFragmentsSetJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsSetResponse, error)
+
+	// StockSchemaFragmentsGetWithResponse request
+	StockSchemaFragmentsGetWithResponse(ctx context.Context, params *StockSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsGetResponse, error)
+
+	// StockSchemaFragmentsGetPostWithBodyWithResponse request with any body
+	StockSchemaFragmentsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsGetPostResponse, error)
+
+	StockSchemaFragmentsGetPostWithResponse(ctx context.Context, body StockSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsGetPostResponse, error)
+
+	// StockSchemaFragmentsListWithResponse request
+	StockSchemaFragmentsListWithResponse(ctx context.Context, params *StockSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsListResponse, error)
+
+	// StockSchemaFragmentsListPostWithBodyWithResponse request with any body
+	StockSchemaFragmentsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsListPostResponse, error)
+
+	StockSchemaFragmentsListPostWithResponse(ctx context.Context, body StockSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsListPostResponse, error)
+
+	// SchemasSubtypePrepareUpdateGetWithBodyWithResponse request with any body
+	SchemasSubtypePrepareUpdateGetWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SchemasSubtypePrepareUpdateGetResponse, error)
+
+	SchemasSubtypePrepareUpdateGetWithResponse(ctx context.Context, body SchemasSubtypePrepareUpdateGetJSONRequestBody, reqEditors ...RequestEditorFn) (*SchemasSubtypePrepareUpdateGetResponse, error)
+
 	// ServiceAccountsCreateWithBodyWithResponse request with any body
 	ServiceAccountsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServiceAccountsCreateResponse, error)
 
@@ -45611,6 +53017,84 @@ type ClientWithResponsesInterface interface {
 	SnapWidgetsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SnapWidgetsCreateResponse, error)
 
 	SnapWidgetsCreateWithResponse(ctx context.Context, body SnapWidgetsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*SnapWidgetsCreateResponse, error)
+
+	// StageDiagramsCreateWithBodyWithResponse request with any body
+	StageDiagramsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsCreateResponse, error)
+
+	StageDiagramsCreateWithResponse(ctx context.Context, body StageDiagramsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsCreateResponse, error)
+
+	// StageDiagramsGetWithResponse request
+	StageDiagramsGetWithResponse(ctx context.Context, params *StageDiagramsGetParams, reqEditors ...RequestEditorFn) (*StageDiagramsGetResponse, error)
+
+	// StageDiagramsGetPostWithBodyWithResponse request with any body
+	StageDiagramsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsGetPostResponse, error)
+
+	StageDiagramsGetPostWithResponse(ctx context.Context, body StageDiagramsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsGetPostResponse, error)
+
+	// StageDiagramsListWithResponse request
+	StageDiagramsListWithResponse(ctx context.Context, params *StageDiagramsListParams, reqEditors ...RequestEditorFn) (*StageDiagramsListResponse, error)
+
+	// StageDiagramsListPostWithBodyWithResponse request with any body
+	StageDiagramsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsListPostResponse, error)
+
+	StageDiagramsListPostWithResponse(ctx context.Context, body StageDiagramsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsListPostResponse, error)
+
+	// StageDiagramsUpdateWithBodyWithResponse request with any body
+	StageDiagramsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsUpdateResponse, error)
+
+	StageDiagramsUpdateWithResponse(ctx context.Context, body StageDiagramsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsUpdateResponse, error)
+
+	// CustomStagesCreateWithBodyWithResponse request with any body
+	CustomStagesCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesCreateResponse, error)
+
+	CustomStagesCreateWithResponse(ctx context.Context, body CustomStagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesCreateResponse, error)
+
+	// CustomStagesGetWithResponse request
+	CustomStagesGetWithResponse(ctx context.Context, params *CustomStagesGetParams, reqEditors ...RequestEditorFn) (*CustomStagesGetResponse, error)
+
+	// CustomStagesGetPostWithBodyWithResponse request with any body
+	CustomStagesGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesGetPostResponse, error)
+
+	CustomStagesGetPostWithResponse(ctx context.Context, body CustomStagesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesGetPostResponse, error)
+
+	// CustomStagesListWithResponse request
+	CustomStagesListWithResponse(ctx context.Context, params *CustomStagesListParams, reqEditors ...RequestEditorFn) (*CustomStagesListResponse, error)
+
+	// CustomStagesListPostWithBodyWithResponse request with any body
+	CustomStagesListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesListPostResponse, error)
+
+	CustomStagesListPostWithResponse(ctx context.Context, body CustomStagesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesListPostResponse, error)
+
+	// CustomStagesUpdateWithBodyWithResponse request with any body
+	CustomStagesUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesUpdateResponse, error)
+
+	CustomStagesUpdateWithResponse(ctx context.Context, body CustomStagesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesUpdateResponse, error)
+
+	// CustomStatesCreateWithBodyWithResponse request with any body
+	CustomStatesCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesCreateResponse, error)
+
+	CustomStatesCreateWithResponse(ctx context.Context, body CustomStatesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesCreateResponse, error)
+
+	// CustomStatesGetWithResponse request
+	CustomStatesGetWithResponse(ctx context.Context, params *CustomStatesGetParams, reqEditors ...RequestEditorFn) (*CustomStatesGetResponse, error)
+
+	// CustomStatesGetPostWithBodyWithResponse request with any body
+	CustomStatesGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesGetPostResponse, error)
+
+	CustomStatesGetPostWithResponse(ctx context.Context, body CustomStatesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesGetPostResponse, error)
+
+	// CustomStatesListWithResponse request
+	CustomStatesListWithResponse(ctx context.Context, params *CustomStatesListParams, reqEditors ...RequestEditorFn) (*CustomStatesListResponse, error)
+
+	// CustomStatesListPostWithBodyWithResponse request with any body
+	CustomStatesListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesListPostResponse, error)
+
+	CustomStatesListPostWithResponse(ctx context.Context, body CustomStatesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesListPostResponse, error)
+
+	// CustomStatesUpdateWithBodyWithResponse request with any body
+	CustomStatesUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesUpdateResponse, error)
+
+	CustomStatesUpdateWithResponse(ctx context.Context, body CustomStatesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesUpdateResponse, error)
 
 	// SurveysCreateWithBodyWithResponse request with any body
 	SurveysCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SurveysCreateResponse, error)
@@ -45740,6 +53224,48 @@ type ClientWithResponsesInterface interface {
 	TimelineEntriesUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*TimelineEntriesUpdateResponse, error)
 
 	TimelineEntriesUpdateWithResponse(ctx context.Context, body TimelineEntriesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*TimelineEntriesUpdateResponse, error)
+
+	// VistasDeleteWithBodyWithResponse request with any body
+	VistasDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error)
+
+	VistasDeleteWithResponse(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error)
+
+	// VistasGetWithResponse request
+	VistasGetWithResponse(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*VistasGetResponse, error)
+
+	// VistasGetPostWithBodyWithResponse request with any body
+	VistasGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error)
+
+	VistasGetPostWithResponse(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error)
+
+	// VistasGroupsDeleteWithBodyWithResponse request with any body
+	VistasGroupsDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error)
+
+	VistasGroupsDeleteWithResponse(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error)
+
+	// VistasGroupsGetWithResponse request
+	VistasGroupsGetWithResponse(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*VistasGroupsGetResponse, error)
+
+	// VistasGroupsGetPostWithBodyWithResponse request with any body
+	VistasGroupsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error)
+
+	VistasGroupsGetPostWithResponse(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error)
+
+	// VistasGroupsListWithResponse request
+	VistasGroupsListWithResponse(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*VistasGroupsListResponse, error)
+
+	// VistasGroupsListPostWithBodyWithResponse request with any body
+	VistasGroupsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error)
+
+	VistasGroupsListPostWithResponse(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error)
+
+	// VistasListWithResponse request
+	VistasListWithResponse(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*VistasListResponse, error)
+
+	// VistasListPostWithBodyWithResponse request with any body
+	VistasListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error)
+
+	VistasListPostWithResponse(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error)
 
 	// WebCrawlerJobsControlWithBodyWithResponse request with any body
 	WebCrawlerJobsControlWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*WebCrawlerJobsControlResponse, error)
@@ -47611,6 +55137,262 @@ func (r ConversationsUpdateResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r ConversationsUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsCountResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsCountResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsCountResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsCountResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsCountPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsCountResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsCountPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsCountPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *CustomObjectsCreateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsDeleteResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsDeleteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomObjectsUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomObjectsUpdateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomObjectsUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomObjectsUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -50808,6 +58590,349 @@ func (r RevUsersUpdateResponse) StatusCode() int {
 	return 0
 }
 
+type AggregatedSchemaGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *AggregatedSchemaGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r AggregatedSchemaGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AggregatedSchemaGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type AggregatedSchemaGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *AggregatedSchemaGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r AggregatedSchemaGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r AggregatedSchemaGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomSchemaFragmentsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomSchemaFragmentsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomSchemaFragmentsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomSchemaFragmentsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomSchemaFragmentsGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomSchemaFragmentsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomSchemaFragmentsGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomSchemaFragmentsGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomSchemaFragmentsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomSchemaFragmentsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomSchemaFragmentsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomSchemaFragmentsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomSchemaFragmentsListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomSchemaFragmentsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomSchemaFragmentsListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomSchemaFragmentsListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomSchemaFragmentsSetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *CustomSchemaFragmentsSetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomSchemaFragmentsSetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomSchemaFragmentsSetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StockSchemaFragmentsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StockSchemaFragmentsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StockSchemaFragmentsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StockSchemaFragmentsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StockSchemaFragmentsGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StockSchemaFragmentsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StockSchemaFragmentsGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StockSchemaFragmentsGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StockSchemaFragmentsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StockSchemaFragmentsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StockSchemaFragmentsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StockSchemaFragmentsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StockSchemaFragmentsListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StockSchemaFragmentsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StockSchemaFragmentsListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StockSchemaFragmentsListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type SchemasSubtypePrepareUpdateGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *SchemasSubtypePrepareUpdateGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r SchemasSubtypePrepareUpdateGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r SchemasSubtypePrepareUpdateGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type ServiceAccountsCreateResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -51287,6 +59412,519 @@ func (r SnapWidgetsCreateResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r SnapWidgetsCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StageDiagramsCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *StageDiagramsCreateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StageDiagramsCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StageDiagramsCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StageDiagramsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StageDiagramsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StageDiagramsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StageDiagramsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StageDiagramsGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StageDiagramsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StageDiagramsGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StageDiagramsGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StageDiagramsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StageDiagramsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StageDiagramsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StageDiagramsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StageDiagramsListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StageDiagramsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StageDiagramsListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StageDiagramsListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type StageDiagramsUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *StageDiagramsUpdateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r StageDiagramsUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r StageDiagramsUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStagesCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *CustomStagesCreateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStagesCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStagesCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStagesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStagesGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStagesGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStagesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStagesGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStagesGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStagesGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStagesGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStagesListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStagesListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStagesListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStagesListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStagesListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStagesListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStagesListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStagesListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStagesUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStagesUpdateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStagesUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStagesUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStatesCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *CustomStatesCreateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStatesCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStatesCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStatesGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStatesGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStatesGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStatesGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStatesGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStatesGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStatesGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStatesGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStatesListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStatesListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStatesListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStatesListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStatesListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStatesListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStatesListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStatesListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type CustomStatesUpdateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *CustomStatesUpdateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r CustomStatesUpdateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r CustomStatesUpdateResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -52111,6 +60749,292 @@ func (r TimelineEntriesUpdateResponse) Status() string {
 
 // StatusCode returns HTTPResponse.StatusCode
 func (r TimelineEntriesUpdateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasDeleteResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasDeleteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsDeleteResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsDeleteResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsDeleteResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsDeleteResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsGetResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsGetResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsGetResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsGetPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsGetResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON404      *NotFound
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsGetPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsGetPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasGroupsListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasGroupsListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasGroupsListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasGroupsListPostResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasListResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasListResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasListResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
+type VistasListPostResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON200      *VistasListResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasListPostResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasListPostResponse) StatusCode() int {
 	if r.HTTPResponse != nil {
 		return r.HTTPResponse.StatusCode
 	}
@@ -53672,6 +62596,135 @@ func (c *ClientWithResponses) ConversationsUpdateWithResponse(ctx context.Contex
 		return nil, err
 	}
 	return ParseConversationsUpdateResponse(rsp)
+}
+
+// CustomObjectsCountWithResponse request returning *CustomObjectsCountResponse
+func (c *ClientWithResponses) CustomObjectsCountWithResponse(ctx context.Context, params *CustomObjectsCountParams, reqEditors ...RequestEditorFn) (*CustomObjectsCountResponse, error) {
+	rsp, err := c.CustomObjectsCount(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsCountResponse(rsp)
+}
+
+// CustomObjectsCountPostWithBodyWithResponse request with arbitrary body returning *CustomObjectsCountPostResponse
+func (c *ClientWithResponses) CustomObjectsCountPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsCountPostResponse, error) {
+	rsp, err := c.CustomObjectsCountPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsCountPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomObjectsCountPostWithResponse(ctx context.Context, body CustomObjectsCountPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsCountPostResponse, error) {
+	rsp, err := c.CustomObjectsCountPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsCountPostResponse(rsp)
+}
+
+// CustomObjectsCreateWithBodyWithResponse request with arbitrary body returning *CustomObjectsCreateResponse
+func (c *ClientWithResponses) CustomObjectsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsCreateResponse, error) {
+	rsp, err := c.CustomObjectsCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsCreateResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomObjectsCreateWithResponse(ctx context.Context, body CustomObjectsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsCreateResponse, error) {
+	rsp, err := c.CustomObjectsCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsCreateResponse(rsp)
+}
+
+// CustomObjectsDeleteWithBodyWithResponse request with arbitrary body returning *CustomObjectsDeleteResponse
+func (c *ClientWithResponses) CustomObjectsDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsDeleteResponse, error) {
+	rsp, err := c.CustomObjectsDeleteWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsDeleteResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomObjectsDeleteWithResponse(ctx context.Context, body CustomObjectsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsDeleteResponse, error) {
+	rsp, err := c.CustomObjectsDelete(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsDeleteResponse(rsp)
+}
+
+// CustomObjectsGetWithResponse request returning *CustomObjectsGetResponse
+func (c *ClientWithResponses) CustomObjectsGetWithResponse(ctx context.Context, params *CustomObjectsGetParams, reqEditors ...RequestEditorFn) (*CustomObjectsGetResponse, error) {
+	rsp, err := c.CustomObjectsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsGetResponse(rsp)
+}
+
+// CustomObjectsGetPostWithBodyWithResponse request with arbitrary body returning *CustomObjectsGetPostResponse
+func (c *ClientWithResponses) CustomObjectsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsGetPostResponse, error) {
+	rsp, err := c.CustomObjectsGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomObjectsGetPostWithResponse(ctx context.Context, body CustomObjectsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsGetPostResponse, error) {
+	rsp, err := c.CustomObjectsGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsGetPostResponse(rsp)
+}
+
+// CustomObjectsListWithResponse request returning *CustomObjectsListResponse
+func (c *ClientWithResponses) CustomObjectsListWithResponse(ctx context.Context, params *CustomObjectsListParams, reqEditors ...RequestEditorFn) (*CustomObjectsListResponse, error) {
+	rsp, err := c.CustomObjectsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsListResponse(rsp)
+}
+
+// CustomObjectsListPostWithBodyWithResponse request with arbitrary body returning *CustomObjectsListPostResponse
+func (c *ClientWithResponses) CustomObjectsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsListPostResponse, error) {
+	rsp, err := c.CustomObjectsListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomObjectsListPostWithResponse(ctx context.Context, body CustomObjectsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsListPostResponse, error) {
+	rsp, err := c.CustomObjectsListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsListPostResponse(rsp)
+}
+
+// CustomObjectsUpdateWithBodyWithResponse request with arbitrary body returning *CustomObjectsUpdateResponse
+func (c *ClientWithResponses) CustomObjectsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomObjectsUpdateResponse, error) {
+	rsp, err := c.CustomObjectsUpdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsUpdateResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomObjectsUpdateWithResponse(ctx context.Context, body CustomObjectsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomObjectsUpdateResponse, error) {
+	rsp, err := c.CustomObjectsUpdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomObjectsUpdateResponse(rsp)
 }
 
 // DevOrgAuthConnectionsCreateWithBodyWithResponse request with arbitrary body returning *DevOrgAuthConnectionsCreateResponse
@@ -55314,6 +64367,170 @@ func (c *ClientWithResponses) RevUsersUpdateWithResponse(ctx context.Context, bo
 	return ParseRevUsersUpdateResponse(rsp)
 }
 
+// AggregatedSchemaGetWithResponse request returning *AggregatedSchemaGetResponse
+func (c *ClientWithResponses) AggregatedSchemaGetWithResponse(ctx context.Context, params *AggregatedSchemaGetParams, reqEditors ...RequestEditorFn) (*AggregatedSchemaGetResponse, error) {
+	rsp, err := c.AggregatedSchemaGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAggregatedSchemaGetResponse(rsp)
+}
+
+// AggregatedSchemaGetPostWithBodyWithResponse request with arbitrary body returning *AggregatedSchemaGetPostResponse
+func (c *ClientWithResponses) AggregatedSchemaGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*AggregatedSchemaGetPostResponse, error) {
+	rsp, err := c.AggregatedSchemaGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAggregatedSchemaGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) AggregatedSchemaGetPostWithResponse(ctx context.Context, body AggregatedSchemaGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*AggregatedSchemaGetPostResponse, error) {
+	rsp, err := c.AggregatedSchemaGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseAggregatedSchemaGetPostResponse(rsp)
+}
+
+// CustomSchemaFragmentsGetWithResponse request returning *CustomSchemaFragmentsGetResponse
+func (c *ClientWithResponses) CustomSchemaFragmentsGetWithResponse(ctx context.Context, params *CustomSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsGetResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsGetResponse(rsp)
+}
+
+// CustomSchemaFragmentsGetPostWithBodyWithResponse request with arbitrary body returning *CustomSchemaFragmentsGetPostResponse
+func (c *ClientWithResponses) CustomSchemaFragmentsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsGetPostResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomSchemaFragmentsGetPostWithResponse(ctx context.Context, body CustomSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsGetPostResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsGetPostResponse(rsp)
+}
+
+// CustomSchemaFragmentsListWithResponse request returning *CustomSchemaFragmentsListResponse
+func (c *ClientWithResponses) CustomSchemaFragmentsListWithResponse(ctx context.Context, params *CustomSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsListResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsListResponse(rsp)
+}
+
+// CustomSchemaFragmentsListPostWithBodyWithResponse request with arbitrary body returning *CustomSchemaFragmentsListPostResponse
+func (c *ClientWithResponses) CustomSchemaFragmentsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsListPostResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomSchemaFragmentsListPostWithResponse(ctx context.Context, body CustomSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsListPostResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsListPostResponse(rsp)
+}
+
+// CustomSchemaFragmentsSetWithBodyWithResponse request with arbitrary body returning *CustomSchemaFragmentsSetResponse
+func (c *ClientWithResponses) CustomSchemaFragmentsSetWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsSetResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsSetWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsSetResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomSchemaFragmentsSetWithResponse(ctx context.Context, body CustomSchemaFragmentsSetJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomSchemaFragmentsSetResponse, error) {
+	rsp, err := c.CustomSchemaFragmentsSet(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomSchemaFragmentsSetResponse(rsp)
+}
+
+// StockSchemaFragmentsGetWithResponse request returning *StockSchemaFragmentsGetResponse
+func (c *ClientWithResponses) StockSchemaFragmentsGetWithResponse(ctx context.Context, params *StockSchemaFragmentsGetParams, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsGetResponse, error) {
+	rsp, err := c.StockSchemaFragmentsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStockSchemaFragmentsGetResponse(rsp)
+}
+
+// StockSchemaFragmentsGetPostWithBodyWithResponse request with arbitrary body returning *StockSchemaFragmentsGetPostResponse
+func (c *ClientWithResponses) StockSchemaFragmentsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsGetPostResponse, error) {
+	rsp, err := c.StockSchemaFragmentsGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStockSchemaFragmentsGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) StockSchemaFragmentsGetPostWithResponse(ctx context.Context, body StockSchemaFragmentsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsGetPostResponse, error) {
+	rsp, err := c.StockSchemaFragmentsGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStockSchemaFragmentsGetPostResponse(rsp)
+}
+
+// StockSchemaFragmentsListWithResponse request returning *StockSchemaFragmentsListResponse
+func (c *ClientWithResponses) StockSchemaFragmentsListWithResponse(ctx context.Context, params *StockSchemaFragmentsListParams, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsListResponse, error) {
+	rsp, err := c.StockSchemaFragmentsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStockSchemaFragmentsListResponse(rsp)
+}
+
+// StockSchemaFragmentsListPostWithBodyWithResponse request with arbitrary body returning *StockSchemaFragmentsListPostResponse
+func (c *ClientWithResponses) StockSchemaFragmentsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsListPostResponse, error) {
+	rsp, err := c.StockSchemaFragmentsListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStockSchemaFragmentsListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) StockSchemaFragmentsListPostWithResponse(ctx context.Context, body StockSchemaFragmentsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StockSchemaFragmentsListPostResponse, error) {
+	rsp, err := c.StockSchemaFragmentsListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStockSchemaFragmentsListPostResponse(rsp)
+}
+
+// SchemasSubtypePrepareUpdateGetWithBodyWithResponse request with arbitrary body returning *SchemasSubtypePrepareUpdateGetResponse
+func (c *ClientWithResponses) SchemasSubtypePrepareUpdateGetWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*SchemasSubtypePrepareUpdateGetResponse, error) {
+	rsp, err := c.SchemasSubtypePrepareUpdateGetWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSchemasSubtypePrepareUpdateGetResponse(rsp)
+}
+
+func (c *ClientWithResponses) SchemasSubtypePrepareUpdateGetWithResponse(ctx context.Context, body SchemasSubtypePrepareUpdateGetJSONRequestBody, reqEditors ...RequestEditorFn) (*SchemasSubtypePrepareUpdateGetResponse, error) {
+	rsp, err := c.SchemasSubtypePrepareUpdateGet(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseSchemasSubtypePrepareUpdateGetResponse(rsp)
+}
+
 // ServiceAccountsCreateWithBodyWithResponse request with arbitrary body returning *ServiceAccountsCreateResponse
 func (c *ClientWithResponses) ServiceAccountsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*ServiceAccountsCreateResponse, error) {
 	rsp, err := c.ServiceAccountsCreateWithBody(ctx, contentType, body, reqEditors...)
@@ -55561,6 +64778,264 @@ func (c *ClientWithResponses) SnapWidgetsCreateWithResponse(ctx context.Context,
 		return nil, err
 	}
 	return ParseSnapWidgetsCreateResponse(rsp)
+}
+
+// StageDiagramsCreateWithBodyWithResponse request with arbitrary body returning *StageDiagramsCreateResponse
+func (c *ClientWithResponses) StageDiagramsCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsCreateResponse, error) {
+	rsp, err := c.StageDiagramsCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsCreateResponse(rsp)
+}
+
+func (c *ClientWithResponses) StageDiagramsCreateWithResponse(ctx context.Context, body StageDiagramsCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsCreateResponse, error) {
+	rsp, err := c.StageDiagramsCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsCreateResponse(rsp)
+}
+
+// StageDiagramsGetWithResponse request returning *StageDiagramsGetResponse
+func (c *ClientWithResponses) StageDiagramsGetWithResponse(ctx context.Context, params *StageDiagramsGetParams, reqEditors ...RequestEditorFn) (*StageDiagramsGetResponse, error) {
+	rsp, err := c.StageDiagramsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsGetResponse(rsp)
+}
+
+// StageDiagramsGetPostWithBodyWithResponse request with arbitrary body returning *StageDiagramsGetPostResponse
+func (c *ClientWithResponses) StageDiagramsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsGetPostResponse, error) {
+	rsp, err := c.StageDiagramsGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) StageDiagramsGetPostWithResponse(ctx context.Context, body StageDiagramsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsGetPostResponse, error) {
+	rsp, err := c.StageDiagramsGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsGetPostResponse(rsp)
+}
+
+// StageDiagramsListWithResponse request returning *StageDiagramsListResponse
+func (c *ClientWithResponses) StageDiagramsListWithResponse(ctx context.Context, params *StageDiagramsListParams, reqEditors ...RequestEditorFn) (*StageDiagramsListResponse, error) {
+	rsp, err := c.StageDiagramsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsListResponse(rsp)
+}
+
+// StageDiagramsListPostWithBodyWithResponse request with arbitrary body returning *StageDiagramsListPostResponse
+func (c *ClientWithResponses) StageDiagramsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsListPostResponse, error) {
+	rsp, err := c.StageDiagramsListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) StageDiagramsListPostWithResponse(ctx context.Context, body StageDiagramsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsListPostResponse, error) {
+	rsp, err := c.StageDiagramsListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsListPostResponse(rsp)
+}
+
+// StageDiagramsUpdateWithBodyWithResponse request with arbitrary body returning *StageDiagramsUpdateResponse
+func (c *ClientWithResponses) StageDiagramsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*StageDiagramsUpdateResponse, error) {
+	rsp, err := c.StageDiagramsUpdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsUpdateResponse(rsp)
+}
+
+func (c *ClientWithResponses) StageDiagramsUpdateWithResponse(ctx context.Context, body StageDiagramsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*StageDiagramsUpdateResponse, error) {
+	rsp, err := c.StageDiagramsUpdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseStageDiagramsUpdateResponse(rsp)
+}
+
+// CustomStagesCreateWithBodyWithResponse request with arbitrary body returning *CustomStagesCreateResponse
+func (c *ClientWithResponses) CustomStagesCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesCreateResponse, error) {
+	rsp, err := c.CustomStagesCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesCreateResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStagesCreateWithResponse(ctx context.Context, body CustomStagesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesCreateResponse, error) {
+	rsp, err := c.CustomStagesCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesCreateResponse(rsp)
+}
+
+// CustomStagesGetWithResponse request returning *CustomStagesGetResponse
+func (c *ClientWithResponses) CustomStagesGetWithResponse(ctx context.Context, params *CustomStagesGetParams, reqEditors ...RequestEditorFn) (*CustomStagesGetResponse, error) {
+	rsp, err := c.CustomStagesGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesGetResponse(rsp)
+}
+
+// CustomStagesGetPostWithBodyWithResponse request with arbitrary body returning *CustomStagesGetPostResponse
+func (c *ClientWithResponses) CustomStagesGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesGetPostResponse, error) {
+	rsp, err := c.CustomStagesGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStagesGetPostWithResponse(ctx context.Context, body CustomStagesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesGetPostResponse, error) {
+	rsp, err := c.CustomStagesGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesGetPostResponse(rsp)
+}
+
+// CustomStagesListWithResponse request returning *CustomStagesListResponse
+func (c *ClientWithResponses) CustomStagesListWithResponse(ctx context.Context, params *CustomStagesListParams, reqEditors ...RequestEditorFn) (*CustomStagesListResponse, error) {
+	rsp, err := c.CustomStagesList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesListResponse(rsp)
+}
+
+// CustomStagesListPostWithBodyWithResponse request with arbitrary body returning *CustomStagesListPostResponse
+func (c *ClientWithResponses) CustomStagesListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesListPostResponse, error) {
+	rsp, err := c.CustomStagesListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStagesListPostWithResponse(ctx context.Context, body CustomStagesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesListPostResponse, error) {
+	rsp, err := c.CustomStagesListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesListPostResponse(rsp)
+}
+
+// CustomStagesUpdateWithBodyWithResponse request with arbitrary body returning *CustomStagesUpdateResponse
+func (c *ClientWithResponses) CustomStagesUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStagesUpdateResponse, error) {
+	rsp, err := c.CustomStagesUpdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesUpdateResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStagesUpdateWithResponse(ctx context.Context, body CustomStagesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStagesUpdateResponse, error) {
+	rsp, err := c.CustomStagesUpdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStagesUpdateResponse(rsp)
+}
+
+// CustomStatesCreateWithBodyWithResponse request with arbitrary body returning *CustomStatesCreateResponse
+func (c *ClientWithResponses) CustomStatesCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesCreateResponse, error) {
+	rsp, err := c.CustomStatesCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesCreateResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStatesCreateWithResponse(ctx context.Context, body CustomStatesCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesCreateResponse, error) {
+	rsp, err := c.CustomStatesCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesCreateResponse(rsp)
+}
+
+// CustomStatesGetWithResponse request returning *CustomStatesGetResponse
+func (c *ClientWithResponses) CustomStatesGetWithResponse(ctx context.Context, params *CustomStatesGetParams, reqEditors ...RequestEditorFn) (*CustomStatesGetResponse, error) {
+	rsp, err := c.CustomStatesGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesGetResponse(rsp)
+}
+
+// CustomStatesGetPostWithBodyWithResponse request with arbitrary body returning *CustomStatesGetPostResponse
+func (c *ClientWithResponses) CustomStatesGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesGetPostResponse, error) {
+	rsp, err := c.CustomStatesGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStatesGetPostWithResponse(ctx context.Context, body CustomStatesGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesGetPostResponse, error) {
+	rsp, err := c.CustomStatesGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesGetPostResponse(rsp)
+}
+
+// CustomStatesListWithResponse request returning *CustomStatesListResponse
+func (c *ClientWithResponses) CustomStatesListWithResponse(ctx context.Context, params *CustomStatesListParams, reqEditors ...RequestEditorFn) (*CustomStatesListResponse, error) {
+	rsp, err := c.CustomStatesList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesListResponse(rsp)
+}
+
+// CustomStatesListPostWithBodyWithResponse request with arbitrary body returning *CustomStatesListPostResponse
+func (c *ClientWithResponses) CustomStatesListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesListPostResponse, error) {
+	rsp, err := c.CustomStatesListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStatesListPostWithResponse(ctx context.Context, body CustomStatesListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesListPostResponse, error) {
+	rsp, err := c.CustomStatesListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesListPostResponse(rsp)
+}
+
+// CustomStatesUpdateWithBodyWithResponse request with arbitrary body returning *CustomStatesUpdateResponse
+func (c *ClientWithResponses) CustomStatesUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*CustomStatesUpdateResponse, error) {
+	rsp, err := c.CustomStatesUpdateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesUpdateResponse(rsp)
+}
+
+func (c *ClientWithResponses) CustomStatesUpdateWithResponse(ctx context.Context, body CustomStatesUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*CustomStatesUpdateResponse, error) {
+	rsp, err := c.CustomStatesUpdate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseCustomStatesUpdateResponse(rsp)
 }
 
 // SurveysCreateWithBodyWithResponse request with arbitrary body returning *SurveysCreateResponse
@@ -55990,6 +65465,144 @@ func (c *ClientWithResponses) TimelineEntriesUpdateWithResponse(ctx context.Cont
 		return nil, err
 	}
 	return ParseTimelineEntriesUpdateResponse(rsp)
+}
+
+// VistasDeleteWithBodyWithResponse request with arbitrary body returning *VistasDeleteResponse
+func (c *ClientWithResponses) VistasDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error) {
+	rsp, err := c.VistasDeleteWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasDeleteResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasDeleteWithResponse(ctx context.Context, body VistasDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error) {
+	rsp, err := c.VistasDelete(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasDeleteResponse(rsp)
+}
+
+// VistasGetWithResponse request returning *VistasGetResponse
+func (c *ClientWithResponses) VistasGetWithResponse(ctx context.Context, params *VistasGetParams, reqEditors ...RequestEditorFn) (*VistasGetResponse, error) {
+	rsp, err := c.VistasGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGetResponse(rsp)
+}
+
+// VistasGetPostWithBodyWithResponse request with arbitrary body returning *VistasGetPostResponse
+func (c *ClientWithResponses) VistasGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error) {
+	rsp, err := c.VistasGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGetPostWithResponse(ctx context.Context, body VistasGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGetPostResponse, error) {
+	rsp, err := c.VistasGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGetPostResponse(rsp)
+}
+
+// VistasGroupsDeleteWithBodyWithResponse request with arbitrary body returning *VistasGroupsDeleteResponse
+func (c *ClientWithResponses) VistasGroupsDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error) {
+	rsp, err := c.VistasGroupsDeleteWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsDeleteResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGroupsDeleteWithResponse(ctx context.Context, body VistasGroupsDeleteJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsDeleteResponse, error) {
+	rsp, err := c.VistasGroupsDelete(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsDeleteResponse(rsp)
+}
+
+// VistasGroupsGetWithResponse request returning *VistasGroupsGetResponse
+func (c *ClientWithResponses) VistasGroupsGetWithResponse(ctx context.Context, params *VistasGroupsGetParams, reqEditors ...RequestEditorFn) (*VistasGroupsGetResponse, error) {
+	rsp, err := c.VistasGroupsGet(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsGetResponse(rsp)
+}
+
+// VistasGroupsGetPostWithBodyWithResponse request with arbitrary body returning *VistasGroupsGetPostResponse
+func (c *ClientWithResponses) VistasGroupsGetPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error) {
+	rsp, err := c.VistasGroupsGetPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsGetPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGroupsGetPostWithResponse(ctx context.Context, body VistasGroupsGetPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsGetPostResponse, error) {
+	rsp, err := c.VistasGroupsGetPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsGetPostResponse(rsp)
+}
+
+// VistasGroupsListWithResponse request returning *VistasGroupsListResponse
+func (c *ClientWithResponses) VistasGroupsListWithResponse(ctx context.Context, params *VistasGroupsListParams, reqEditors ...RequestEditorFn) (*VistasGroupsListResponse, error) {
+	rsp, err := c.VistasGroupsList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsListResponse(rsp)
+}
+
+// VistasGroupsListPostWithBodyWithResponse request with arbitrary body returning *VistasGroupsListPostResponse
+func (c *ClientWithResponses) VistasGroupsListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error) {
+	rsp, err := c.VistasGroupsListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasGroupsListPostWithResponse(ctx context.Context, body VistasGroupsListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasGroupsListPostResponse, error) {
+	rsp, err := c.VistasGroupsListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasGroupsListPostResponse(rsp)
+}
+
+// VistasListWithResponse request returning *VistasListResponse
+func (c *ClientWithResponses) VistasListWithResponse(ctx context.Context, params *VistasListParams, reqEditors ...RequestEditorFn) (*VistasListResponse, error) {
+	rsp, err := c.VistasList(ctx, params, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasListResponse(rsp)
+}
+
+// VistasListPostWithBodyWithResponse request with arbitrary body returning *VistasListPostResponse
+func (c *ClientWithResponses) VistasListPostWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error) {
+	rsp, err := c.VistasListPostWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasListPostResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasListPostWithResponse(ctx context.Context, body VistasListPostJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasListPostResponse, error) {
+	rsp, err := c.VistasListPost(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasListPostResponse(rsp)
 }
 
 // WebCrawlerJobsControlWithBodyWithResponse request with arbitrary body returning *WebCrawlerJobsControlResponse
@@ -60750,6 +70363,646 @@ func ParseConversationsUpdateResponse(rsp *http.Response) (*ConversationsUpdateR
 	switch {
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
 		var dest ConversationsUpdateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsCountResponse parses an HTTP response from a CustomObjectsCountWithResponse call
+func ParseCustomObjectsCountResponse(rsp *http.Response) (*CustomObjectsCountResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsCountResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsCountResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsCountPostResponse parses an HTTP response from a CustomObjectsCountPostWithResponse call
+func ParseCustomObjectsCountPostResponse(rsp *http.Response) (*CustomObjectsCountPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsCountPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsCountResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsCreateResponse parses an HTTP response from a CustomObjectsCreateWithResponse call
+func ParseCustomObjectsCreateResponse(rsp *http.Response) (*CustomObjectsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest CustomObjectsCreateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsDeleteResponse parses an HTTP response from a CustomObjectsDeleteWithResponse call
+func ParseCustomObjectsDeleteResponse(rsp *http.Response) (*CustomObjectsDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsDeleteResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsGetResponse parses an HTTP response from a CustomObjectsGetWithResponse call
+func ParseCustomObjectsGetResponse(rsp *http.Response) (*CustomObjectsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsGetPostResponse parses an HTTP response from a CustomObjectsGetPostWithResponse call
+func ParseCustomObjectsGetPostResponse(rsp *http.Response) (*CustomObjectsGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsListResponse parses an HTTP response from a CustomObjectsListWithResponse call
+func ParseCustomObjectsListResponse(rsp *http.Response) (*CustomObjectsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsListPostResponse parses an HTTP response from a CustomObjectsListPostWithResponse call
+func ParseCustomObjectsListPostResponse(rsp *http.Response) (*CustomObjectsListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomObjectsUpdateResponse parses an HTTP response from a CustomObjectsUpdateWithResponse call
+func ParseCustomObjectsUpdateResponse(rsp *http.Response) (*CustomObjectsUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomObjectsUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomObjectsUpdateResponseBody
 		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
 			return nil, err
 		}
@@ -68810,6 +79063,871 @@ func ParseRevUsersUpdateResponse(rsp *http.Response) (*RevUsersUpdateResponse, e
 	return response, nil
 }
 
+// ParseAggregatedSchemaGetResponse parses an HTTP response from a AggregatedSchemaGetWithResponse call
+func ParseAggregatedSchemaGetResponse(rsp *http.Response) (*AggregatedSchemaGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AggregatedSchemaGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AggregatedSchemaGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseAggregatedSchemaGetPostResponse parses an HTTP response from a AggregatedSchemaGetPostWithResponse call
+func ParseAggregatedSchemaGetPostResponse(rsp *http.Response) (*AggregatedSchemaGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &AggregatedSchemaGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest AggregatedSchemaGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomSchemaFragmentsGetResponse parses an HTTP response from a CustomSchemaFragmentsGetWithResponse call
+func ParseCustomSchemaFragmentsGetResponse(rsp *http.Response) (*CustomSchemaFragmentsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomSchemaFragmentsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomSchemaFragmentsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomSchemaFragmentsGetPostResponse parses an HTTP response from a CustomSchemaFragmentsGetPostWithResponse call
+func ParseCustomSchemaFragmentsGetPostResponse(rsp *http.Response) (*CustomSchemaFragmentsGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomSchemaFragmentsGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomSchemaFragmentsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomSchemaFragmentsListResponse parses an HTTP response from a CustomSchemaFragmentsListWithResponse call
+func ParseCustomSchemaFragmentsListResponse(rsp *http.Response) (*CustomSchemaFragmentsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomSchemaFragmentsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomSchemaFragmentsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomSchemaFragmentsListPostResponse parses an HTTP response from a CustomSchemaFragmentsListPostWithResponse call
+func ParseCustomSchemaFragmentsListPostResponse(rsp *http.Response) (*CustomSchemaFragmentsListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomSchemaFragmentsListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomSchemaFragmentsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomSchemaFragmentsSetResponse parses an HTTP response from a CustomSchemaFragmentsSetWithResponse call
+func ParseCustomSchemaFragmentsSetResponse(rsp *http.Response) (*CustomSchemaFragmentsSetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomSchemaFragmentsSetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest CustomSchemaFragmentsSetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStockSchemaFragmentsGetResponse parses an HTTP response from a StockSchemaFragmentsGetWithResponse call
+func ParseStockSchemaFragmentsGetResponse(rsp *http.Response) (*StockSchemaFragmentsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StockSchemaFragmentsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StockSchemaFragmentsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStockSchemaFragmentsGetPostResponse parses an HTTP response from a StockSchemaFragmentsGetPostWithResponse call
+func ParseStockSchemaFragmentsGetPostResponse(rsp *http.Response) (*StockSchemaFragmentsGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StockSchemaFragmentsGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StockSchemaFragmentsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStockSchemaFragmentsListResponse parses an HTTP response from a StockSchemaFragmentsListWithResponse call
+func ParseStockSchemaFragmentsListResponse(rsp *http.Response) (*StockSchemaFragmentsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StockSchemaFragmentsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StockSchemaFragmentsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStockSchemaFragmentsListPostResponse parses an HTTP response from a StockSchemaFragmentsListPostWithResponse call
+func ParseStockSchemaFragmentsListPostResponse(rsp *http.Response) (*StockSchemaFragmentsListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StockSchemaFragmentsListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StockSchemaFragmentsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseSchemasSubtypePrepareUpdateGetResponse parses an HTTP response from a SchemasSubtypePrepareUpdateGetWithResponse call
+func ParseSchemasSubtypePrepareUpdateGetResponse(rsp *http.Response) (*SchemasSubtypePrepareUpdateGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &SchemasSubtypePrepareUpdateGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest SchemasSubtypePrepareUpdateGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
 // ParseServiceAccountsCreateResponse parses an HTTP response from a ServiceAccountsCreateWithResponse call
 func ParseServiceAccountsCreateResponse(rsp *http.Response) (*ServiceAccountsCreateResponse, error) {
 	bodyBytes, err := io.ReadAll(rsp.Body)
@@ -70002,6 +81120,1293 @@ func ParseSnapWidgetsCreateResponse(rsp *http.Response) (*SnapWidgetsCreateRespo
 			return nil, err
 		}
 		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStageDiagramsCreateResponse parses an HTTP response from a StageDiagramsCreateWithResponse call
+func ParseStageDiagramsCreateResponse(rsp *http.Response) (*StageDiagramsCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StageDiagramsCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest StageDiagramsCreateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStageDiagramsGetResponse parses an HTTP response from a StageDiagramsGetWithResponse call
+func ParseStageDiagramsGetResponse(rsp *http.Response) (*StageDiagramsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StageDiagramsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StageDiagramsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStageDiagramsGetPostResponse parses an HTTP response from a StageDiagramsGetPostWithResponse call
+func ParseStageDiagramsGetPostResponse(rsp *http.Response) (*StageDiagramsGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StageDiagramsGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StageDiagramsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStageDiagramsListResponse parses an HTTP response from a StageDiagramsListWithResponse call
+func ParseStageDiagramsListResponse(rsp *http.Response) (*StageDiagramsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StageDiagramsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StageDiagramsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStageDiagramsListPostResponse parses an HTTP response from a StageDiagramsListPostWithResponse call
+func ParseStageDiagramsListPostResponse(rsp *http.Response) (*StageDiagramsListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StageDiagramsListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StageDiagramsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseStageDiagramsUpdateResponse parses an HTTP response from a StageDiagramsUpdateWithResponse call
+func ParseStageDiagramsUpdateResponse(rsp *http.Response) (*StageDiagramsUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &StageDiagramsUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest StageDiagramsUpdateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStagesCreateResponse parses an HTTP response from a CustomStagesCreateWithResponse call
+func ParseCustomStagesCreateResponse(rsp *http.Response) (*CustomStagesCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStagesCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest CustomStagesCreateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStagesGetResponse parses an HTTP response from a CustomStagesGetWithResponse call
+func ParseCustomStagesGetResponse(rsp *http.Response) (*CustomStagesGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStagesGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStagesGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStagesGetPostResponse parses an HTTP response from a CustomStagesGetPostWithResponse call
+func ParseCustomStagesGetPostResponse(rsp *http.Response) (*CustomStagesGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStagesGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStagesGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStagesListResponse parses an HTTP response from a CustomStagesListWithResponse call
+func ParseCustomStagesListResponse(rsp *http.Response) (*CustomStagesListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStagesListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStagesListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStagesListPostResponse parses an HTTP response from a CustomStagesListPostWithResponse call
+func ParseCustomStagesListPostResponse(rsp *http.Response) (*CustomStagesListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStagesListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStagesListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStagesUpdateResponse parses an HTTP response from a CustomStagesUpdateWithResponse call
+func ParseCustomStagesUpdateResponse(rsp *http.Response) (*CustomStagesUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStagesUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStagesUpdateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStatesCreateResponse parses an HTTP response from a CustomStatesCreateWithResponse call
+func ParseCustomStatesCreateResponse(rsp *http.Response) (*CustomStatesCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStatesCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest CustomStatesCreateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStatesGetResponse parses an HTTP response from a CustomStatesGetWithResponse call
+func ParseCustomStatesGetResponse(rsp *http.Response) (*CustomStatesGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStatesGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStatesGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStatesGetPostResponse parses an HTTP response from a CustomStatesGetPostWithResponse call
+func ParseCustomStatesGetPostResponse(rsp *http.Response) (*CustomStatesGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStatesGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStatesGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStatesListResponse parses an HTTP response from a CustomStatesListWithResponse call
+func ParseCustomStatesListResponse(rsp *http.Response) (*CustomStatesListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStatesListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStatesListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStatesListPostResponse parses an HTTP response from a CustomStatesListPostWithResponse call
+func ParseCustomStatesListPostResponse(rsp *http.Response) (*CustomStatesListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStatesListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStatesListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseCustomStatesUpdateResponse parses an HTTP response from a CustomStatesUpdateWithResponse call
+func ParseCustomStatesUpdateResponse(rsp *http.Response) (*CustomStatesUpdateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &CustomStatesUpdateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest CustomStatesUpdateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
 		var dest TooManyRequests
@@ -72058,6 +84463,728 @@ func ParseTimelineEntriesUpdateResponse(rsp *http.Response) (*TimelineEntriesUpd
 			return nil, err
 		}
 		response.JSON409 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasDeleteResponse parses an HTTP response from a VistasDeleteWithResponse call
+func ParseVistasDeleteResponse(rsp *http.Response) (*VistasDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasDeleteResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGetResponse parses an HTTP response from a VistasGetWithResponse call
+func ParseVistasGetResponse(rsp *http.Response) (*VistasGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGetPostResponse parses an HTTP response from a VistasGetPostWithResponse call
+func ParseVistasGetPostResponse(rsp *http.Response) (*VistasGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsDeleteResponse parses an HTTP response from a VistasGroupsDeleteWithResponse call
+func ParseVistasGroupsDeleteResponse(rsp *http.Response) (*VistasGroupsDeleteResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsDeleteResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsDeleteResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsGetResponse parses an HTTP response from a VistasGroupsGetWithResponse call
+func ParseVistasGroupsGetResponse(rsp *http.Response) (*VistasGroupsGetResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsGetResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsGetPostResponse parses an HTTP response from a VistasGroupsGetPostWithResponse call
+func ParseVistasGroupsGetPostResponse(rsp *http.Response) (*VistasGroupsGetPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsGetPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsGetResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 404:
+		var dest NotFound
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsListResponse parses an HTTP response from a VistasGroupsListWithResponse call
+func ParseVistasGroupsListResponse(rsp *http.Response) (*VistasGroupsListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasGroupsListPostResponse parses an HTTP response from a VistasGroupsListPostWithResponse call
+func ParseVistasGroupsListPostResponse(rsp *http.Response) (*VistasGroupsListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasGroupsListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasGroupsListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasListResponse parses an HTTP response from a VistasListWithResponse call
+func ParseVistasListResponse(rsp *http.Response) (*VistasListResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasListResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasListPostResponse parses an HTTP response from a VistasListPostWithResponse call
+func ParseVistasListPostResponse(rsp *http.Response) (*VistasListPostResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasListPostResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 200:
+		var dest VistasListResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
 		var dest TooManyRequests

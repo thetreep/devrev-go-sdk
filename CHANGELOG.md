@@ -1,3 +1,74 @@
+## v0.2.1 (2025-06-30)
+
+### Public API Changes
+
+#### Changes from 2025-06-24
+
+## Promoted Endpoints
+
+### Custom Objects
+- [`/custom-objects.count`](/public/api-reference/customization/custom-objects-count)
+- [`/custom-objects.create`](/public/api-reference/customization/custom-objects-create)
+- [`/custom-objects.delete`](/public/api-reference/customization/custom-objects-delete)
+- [`/custom-objects.get`](/public/api-reference/customization/custom-objects-get-post)
+- [`/custom-objects.list`](/public/api-reference/customization/custom-objects-list-post)
+- [`/custom-objects.update`](/public/api-reference/customization/custom-objects-update)
+
+### Custom Stages
+- [`/stages.custom.create`](/public/api-reference/customization/custom-stages-create)
+- [`/stages.custom.get`](/public/api-reference/customization/custom-stages-get-post)
+- [`/stages.custom.list`](/public/api-reference/customization/custom-stages-list-post)
+- [`/stages.custom.update`](/public/api-reference/customization/custom-stages-update)
+
+### Custom States
+- [`/states.custom.create`](/public/api-reference/customization/custom-states-create)
+- [`/states.custom.get`](/public/api-reference/customization/custom-states-get-post)
+- [`/states.custom.list`](/public/api-reference/customization/custom-states-list-post)
+- [`/states.custom.update`](/public/api-reference/customization/custom-states-update)
+
+### Customization
+- [`/schemas.aggregated.get`](/public/api-reference/customization/aggregated-schema-get)
+- [`/schemas.custom.get`](/public/api-reference/customization/custom-schema-fragments-get-post)
+- [`/schemas.custom.list`](/public/api-reference/customization/custom-schema-fragments-list-post)
+- [`/schemas.custom.set`](/public/api-reference/customization/custom-schema-fragments-set)
+- [`/schemas.stock.get`](/public/api-reference/customization/stock-schema-fragments-get-post)
+- [`/schemas.stock.list`](/public/api-reference/customization/stock-schema-fragments-list-post)
+- [`/schemas.subtypes.prepare-update`](/public/api-reference/customization/schemas-subtype-prepare-update-get)
+
+### Stage Diagrams
+- [`/stage-diagrams.create`](/public/api-reference/customization/stage-diagrams-create)
+- [`/stage-diagrams.get`](/public/api-reference/customization/stage-diagrams-get-post)
+- [`/stage-diagrams.list`](/public/api-reference/customization/stage-diagrams-list-post)
+- [`/stage-diagrams.update`](/public/api-reference/customization/stage-diagrams-update)
+
+<!-- included from 2025-06-24 -->
+
+### Beta API Changes
+
+#### Changes from 2025-06-24
+
+## New Endpoints
+
+### Vistas
+- [`/vistas.delete`](/beta/api-reference/vistas/delete): Deletes a vista
+- [`/vistas.get`](/beta/api-reference/vistas/get-post): Gets a vista's information
+- [`/vistas.list`](/beta/api-reference/vistas/list-post): Lists available vistas
+
+### Vista Group Items
+- [`/vistas.groups.delete`](/beta/api-reference/vistas/groups-delete): Deletes a vista group item
+- [`/vistas.groups.get`](/beta/api-reference/vistas/groups-get-post): Gets a vista group item's information
+- [`/vistas.groups.list`](/beta/api-reference/vistas/groups-list-post): Lists the available vista group items
+
+## Updated Endpoints
+
+### Webhooks
+- Added webhook types for articles:
+  - `article_created`
+  - `article_updated`
+  - `article_deleted`
+
+<!-- included from 2025-06-24 -->
+
 ## v0.2.0 (2025-06-05)
 
 ### Public API Changes
