@@ -1,3 +1,49 @@
+## v0.2.2 (2025-08-04)
+
+### Public API Changes
+
+#### Changes from 2025-07-29
+
+## New Endpoints
+
+### Vistas
+  - Initial support for `meetings` vistas
+
+## Modified Endpoints
+
+### Articles
+- Added field `parent` to [`/articles.list`](/public/api-reference/articles/list-articles-post)
+
+### Customization
+- Added fields to [`/schemas.aggregated.get`](/public/api-reference/customization/aggregated-schema-get):
+  - `custom_schema_fragments`
+  - `stock_schema_fragment`
+
+<!-- included from 2025-07-29 -->
+
+### Beta API Changes
+
+#### Changes from 2025-07-29
+
+## New Endpoints
+
+### Vistas
+- [`/vistas.create`](/beta/api-reference/vistas/create): Creates a vista
+  - Initial support for `meetings` vistas
+
+## Modified Endpoints
+
+### Articles
+- Added field `parent` to [`/articles.list`](/beta/api-reference/articles/list-articles-post)
+- Added field `parent` to [`/articles.count`](/beta/api-reference/articles/count-post)
+
+### Customization
+- Added fields to [`/schemas.aggregated.get`](/beta/api-reference/customization/aggregated-schema-get):
+  - `custom_schema_fragments`
+  - `stock_schema_fragment`
+
+<!-- included from 2025-07-29 -->
+
 ## v0.2.1 (2025-06-30)
 
 ### Public API Changes

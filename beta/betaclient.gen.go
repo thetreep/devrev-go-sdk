@@ -227,6 +227,14 @@ const (
 	Primitive BooleanExpressionType = "primitive"
 )
 
+// Defines values for CaveatOperator.
+const (
+	Eq         CaveatOperator = "eq"
+	In         CaveatOperator = "in"
+	Intersects CaveatOperator = "intersects"
+	NotEq      CaveatOperator = "not_eq"
+)
+
 // Defines values for ChatCompletionsRequestMessageRole.
 const (
 	ChatCompletionsRequestMessageRoleAssistant ChatCompletionsRequestMessageRole = "assistant"
@@ -572,6 +580,15 @@ const (
 	Removed EventTimelineEntryUpdatedReactionAction = "removed"
 )
 
+// Defines values for ExportAuditLogsRequestOperationType.
+const (
+	ExportAuditLogsRequestOperationTypeCreate ExportAuditLogsRequestOperationType = "create"
+	ExportAuditLogsRequestOperationTypeDelete ExportAuditLogsRequestOperationType = "delete"
+	ExportAuditLogsRequestOperationTypeOther  ExportAuditLogsRequestOperationType = "other"
+	ExportAuditLogsRequestOperationTypeRead   ExportAuditLogsRequestOperationType = "read"
+	ExportAuditLogsRequestOperationTypeUpdate ExportAuditLogsRequestOperationType = "update"
+)
+
 // Defines values for ExternalSystemType.
 const (
 	ExternalSystemTypeAdaas             ExternalSystemType = "adaas"
@@ -579,6 +596,7 @@ const (
 	ExternalSystemTypeGithub            ExternalSystemType = "github"
 	ExternalSystemTypeHubspot           ExternalSystemType = "hubspot"
 	ExternalSystemTypeJira              ExternalSystemType = "jira"
+	ExternalSystemTypeJiraDataCenter    ExternalSystemType = "jira_data_center"
 	ExternalSystemTypeLinear            ExternalSystemType = "linear"
 	ExternalSystemTypeRocketlane        ExternalSystemType = "rocketlane"
 	ExternalSystemTypeSalesforceSales   ExternalSystemType = "salesforce_sales"
@@ -765,6 +783,13 @@ const (
 	MeetingChannelZoom          MeetingChannel = "zoom"
 )
 
+// Defines values for MeetingDirection.
+const (
+	MeetingDirectionIncoming MeetingDirection = "incoming"
+	MeetingDirectionInternal MeetingDirection = "internal"
+	MeetingDirectionOutgoing MeetingDirection = "outgoing"
+)
+
 // Defines values for MeetingState.
 const (
 	MeetingStateCanceled    MeetingState = "canceled"
@@ -811,6 +836,13 @@ const (
 const (
 	MetricDefinitionStatusActive   MetricDefinitionStatus = "active"
 	MetricDefinitionStatusInactive MetricDefinitionStatus = "inactive"
+)
+
+// Defines values for NotificationPriority.
+const (
+	NotificationPriorityHigh   NotificationPriority = "high"
+	NotificationPriorityLow    NotificationPriority = "low"
+	NotificationPriorityMedium NotificationPriority = "medium"
 )
 
 // Defines values for OpportunityForecastCategory.
@@ -880,6 +912,20 @@ const (
 	PreferencesTypeUserPreferences PreferencesType = "user_preferences"
 )
 
+// Defines values for PrimitiveValueType.
+const (
+	PrimitiveValueTypeAttribute           PrimitiveValueType = "attribute"
+	PrimitiveValueTypeBool                PrimitiveValueType = "bool"
+	PrimitiveValueTypeId                  PrimitiveValueType = "id"
+	PrimitiveValueTypeIdList              PrimitiveValueType = "id_list"
+	PrimitiveValueTypeInt                 PrimitiveValueType = "int"
+	PrimitiveValueTypeIntList             PrimitiveValueType = "int_list"
+	PrimitiveValueTypeOverridableEnum     PrimitiveValueType = "overridable_enum"
+	PrimitiveValueTypeOverridableEnumList PrimitiveValueType = "overridable_enum_list"
+	PrimitiveValueTypeString              PrimitiveValueType = "string"
+	PrimitiveValueTypeStringList          PrimitiveValueType = "string_list"
+)
+
 // Defines values for QuestionAnswerStatus.
 const (
 	QuestionAnswerStatusArchived     QuestionAnswerStatus = "archived"
@@ -905,11 +951,11 @@ const (
 
 // Defines values for RolePrivileges.
 const (
-	RolePrivilegesCreate  RolePrivileges = "create"
-	RolePrivilegesDelete  RolePrivileges = "delete"
-	RolePrivilegesExecute RolePrivileges = "execute"
-	RolePrivilegesRead    RolePrivileges = "read"
-	RolePrivilegesUpdate  RolePrivileges = "update"
+	Create  RolePrivileges = "create"
+	Delete  RolePrivileges = "delete"
+	Execute RolePrivileges = "execute"
+	Read    RolePrivileges = "read"
+	Update  RolePrivileges = "update"
 )
 
 // Defines values for RoleTarget.
@@ -1084,6 +1130,12 @@ const (
 const (
 	Asc  SearchSortOrderParam = "asc"
 	Desc SearchSortOrderParam = "desc"
+)
+
+// Defines values for SelectorObject.
+const (
+	Actor  SelectorObject = "actor"
+	Target SelectorObject = "target"
 )
 
 // Defines values for SendNotificationGenericNotificationEntryNotificationActionType.
@@ -1351,10 +1403,10 @@ const (
 
 // Defines values for TicketSeverity.
 const (
-	Blocker TicketSeverity = "blocker"
-	High    TicketSeverity = "high"
-	Low     TicketSeverity = "low"
-	Medium  TicketSeverity = "medium"
+	TicketSeverityBlocker TicketSeverity = "blocker"
+	TicketSeverityHigh    TicketSeverity = "high"
+	TicketSeverityLow     TicketSeverity = "low"
+	TicketSeverityMedium  TicketSeverity = "medium"
 )
 
 // Defines values for TimelineChangeEventEventType.
@@ -1402,6 +1454,7 @@ const (
 	TimelineEntryObjectTypeEngagement          TimelineEntryObjectType = "engagement"
 	TimelineEntryObjectTypeEnhancement         TimelineEntryObjectType = "enhancement"
 	TimelineEntryObjectTypeFeature             TimelineEntryObjectType = "feature"
+	TimelineEntryObjectTypeGroup               TimelineEntryObjectType = "group"
 	TimelineEntryObjectTypeIncident            TimelineEntryObjectType = "incident"
 	TimelineEntryObjectTypeIssue               TimelineEntryObjectType = "issue"
 	TimelineEntryObjectTypeLinkable            TimelineEntryObjectType = "linkable"
@@ -1435,10 +1488,10 @@ const (
 
 // Defines values for TimelineEntryVisibility.
 const (
-	External TimelineEntryVisibility = "external"
-	Internal TimelineEntryVisibility = "internal"
-	Private  TimelineEntryVisibility = "private"
-	Public   TimelineEntryVisibility = "public"
+	TimelineEntryVisibilityExternal TimelineEntryVisibility = "external"
+	TimelineEntryVisibilityInternal TimelineEntryVisibility = "internal"
+	TimelineEntryVisibilityPrivate  TimelineEntryVisibility = "private"
+	TimelineEntryVisibilityPublic   TimelineEntryVisibility = "public"
 )
 
 // Defines values for TuringSourcesType.
@@ -2121,6 +2174,9 @@ type AggregatedSchema struct {
 
 // AggregatedSchemaGetRequest defines model for aggregated-schema-get-request.
 type AggregatedSchemaGetRequest struct {
+	// CustomSchemaFragments The custom schema fragment IDs which are to be aggregated.
+	CustomSchemaFragments *[]string `json:"custom_schema_fragments,omitempty"`
+
 	// CustomSchemaSpec Custom schemas described using identifiers
 	CustomSchemaSpec *CustomSchemaSpecForRead `json:"custom_schema_spec,omitempty"`
 
@@ -2130,6 +2186,9 @@ type AggregatedSchemaGetRequest struct {
 	// LeafType The leaf type. Used for inferring the default stage diagram and
 	// tenant fragment ID.
 	LeafType *string `json:"leaf_type,omitempty"`
+
+	// StockSchemaFragment The stock schema fragment which is to be aggregated.
+	StockSchemaFragment *string `json:"stock_schema_fragment,omitempty"`
 }
 
 // AggregatedSchemaGetResponseBody defines model for aggregated-schema-get-response.
@@ -2690,6 +2749,9 @@ type ArticlesCountRequest struct {
 	// OwnedBy Filters for articles owned by any of the provided users.
 	OwnedBy *[]string `json:"owned_by,omitempty"`
 
+	// Parent Filters for articles with the provided parent directories.
+	Parent *[]string `json:"parent,omitempty"`
+
 	// Scope Filter for the scope of the articles.
 	Scope *[]int64 `json:"scope,omitempty"`
 
@@ -2860,6 +2922,9 @@ type ArticlesListRequest struct {
 
 	// OwnedBy Filters for articles owned by any of the provided users.
 	OwnedBy *[]string `json:"owned_by,omitempty"`
+
+	// Parent Filters for articles with the provided parent directories.
+	Parent *[]string `json:"parent,omitempty"`
 
 	// Scope Filter for the scope of the articles.
 	Scope *[]int64 `json:"scope,omitempty"`
@@ -3910,6 +3975,9 @@ type Capability = PartBase
 
 // CapabilitySummary defines model for capability-summary.
 type CapabilitySummary = PartBaseSummary
+
+// CaveatOperator The operator used to compare the key and the value.
+type CaveatOperator string
 
 // Chat defines model for chat.
 type Chat struct {
@@ -5014,9 +5082,6 @@ type ConversationsCreateRequest struct {
 	// Title The title for the conversation.
 	Title *string                             `json:"title,omitempty"`
 	Type  ConversationsCreateRequestTypeValue `json:"type"`
-
-	// UserSessions The IDs of user sessions associated with the conversation.
-	UserSessions *[]string `json:"user_sessions,omitempty"`
 }
 
 // ConversationsCreateRequestMessage defines model for conversations-create-request-message.
@@ -5301,8 +5366,7 @@ type ConversationsUpdateRequest struct {
 	Tags   *ConversationsUpdateRequestTags `json:"tags,omitempty"`
 
 	// Title The updated title of the conversation.
-	Title        *string                                 `json:"title,omitempty"`
-	UserSessions *ConversationsUpdateRequestUserSessions `json:"user_sessions,omitempty"`
+	Title *string `json:"title,omitempty"`
 }
 
 // ConversationsUpdateRequestAppliesToParts defines model for conversations-update-request-applies-to-parts.
@@ -5344,12 +5408,6 @@ type ConversationsUpdateRequestTags struct {
 
 	// Set Sets the tag IDs to the provided tags.
 	Set *[]SetTagWithValue `json:"set,omitempty"`
-}
-
-// ConversationsUpdateRequestUserSessions defines model for conversations-update-request-user-sessions.
-type ConversationsUpdateRequestUserSessions struct {
-	// Set The updated user sessions that the conversation is associated with.
-	Set *[]string `json:"set,omitempty"`
 }
 
 // ConversationsUpdateResponseBody The response for updating a conversation.
@@ -6747,6 +6805,24 @@ type CustomTypeFragmentSummary = CustomSchemaFragmentBaseSummary
 // CustomTypePathComponent Path component for rendering custom type lists in tree form.
 type CustomTypePathComponent = map[string]interface{}
 
+// CustomView defines model for custom-view.
+type CustomView struct {
+	// ColumnProperties A list of vista's column preferences in order.
+	ColumnProperties *[]CustomViewColumnProperties `json:"column_properties,omitempty"`
+
+	// ShowGroups Boolean to specify whether to show groups or not.
+	ShowGroups *bool `json:"show_groups,omitempty"`
+}
+
+// CustomViewColumnProperties defines model for custom-view-column-properties.
+type CustomViewColumnProperties struct {
+	// Name Name of the column.
+	Name string `json:"name"`
+
+	// Width Width of the column.
+	Width *string `json:"width,omitempty"`
+}
+
 // Dashboard defines model for dashboard.
 type Dashboard = AtomBase
 
@@ -7153,6 +7229,7 @@ type DevUser struct {
 	// PhoneNumbers Phone numbers of the user.
 	PhoneNumbers    *[]string    `json:"phone_numbers,omitempty"`
 	PrimaryIdentity *UserSummary `json:"primary_identity,omitempty"`
+	ReportsTo       *UserSummary `json:"reports_to,omitempty"`
 
 	// Skills Array of skills of the user.
 	Skills *[]UserSkill `json:"skills,omitempty"`
@@ -7472,9 +7549,6 @@ type DirectoriesCreateRequest struct {
 	// Description Description for the directory.
 	Description *string `json:"description,omitempty"`
 
-	// Icon Icon for the directory.
-	Icon *string `json:"icon,omitempty"`
-
 	// Language Language of the directory.
 	Language *string `json:"language,omitempty"`
 
@@ -7666,6 +7740,10 @@ type Dm struct {
 	// DisplayId Human-readable object ID unique to the Dev organization.
 	DisplayId *string `json:"display_id,omitempty"`
 
+	// Groups The groups in the direct message. Only these groups have access to
+	// the chat's history and can send new messages.
+	Groups *[]GroupSummary `json:"groups,omitempty"`
+
 	// Id Globally unique object ID.
 	Id         string       `json:"id"`
 	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
@@ -7679,15 +7757,19 @@ type Dm struct {
 	// Title The title given to the chat.
 	Title *string `json:"title,omitempty"`
 
-	// Users The users in the direct message. Only these users have access the
-	// chat's history and can send new messages.
-	Users []AtomSummary `json:"users"`
+	// Users The users in the direct message. Only these users have access to
+	// the chat's history and can send new messages.
+	Users []UserSummary `json:"users"`
 }
 
 // DmSummary defines model for dm-summary.
 type DmSummary struct {
 	// DisplayId Human-readable object ID unique to the Dev organization.
 	DisplayId *string `json:"display_id,omitempty"`
+
+	// Groups The groups in the direct message. Only these groups have access to
+	// the chat's history and can send new messages.
+	Groups *[]GroupSummary `json:"groups,omitempty"`
 
 	// Id Globally unique object ID.
 	Id string `json:"id"`
@@ -7698,9 +7780,9 @@ type DmSummary struct {
 	// Title The title given to the chat.
 	Title *string `json:"title,omitempty"`
 
-	// Users The users in the direct message. Only these users have access the
-	// chat's history and can send new messages.
-	Users []AtomSummary `json:"users"`
+	// Users The users in the direct message. Only these users have access to
+	// the chat's history and can send new messages.
+	Users []UserSummary `json:"users"`
 }
 
 // DonutVisualizationXAxis The X-axis for a donut visualization.
@@ -7780,10 +7862,24 @@ type DynamicVista struct {
 
 	// SharedWith Users and groups associated with vista.
 	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+	union      json.RawMessage
 }
 
 // DynamicVistaFilterType Type of DevRev object for which the vista is applicable.
 type DynamicVistaFilterType string
+
+// DynamicVistaMeetingsVista defines model for dynamic-vista-meetings-vista.
+type DynamicVistaMeetingsVista struct {
+	Filter MeetingsVistaFilter `json:"filter"`
+
+	// Items Pinned items associated with the vista.
+	Items *[]DynamicVistaMeetingsVistaItemValue `json:"items,omitempty"`
+}
+
+// DynamicVistaMeetingsVistaItemValue defines model for dynamic-vista-meetings-vista-item-value.
+type DynamicVistaMeetingsVistaItemValue struct {
+	Item MeetingSummary `json:"item"`
+}
 
 // DynamicVistaSummary defines model for dynamic-vista-summary.
 type DynamicVistaSummary = VistaBaseSummary
@@ -9245,12 +9341,21 @@ type EventWorkUpdated struct {
 
 // ExportAuditLogsRequest Request object to get a log's information.
 type ExportAuditLogsRequest struct {
+	// Categories Categories of the logs to filter by.
+	Categories *[]string `json:"categories,omitempty"`
+
 	// From Time from which logs are to be retrieved.
 	From time.Time `json:"from"`
+
+	// OperationTypes Operation type to filter the logs by.
+	OperationTypes *[]ExportAuditLogsRequestOperationType `json:"operation_types,omitempty"`
 
 	// To Time till which logs are to be retrieved.
 	To time.Time `json:"to"`
 }
+
+// ExportAuditLogsRequestOperationType defines model for export-audit-logs-request-operation-type.
+type ExportAuditLogsRequestOperationType string
 
 // ExportAuditLogsResponseBody Response for the audit logs export request. Response is empty as the
 // process is asynchronous. Upon completion, the user will be notified.
@@ -10522,6 +10627,9 @@ type Issue struct {
 	// DisplayId Human-readable object ID unique to the Dev organization.
 	DisplayId *string `json:"display_id,omitempty"`
 
+	// EstimatedEffort Estimated effort to complete the issue.
+	EstimatedEffort *float64 `json:"estimated_effort,omitempty"`
+
 	// Id Globally unique object ID.
 	Id         string       `json:"id"`
 	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
@@ -11057,6 +11165,11 @@ type Meeting struct {
 	// Description Description of the meeting.
 	Description *string `json:"description,omitempty"`
 
+	// Direction Direction of meeting - meetings within an organization are internal.
+	// Meetings with external customers can be incoming or outgoing depending
+	// on who initiates them.
+	Direction *MeetingDirection `json:"direction,omitempty"`
+
 	// DisplayId Human-readable object ID unique to the Dev organization.
 	DisplayId *string `json:"display_id,omitempty"`
 
@@ -11111,6 +11224,11 @@ type Meeting struct {
 
 // MeetingChannel The channel of meeting.
 type MeetingChannel string
+
+// MeetingDirection Direction of meeting - meetings within an organization are internal.
+// Meetings with external customers can be incoming or outgoing depending
+// on who initiates them.
+type MeetingDirection string
 
 // MeetingState The state of meeting.
 type MeetingState string
@@ -11168,6 +11286,10 @@ type MeetingsCountRequest struct {
 
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype      *[]string           `json:"subtype,omitempty"`
+	SyncMetadata *SyncMetadataFilter `json:"sync_metadata,omitempty"`
 
 	// Tags Filters for meeting by tags.
 	Tags *[]string `json:"tags,omitempty"`
@@ -11337,6 +11459,10 @@ type MeetingsListRequest struct {
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `json:"state,omitempty"`
 
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype      *[]string           `json:"subtype,omitempty"`
+	SyncMetadata *SyncMetadataFilter `json:"sync_metadata,omitempty"`
+
 	// Tags Filters for meeting by tags.
 	Tags *[]string `json:"tags,omitempty"`
 }
@@ -11425,6 +11551,62 @@ type MeetingsUpdateRequestTags struct {
 // MeetingsUpdateResponseBody defines model for meetings-update-response.
 type MeetingsUpdateResponseBody struct {
 	Meeting Meeting `json:"meeting"`
+}
+
+// MeetingsVistaFilter defines model for meetings-vista-filter.
+type MeetingsVistaFilter struct {
+	// Channel Filters for meeting on specified channels.
+	Channel *[]MeetingChannel `json:"channel,omitempty"`
+
+	// CreatedBy Filters for meetings created by the specified user(s).
+	CreatedBy *[]string `json:"created_by,omitempty"`
+
+	// CreatedDate Provides ways to specify date ranges on objects.
+	CreatedDate *DateFilter `json:"created_date,omitempty"`
+
+	// CustomFields Filters for meeting on custom fields.
+	CustomFields *map[string]interface{} `json:"custom_fields,omitempty"`
+
+	// EndedDate Provides ways to specify date ranges on objects.
+	EndedDate *DateFilter `json:"ended_date,omitempty"`
+
+	// ExternalRef Filters for meetings with the provided external_ref(s).
+	ExternalRef *[]string `json:"external_ref,omitempty"`
+
+	// GroupBy The field to group the collection by.
+	GroupBy *string `json:"group_by,omitempty"`
+
+	// Links Filters for links associated with the meeting.
+	Links *[]MeetingsFilterLinkSummaryFilter `json:"links,omitempty"`
+
+	// Members Filter for meeting on specified Member Ids.
+	Members *[]string `json:"members,omitempty"`
+
+	// ModifiedDate Provides ways to specify date ranges on objects.
+	ModifiedDate *DateFilter `json:"modified_date,omitempty"`
+
+	// Organizer Filter for meeting on specified organizers.
+	Organizer *[]string `json:"organizer,omitempty"`
+
+	// Parent Filters for meetings with the provided parent.
+	// Deprecated:
+	Parent *[]string `json:"parent,omitempty"`
+
+	// ScheduledDate Provides ways to specify date ranges on objects.
+	ScheduledDate *DateFilter `json:"scheduled_date,omitempty"`
+
+	// SortBy Comma-separated fields to sort the objects by.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
+	// State Filters for meeting on specified state or outcomes.
+	State *[]MeetingState `json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype      *[]string           `json:"subtype,omitempty"`
+	SyncMetadata *SyncMetadataFilter `json:"sync_metadata,omitempty"`
+
+	// Tags Filters for meeting by tags.
+	Tags *[]string `json:"tags,omitempty"`
 }
 
 // MemberSummary defines model for member-summary.
@@ -11752,6 +11934,9 @@ type NotificationContentTemplate = ContentTemplateBase
 
 // NotificationContentTemplateSummary defines model for notification-content-template-summary.
 type NotificationContentTemplateSummary = ContentTemplateBaseSummary
+
+// NotificationPriority Priority of the notification.
+type NotificationPriority string
 
 // NotificationsSendRequest defines model for notifications-send-request.
 type NotificationsSendRequest struct {
@@ -12931,6 +13116,9 @@ type PreferencesUpdateRequest struct {
 type PreferencesUpdateResponseBody struct {
 	Preferences Preferences `json:"preferences"`
 }
+
+// PrimitiveValueType Type of the value.
+type PrimitiveValueType string
 
 // Product defines model for product.
 type Product = PartBase
@@ -14127,6 +14315,9 @@ type RolesApplyResponseBody = map[string]interface{}
 
 // RolesCreateRequest A request to create a new role.
 type RolesCreateRequest struct {
+	// Caveats The caveats on the role.
+	Caveats *[]RolesCreateRequestCaveat `json:"caveats,omitempty"`
+
 	// Description The description of the role.
 	Description *string `json:"description,omitempty"`
 
@@ -14145,6 +14336,48 @@ type RolesCreateRequest struct {
 
 	// TargetSubtype The subtype of the target.
 	TargetSubtype *string `json:"target_subtype,omitempty"`
+}
+
+// RolesCreateRequestCaveat Caveat under which the role applies.
+type RolesCreateRequestCaveat struct {
+	// Key Selector.
+	Key Selector `json:"key"`
+
+	// Operator The operator used to compare the key and the value.
+	Operator CaveatOperator `json:"operator"`
+
+	// Value Primitive Value.
+	Value RolesCreateRequestPrimitiveValue `json:"value"`
+}
+
+// RolesCreateRequestPrimitiveValue Primitive Value.
+type RolesCreateRequestPrimitiveValue struct {
+	// AttributeValue Selector.
+	AttributeValue *Selector `json:"attribute_value,omitempty"`
+
+	// BoolValue Boolean value.
+	BoolValue *bool `json:"bool_value,omitempty"`
+
+	// IdListValue List of ID values.
+	IdListValue *[]string `json:"id_list_value,omitempty"`
+
+	// IdValue ID value.
+	IdValue *string `json:"id_value,omitempty"`
+
+	// IntListValue List of integer values.
+	IntListValue *[]int64 `json:"int_list_value,omitempty"`
+
+	// IntValue Integer value.
+	IntValue *int64 `json:"int_value,omitempty"`
+
+	// StringListValue List of string values.
+	StringListValue *[]string `json:"string_list_value,omitempty"`
+
+	// StringValue String value.
+	StringValue *string `json:"string_value,omitempty"`
+
+	// Type Type of the value.
+	Type PrimitiveValueType `json:"type"`
 }
 
 // RolesCreateResponseBody A response to a request to create a new role.
@@ -15784,10 +16017,25 @@ type SearchSummaryBase struct {
 	Snippet *string `json:"snippet,omitempty"`
 }
 
+// Selector Selector.
+type Selector struct {
+	// Attribute Attribute of the object.
+	Attribute string `json:"attribute"`
+
+	// Object The object.
+	Object SelectorObject `json:"object"`
+}
+
+// SelectorObject The object.
+type SelectorObject string
+
 // SendNotification defines model for send-notification.
 type SendNotification struct {
 	// Parent The ID of the parent object associated with the notification.
 	Parent *string `json:"parent,omitempty"`
+
+	// Priority Priority of the notification.
+	Priority *NotificationPriority `json:"priority,omitempty"`
 
 	// Receiver The ID of the user for whom the notification was generated.
 	Receiver string `json:"receiver"`
@@ -19723,6 +19971,51 @@ type VistaSummary struct {
 // VistaType Type of vista object.
 type VistaType string
 
+// VistasCreateRequest The request to create new vista.
+type VistasCreateRequest struct {
+	CustomView *CustomView `json:"custom_view,omitempty"`
+
+	// Description Description of the vista.
+	Description *string `json:"description,omitempty"`
+
+	// Name Name of the vista.
+	Name string `json:"name"`
+
+	// SharedWith Users and groups associated with vista.
+	SharedWith *[]SetSharedWithMembership `json:"shared_with,omitempty"`
+
+	// Type Type of vista object.
+	Type  VistaType `json:"type"`
+	union json.RawMessage
+}
+
+// VistasCreateRequestDynamicVista defines model for vistas-create-request-dynamic-vista.
+type VistasCreateRequestDynamicVista struct {
+	// FilterType Type of DevRev object for which the vista is applicable.
+	FilterType DynamicVistaFilterType `json:"filter_type"`
+	union      json.RawMessage
+}
+
+// VistasCreateRequestDynamicVistaMeetingsVista defines model for vistas-create-request-dynamic-vista-meetings-vista.
+type VistasCreateRequestDynamicVistaMeetingsVista struct {
+	Filter MeetingsVistaFilter `json:"filter"`
+
+	// Items Pinned items associated with the vista.
+	Items *[]VistasCreateRequestDynamicVistaMeetingsVistaItemValue `json:"items,omitempty"`
+}
+
+// VistasCreateRequestDynamicVistaMeetingsVistaItemValue defines model for vistas-create-request-dynamic-vista-meetings-vista-item-value.
+type VistasCreateRequestDynamicVistaMeetingsVistaItemValue struct {
+	// Id The ID of the item.
+	Id string `json:"id"`
+}
+
+// VistasCreateResponseBody The response to vista creation.
+type VistasCreateResponseBody struct {
+	// Vista Represents a collection of DevRev objects.
+	Vista Vista `json:"vista"`
+}
+
 // VistasDeleteRequest The request to delete a vista.
 type VistasDeleteRequest struct {
 	// Id The ID of the vista to delete.
@@ -21896,6 +22189,9 @@ type ArticlesCountParams struct {
 	// OwnedBy Filters for articles owned by any of the provided users.
 	OwnedBy *[]string `form:"owned_by,omitempty" json:"owned_by,omitempty"`
 
+	// Parent Filters for articles with the provided parent directories.
+	Parent *[]string `form:"parent,omitempty" json:"parent,omitempty"`
+
 	// Scope Filter for the scope of the articles.
 	Scope *[]int64 `form:"scope,omitempty" json:"scope,omitempty"`
 
@@ -21949,6 +22245,9 @@ type ListArticlesParams struct {
 
 	// OwnedBy Filters for articles owned by any of the provided users.
 	OwnedBy *[]string `form:"owned_by,omitempty" json:"owned_by,omitempty"`
+
+	// Parent Filters for articles with the provided parent directories.
+	Parent *[]string `form:"parent,omitempty" json:"parent,omitempty"`
 
 	// Scope Filter for the scope of the articles.
 	Scope *[]int64 `form:"scope,omitempty" json:"scope,omitempty"`
@@ -22889,6 +23188,33 @@ type MeetingsCountParams struct {
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `form:"state,omitempty" json:"state,omitempty"`
 
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype *[]string `form:"subtype,omitempty" json:"subtype,omitempty"`
+
+	// SyncMetadataExternalReference Filters for issues with this specific external reference.
+	SyncMetadataExternalReference *[]string `form:"sync_metadata.external_reference,omitempty" json:"sync_metadata.external_reference,omitempty"`
+
+	// SyncMetadataLastSyncInStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncInStatus *[]SyncMetadataFilterSyncInFilterStatus `form:"sync_metadata.last_sync_in.status,omitempty" json:"sync_metadata.last_sync_in.status,omitempty"`
+
+	// SyncMetadataLastSyncInSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncInSyncHistory *[]string `form:"sync_metadata.last_sync_in.sync_history,omitempty" json:"sync_metadata.last_sync_in.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncInSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncInSyncUnit *[]string `form:"sync_metadata.last_sync_in.sync_unit,omitempty" json:"sync_metadata.last_sync_in.sync_unit,omitempty"`
+
+	// SyncMetadataLastSyncOutStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncOutStatus *[]SyncMetadataFilterSyncOutFilterStatus `form:"sync_metadata.last_sync_out.status,omitempty" json:"sync_metadata.last_sync_out.status,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncOutSyncHistory *[]string `form:"sync_metadata.last_sync_out.sync_history,omitempty" json:"sync_metadata.last_sync_out.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncOutSyncUnit *[]string `form:"sync_metadata.last_sync_out.sync_unit,omitempty" json:"sync_metadata.last_sync_out.sync_unit,omitempty"`
+
+	// SyncMetadataOriginSystem Filters for issues synced from this specific origin system.
+	SyncMetadataOriginSystem *[]string `form:"sync_metadata.origin_system,omitempty" json:"sync_metadata.origin_system,omitempty"`
+
 	// Tags Filters for meeting by tags.
 	Tags *[]string `form:"tags,omitempty" json:"tags,omitempty"`
 }
@@ -22947,6 +23273,33 @@ type MeetingsListParams struct {
 
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `form:"state,omitempty" json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype *[]string `form:"subtype,omitempty" json:"subtype,omitempty"`
+
+	// SyncMetadataExternalReference Filters for issues with this specific external reference.
+	SyncMetadataExternalReference *[]string `form:"sync_metadata.external_reference,omitempty" json:"sync_metadata.external_reference,omitempty"`
+
+	// SyncMetadataLastSyncInStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncInStatus *[]SyncMetadataFilterSyncInFilterStatus `form:"sync_metadata.last_sync_in.status,omitempty" json:"sync_metadata.last_sync_in.status,omitempty"`
+
+	// SyncMetadataLastSyncInSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncInSyncHistory *[]string `form:"sync_metadata.last_sync_in.sync_history,omitempty" json:"sync_metadata.last_sync_in.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncInSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncInSyncUnit *[]string `form:"sync_metadata.last_sync_in.sync_unit,omitempty" json:"sync_metadata.last_sync_in.sync_unit,omitempty"`
+
+	// SyncMetadataLastSyncOutStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncOutStatus *[]SyncMetadataFilterSyncOutFilterStatus `form:"sync_metadata.last_sync_out.status,omitempty" json:"sync_metadata.last_sync_out.status,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncOutSyncHistory *[]string `form:"sync_metadata.last_sync_out.sync_history,omitempty" json:"sync_metadata.last_sync_out.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncOutSyncUnit *[]string `form:"sync_metadata.last_sync_out.sync_unit,omitempty" json:"sync_metadata.last_sync_out.sync_unit,omitempty"`
+
+	// SyncMetadataOriginSystem Filters for issues synced from this specific origin system.
+	SyncMetadataOriginSystem *[]string `form:"sync_metadata.origin_system,omitempty" json:"sync_metadata.origin_system,omitempty"`
 
 	// Tags Filters for meeting by tags.
 	Tags *[]string `form:"tags,omitempty" json:"tags,omitempty"`
@@ -23416,6 +23769,9 @@ type RevUsersScanParams struct {
 
 // AggregatedSchemaGetParams defines parameters for AggregatedSchemaGet.
 type AggregatedSchemaGetParams struct {
+	// CustomSchemaFragments The custom schema fragment IDs which are to be aggregated.
+	CustomSchemaFragments *[]string `form:"custom_schema_fragments,omitempty" json:"custom_schema_fragments,omitempty"`
+
 	// CustomSchemaSpecApps List of apps.
 	CustomSchemaSpecApps *[]string `form:"custom_schema_spec.apps,omitempty" json:"custom_schema_spec.apps,omitempty"`
 
@@ -23428,6 +23784,9 @@ type AggregatedSchemaGetParams struct {
 	// LeafType The leaf type. Used for inferring the default stage diagram and
 	// tenant fragment ID.
 	LeafType *string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+
+	// StockSchemaFragment The stock schema fragment which is to be aggregated.
+	StockSchemaFragment *string `form:"stock_schema_fragment,omitempty" json:"stock_schema_fragment,omitempty"`
 }
 
 // CustomSchemaFragmentsGetParams defines parameters for CustomSchemaFragmentsGet.
@@ -25169,6 +25528,9 @@ type UomsListPostJSONRequestBody = UomsListRequest
 
 // UomsUpdateJSONRequestBody defines body for UomsUpdate for application/json ContentType.
 type UomsUpdateJSONRequestBody = UomsUpdateRequest
+
+// VistasCreateJSONRequestBody defines body for VistasCreate for application/json ContentType.
+type VistasCreateJSONRequestBody = VistasCreateRequest
 
 // VistasDeleteJSONRequestBody defines body for VistasDelete for application/json ContentType.
 type VistasDeleteJSONRequestBody = VistasDeleteRequest
@@ -31087,6 +31449,196 @@ func (t *DevOrgAuthConnectionsUpdateRequest) UnmarshalJSON(b []byte) error {
 		err = json.Unmarshal(raw, &t.Type)
 		if err != nil {
 			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsDynamicVistaMeetingsVista returns the union data inside the DynamicVista as a DynamicVistaMeetingsVista
+func (t DynamicVista) AsDynamicVistaMeetingsVista() (DynamicVistaMeetingsVista, error) {
+	var body DynamicVistaMeetingsVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDynamicVistaMeetingsVista overwrites any union data inside the DynamicVista as the provided DynamicVistaMeetingsVista
+func (t *DynamicVista) FromDynamicVistaMeetingsVista(v DynamicVistaMeetingsVista) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDynamicVistaMeetingsVista performs a merge with any union data inside the DynamicVista, using the provided DynamicVistaMeetingsVista
+func (t *DynamicVista) MergeDynamicVistaMeetingsVista(v DynamicVistaMeetingsVista) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t DynamicVista) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	if t.CreatedBy != nil {
+		object["created_by"], err = json.Marshal(t.CreatedBy)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'created_by': %w", err)
+		}
+	}
+
+	if t.CreatedDate != nil {
+		object["created_date"], err = json.Marshal(t.CreatedDate)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'created_date': %w", err)
+		}
+	}
+
+	if t.DisplayId != nil {
+		object["display_id"], err = json.Marshal(t.DisplayId)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'display_id': %w", err)
+		}
+	}
+
+	object["filter_type"], err = json.Marshal(t.FilterType)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'filter_type': %w", err)
+	}
+
+	object["id"], err = json.Marshal(t.Id)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'id': %w", err)
+	}
+
+	if t.IsDefault != nil {
+		object["is_default"], err = json.Marshal(t.IsDefault)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'is_default': %w", err)
+		}
+	}
+
+	if t.ModifiedBy != nil {
+		object["modified_by"], err = json.Marshal(t.ModifiedBy)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'modified_by': %w", err)
+		}
+	}
+
+	if t.ModifiedDate != nil {
+		object["modified_date"], err = json.Marshal(t.ModifiedDate)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'modified_date': %w", err)
+		}
+	}
+
+	object["name"], err = json.Marshal(t.Name)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'name': %w", err)
+	}
+
+	if t.SharedWith != nil {
+		object["shared_with"], err = json.Marshal(t.SharedWith)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'shared_with': %w", err)
+		}
+	}
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *DynamicVista) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["created_by"]; found {
+		err = json.Unmarshal(raw, &t.CreatedBy)
+		if err != nil {
+			return fmt.Errorf("error reading 'created_by': %w", err)
+		}
+	}
+
+	if raw, found := object["created_date"]; found {
+		err = json.Unmarshal(raw, &t.CreatedDate)
+		if err != nil {
+			return fmt.Errorf("error reading 'created_date': %w", err)
+		}
+	}
+
+	if raw, found := object["display_id"]; found {
+		err = json.Unmarshal(raw, &t.DisplayId)
+		if err != nil {
+			return fmt.Errorf("error reading 'display_id': %w", err)
+		}
+	}
+
+	if raw, found := object["filter_type"]; found {
+		err = json.Unmarshal(raw, &t.FilterType)
+		if err != nil {
+			return fmt.Errorf("error reading 'filter_type': %w", err)
+		}
+	}
+
+	if raw, found := object["id"]; found {
+		err = json.Unmarshal(raw, &t.Id)
+		if err != nil {
+			return fmt.Errorf("error reading 'id': %w", err)
+		}
+	}
+
+	if raw, found := object["is_default"]; found {
+		err = json.Unmarshal(raw, &t.IsDefault)
+		if err != nil {
+			return fmt.Errorf("error reading 'is_default': %w", err)
+		}
+	}
+
+	if raw, found := object["modified_by"]; found {
+		err = json.Unmarshal(raw, &t.ModifiedBy)
+		if err != nil {
+			return fmt.Errorf("error reading 'modified_by': %w", err)
+		}
+	}
+
+	if raw, found := object["modified_date"]; found {
+		err = json.Unmarshal(raw, &t.ModifiedDate)
+		if err != nil {
+			return fmt.Errorf("error reading 'modified_date': %w", err)
+		}
+	}
+
+	if raw, found := object["name"]; found {
+		err = json.Unmarshal(raw, &t.Name)
+		if err != nil {
+			return fmt.Errorf("error reading 'name': %w", err)
+		}
+	}
+
+	if raw, found := object["shared_with"]; found {
+		err = json.Unmarshal(raw, &t.SharedWith)
+		if err != nil {
+			return fmt.Errorf("error reading 'shared_with': %w", err)
 		}
 	}
 
@@ -38288,6 +38840,13 @@ func (t SendNotification) MarshalJSON() ([]byte, error) {
 		}
 	}
 
+	if t.Priority != nil {
+		object["priority"], err = json.Marshal(t.Priority)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'priority': %w", err)
+		}
+	}
+
 	object["receiver"], err = json.Marshal(t.Receiver)
 	if err != nil {
 		return nil, fmt.Errorf("error marshaling 'receiver': %w", err)
@@ -38324,6 +38883,13 @@ func (t *SendNotification) UnmarshalJSON(b []byte) error {
 		err = json.Unmarshal(raw, &t.Parent)
 		if err != nil {
 			return fmt.Errorf("error reading 'parent': %w", err)
+		}
+	}
+
+	if raw, found := object["priority"]; found {
+		err = json.Unmarshal(raw, &t.Priority)
+		if err != nil {
+			return fmt.Errorf("error reading 'priority': %w", err)
 		}
 	}
 
@@ -40324,6 +40890,248 @@ func (t *VistaSummary) UnmarshalJSON(b []byte) error {
 		err = json.Unmarshal(raw, &t.Type)
 		if err != nil {
 			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsVistasCreateRequestDynamicVista returns the union data inside the VistasCreateRequest as a VistasCreateRequestDynamicVista
+func (t VistasCreateRequest) AsVistasCreateRequestDynamicVista() (VistasCreateRequestDynamicVista, error) {
+	var body VistasCreateRequestDynamicVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromVistasCreateRequestDynamicVista overwrites any union data inside the VistasCreateRequest as the provided VistasCreateRequestDynamicVista
+func (t *VistasCreateRequest) FromVistasCreateRequestDynamicVista(v VistasCreateRequestDynamicVista) error {
+	t.Type = "dynamic"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeVistasCreateRequestDynamicVista performs a merge with any union data inside the VistasCreateRequest, using the provided VistasCreateRequestDynamicVista
+func (t *VistasCreateRequest) MergeVistasCreateRequestDynamicVista(v VistasCreateRequestDynamicVista) error {
+	t.Type = "dynamic"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t VistasCreateRequest) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t VistasCreateRequest) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "dynamic":
+		return t.AsVistasCreateRequestDynamicVista()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t VistasCreateRequest) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	if t.CustomView != nil {
+		object["custom_view"], err = json.Marshal(t.CustomView)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'custom_view': %w", err)
+		}
+	}
+
+	if t.Description != nil {
+		object["description"], err = json.Marshal(t.Description)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'description': %w", err)
+		}
+	}
+
+	object["name"], err = json.Marshal(t.Name)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'name': %w", err)
+	}
+
+	if t.SharedWith != nil {
+		object["shared_with"], err = json.Marshal(t.SharedWith)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'shared_with': %w", err)
+		}
+	}
+
+	object["type"], err = json.Marshal(t.Type)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *VistasCreateRequest) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["custom_view"]; found {
+		err = json.Unmarshal(raw, &t.CustomView)
+		if err != nil {
+			return fmt.Errorf("error reading 'custom_view': %w", err)
+		}
+	}
+
+	if raw, found := object["description"]; found {
+		err = json.Unmarshal(raw, &t.Description)
+		if err != nil {
+			return fmt.Errorf("error reading 'description': %w", err)
+		}
+	}
+
+	if raw, found := object["name"]; found {
+		err = json.Unmarshal(raw, &t.Name)
+		if err != nil {
+			return fmt.Errorf("error reading 'name': %w", err)
+		}
+	}
+
+	if raw, found := object["shared_with"]; found {
+		err = json.Unmarshal(raw, &t.SharedWith)
+		if err != nil {
+			return fmt.Errorf("error reading 'shared_with': %w", err)
+		}
+	}
+
+	if raw, found := object["type"]; found {
+		err = json.Unmarshal(raw, &t.Type)
+		if err != nil {
+			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsVistasCreateRequestDynamicVistaMeetingsVista returns the union data inside the VistasCreateRequestDynamicVista as a VistasCreateRequestDynamicVistaMeetingsVista
+func (t VistasCreateRequestDynamicVista) AsVistasCreateRequestDynamicVistaMeetingsVista() (VistasCreateRequestDynamicVistaMeetingsVista, error) {
+	var body VistasCreateRequestDynamicVistaMeetingsVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromVistasCreateRequestDynamicVistaMeetingsVista overwrites any union data inside the VistasCreateRequestDynamicVista as the provided VistasCreateRequestDynamicVistaMeetingsVista
+func (t *VistasCreateRequestDynamicVista) FromVistasCreateRequestDynamicVistaMeetingsVista(v VistasCreateRequestDynamicVistaMeetingsVista) error {
+	t.FilterType = "meetings"
+
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeVistasCreateRequestDynamicVistaMeetingsVista performs a merge with any union data inside the VistasCreateRequestDynamicVista, using the provided VistasCreateRequestDynamicVistaMeetingsVista
+func (t *VistasCreateRequestDynamicVista) MergeVistasCreateRequestDynamicVistaMeetingsVista(v VistasCreateRequestDynamicVistaMeetingsVista) error {
+	t.FilterType = "meetings"
+
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t VistasCreateRequestDynamicVista) Discriminator() (string, error) {
+	var discriminator struct {
+		Discriminator string `json:"filter_type"`
+	}
+	err := json.Unmarshal(t.union, &discriminator)
+	return discriminator.Discriminator, err
+}
+
+func (t VistasCreateRequestDynamicVista) ValueByDiscriminator() (interface{}, error) {
+	discriminator, err := t.Discriminator()
+	if err != nil {
+		return nil, err
+	}
+	switch discriminator {
+	case "meetings":
+		return t.AsVistasCreateRequestDynamicVistaMeetingsVista()
+	default:
+		return nil, errors.New("unknown discriminator value: " + discriminator)
+	}
+}
+
+func (t VistasCreateRequestDynamicVista) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	object["filter_type"], err = json.Marshal(t.FilterType)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'filter_type': %w", err)
+	}
+
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *VistasCreateRequestDynamicVista) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["filter_type"]; found {
+		err = json.Unmarshal(raw, &t.FilterType)
+		if err != nil {
+			return fmt.Errorf("error reading 'filter_type': %w", err)
 		}
 	}
 
@@ -43156,6 +43964,11 @@ type ClientInterface interface {
 	UomsUpdateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	UomsUpdate(ctx context.Context, body UomsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	// VistasCreateWithBody request with any body
+	VistasCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
+
+	VistasCreate(ctx context.Context, body VistasCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error)
 
 	// VistasDeleteWithBody request with any body
 	VistasDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error)
@@ -50622,6 +51435,30 @@ func (c *Client) UomsUpdate(ctx context.Context, body UomsUpdateJSONRequestBody,
 	return c.Client.Do(req)
 }
 
+func (c *Client) VistasCreateWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasCreateRequestWithBody(c.Server, contentType, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
+func (c *Client) VistasCreate(ctx context.Context, body VistasCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*http.Response, error) {
+	req, err := NewVistasCreateRequest(c.Server, body)
+	if err != nil {
+		return nil, err
+	}
+	req = req.WithContext(ctx)
+	if err := c.applyEditors(ctx, req, reqEditors); err != nil {
+		return nil, err
+	}
+	return c.Client.Do(req)
+}
+
 func (c *Client) VistasDeleteWithBody(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*http.Response, error) {
 	req, err := NewVistasDeleteRequestWithBody(c.Server, contentType, body)
 	if err != nil {
@@ -52781,6 +53618,22 @@ func NewArticlesCountRequest(server string, params *ArticlesCountParams) (*http.
 
 		}
 
+		if params.Parent != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "parent", runtime.ParamLocationQuery, *params.Parent); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		if params.Scope != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "scope", runtime.ParamLocationQuery, *params.Scope); err != nil {
@@ -53230,6 +54083,22 @@ func NewListArticlesRequest(server string, params *ListArticlesParams) (*http.Re
 		if params.OwnedBy != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "owned_by", runtime.ParamLocationQuery, *params.OwnedBy); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Parent != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "parent", runtime.ParamLocationQuery, *params.Parent); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -62870,6 +63739,150 @@ func NewMeetingsCountRequest(server string, params *MeetingsCountParams) (*http.
 
 		}
 
+		if params.Subtype != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "subtype", runtime.ParamLocationQuery, *params.Subtype); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataExternalReference != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.external_reference", runtime.ParamLocationQuery, *params.SyncMetadataExternalReference); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataOriginSystem != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.origin_system", runtime.ParamLocationQuery, *params.SyncMetadataOriginSystem); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		if params.Tags != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "tags", runtime.ParamLocationQuery, *params.Tags); err != nil {
@@ -63351,6 +64364,150 @@ func NewMeetingsListRequest(server string, params *MeetingsListParams) (*http.Re
 		if params.State != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "state", runtime.ParamLocationQuery, *params.State); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Subtype != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "subtype", runtime.ParamLocationQuery, *params.Subtype); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataExternalReference != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.external_reference", runtime.ParamLocationQuery, *params.SyncMetadataExternalReference); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataOriginSystem != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.origin_system", runtime.ParamLocationQuery, *params.SyncMetadataOriginSystem); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -68309,6 +69466,22 @@ func NewAggregatedSchemaGetRequest(server string, params *AggregatedSchemaGetPar
 	if params != nil {
 		queryValues := queryURL.Query()
 
+		if params.CustomSchemaFragments != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_fragments", runtime.ParamLocationQuery, *params.CustomSchemaFragments); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		if params.CustomSchemaSpecApps != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_spec.apps", runtime.ParamLocationQuery, *params.CustomSchemaSpecApps); err != nil {
@@ -68360,6 +69533,22 @@ func NewAggregatedSchemaGetRequest(server string, params *AggregatedSchemaGetPar
 		if params.LeafType != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.StockSchemaFragment != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "stock_schema_fragment", runtime.ParamLocationQuery, *params.StockSchemaFragment); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -74235,6 +75424,46 @@ func NewUomsUpdateRequestWithBody(server string, contentType string, body io.Rea
 	return req, nil
 }
 
+// NewVistasCreateRequest calls the generic VistasCreate builder with application/json body
+func NewVistasCreateRequest(server string, body VistasCreateJSONRequestBody) (*http.Request, error) {
+	var bodyReader io.Reader
+	buf, err := json.Marshal(body)
+	if err != nil {
+		return nil, err
+	}
+	bodyReader = bytes.NewReader(buf)
+	return NewVistasCreateRequestWithBody(server, "application/json", bodyReader)
+}
+
+// NewVistasCreateRequestWithBody generates requests for VistasCreate with any type of body
+func NewVistasCreateRequestWithBody(server string, contentType string, body io.Reader) (*http.Request, error) {
+	var err error
+
+	serverURL, err := url.Parse(server)
+	if err != nil {
+		return nil, err
+	}
+
+	operationPath := fmt.Sprintf("/vistas.create")
+	if operationPath[0] == '/' {
+		operationPath = "." + operationPath
+	}
+
+	queryURL, err := serverURL.Parse(operationPath)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", queryURL.String(), body)
+	if err != nil {
+		return nil, err
+	}
+
+	req.Header.Add("Content-Type", contentType)
+
+	return req, nil
+}
+
 // NewVistasDeleteRequest calls the generic VistasDelete builder with application/json body
 func NewVistasDeleteRequest(server string, body VistasDeleteJSONRequestBody) (*http.Request, error) {
 	var bodyReader io.Reader
@@ -79228,6 +80457,11 @@ type ClientWithResponsesInterface interface {
 	UomsUpdateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*UomsUpdateResponse, error)
 
 	UomsUpdateWithResponse(ctx context.Context, body UomsUpdateJSONRequestBody, reqEditors ...RequestEditorFn) (*UomsUpdateResponse, error)
+
+	// VistasCreateWithBodyWithResponse request with any body
+	VistasCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasCreateResponse, error)
+
+	VistasCreateWithResponse(ctx context.Context, body VistasCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasCreateResponse, error)
 
 	// VistasDeleteWithBodyWithResponse request with any body
 	VistasDeleteWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasDeleteResponse, error)
@@ -89617,6 +90851,35 @@ func (r UomsUpdateResponse) StatusCode() int {
 	return 0
 }
 
+type VistasCreateResponse struct {
+	Body         []byte
+	HTTPResponse *http.Response
+	JSON201      *VistasCreateResponseBody
+	JSON400      *BadRequest
+	JSON401      *Unauthorized
+	JSON403      *Forbidden
+	JSON409      *Conflict
+	JSON429      *TooManyRequests
+	JSON500      *InternalServerError
+	JSON503      *ServiceUnavailable
+}
+
+// Status returns HTTPResponse.Status
+func (r VistasCreateResponse) Status() string {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.Status
+	}
+	return http.StatusText(0)
+}
+
+// StatusCode returns HTTPResponse.StatusCode
+func (r VistasCreateResponse) StatusCode() int {
+	if r.HTTPResponse != nil {
+		return r.HTTPResponse.StatusCode
+	}
+	return 0
+}
+
 type VistasDeleteResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
@@ -95872,6 +97135,23 @@ func (c *ClientWithResponses) UomsUpdateWithResponse(ctx context.Context, body U
 		return nil, err
 	}
 	return ParseUomsUpdateResponse(rsp)
+}
+
+// VistasCreateWithBodyWithResponse request with arbitrary body returning *VistasCreateResponse
+func (c *ClientWithResponses) VistasCreateWithBodyWithResponse(ctx context.Context, contentType string, body io.Reader, reqEditors ...RequestEditorFn) (*VistasCreateResponse, error) {
+	rsp, err := c.VistasCreateWithBody(ctx, contentType, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasCreateResponse(rsp)
+}
+
+func (c *ClientWithResponses) VistasCreateWithResponse(ctx context.Context, body VistasCreateJSONRequestBody, reqEditors ...RequestEditorFn) (*VistasCreateResponse, error) {
+	rsp, err := c.VistasCreate(ctx, body, reqEditors...)
+	if err != nil {
+		return nil, err
+	}
+	return ParseVistasCreateResponse(rsp)
 }
 
 // VistasDeleteWithBodyWithResponse request with arbitrary body returning *VistasDeleteResponse
@@ -122028,6 +123308,81 @@ func ParseUomsUpdateResponse(rsp *http.Response) (*UomsUpdateResponse, error) {
 			return nil, err
 		}
 		response.JSON404 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
+		var dest TooManyRequests
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON429 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 500:
+		var dest InternalServerError
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON500 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 503:
+		var dest ServiceUnavailable
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON503 = &dest
+
+	}
+
+	return response, nil
+}
+
+// ParseVistasCreateResponse parses an HTTP response from a VistasCreateWithResponse call
+func ParseVistasCreateResponse(rsp *http.Response) (*VistasCreateResponse, error) {
+	bodyBytes, err := io.ReadAll(rsp.Body)
+	defer func() { _ = rsp.Body.Close() }()
+	if err != nil {
+		return nil, err
+	}
+
+	response := &VistasCreateResponse{
+		Body:         bodyBytes,
+		HTTPResponse: rsp,
+	}
+
+	switch {
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 201:
+		var dest VistasCreateResponseBody
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON201 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 400:
+		var dest BadRequest
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON400 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 401:
+		var dest Unauthorized
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON401 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 403:
+		var dest Forbidden
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON403 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 409:
+		var dest Conflict
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSON409 = &dest
 
 	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && rsp.StatusCode == 429:
 		var dest TooManyRequests

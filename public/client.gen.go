@@ -889,6 +889,7 @@ const (
 	TimelineEntryObjectTypeConversation    TimelineEntryObjectType = "conversation"
 	TimelineEntryObjectTypeEnhancement     TimelineEntryObjectType = "enhancement"
 	TimelineEntryObjectTypeFeature         TimelineEntryObjectType = "feature"
+	TimelineEntryObjectTypeGroup           TimelineEntryObjectType = "group"
 	TimelineEntryObjectTypeIssue           TimelineEntryObjectType = "issue"
 	TimelineEntryObjectTypeProduct         TimelineEntryObjectType = "product"
 	TimelineEntryObjectTypeRevOrg          TimelineEntryObjectType = "rev_org"
@@ -1398,6 +1399,9 @@ type AggregatedSchema struct {
 
 // AggregatedSchemaGetRequest defines model for aggregated-schema-get-request.
 type AggregatedSchemaGetRequest struct {
+	// CustomSchemaFragments The custom schema fragment IDs which are to be aggregated.
+	CustomSchemaFragments *[]string `json:"custom_schema_fragments,omitempty"`
+
 	// CustomSchemaSpec Custom schemas described using identifiers
 	CustomSchemaSpec *CustomSchemaSpecForRead `json:"custom_schema_spec,omitempty"`
 
@@ -1407,6 +1411,9 @@ type AggregatedSchemaGetRequest struct {
 	// LeafType The leaf type. Used for inferring the default stage diagram and
 	// tenant fragment ID.
 	LeafType *string `json:"leaf_type,omitempty"`
+
+	// StockSchemaFragment The stock schema fragment which is to be aggregated.
+	StockSchemaFragment *string `json:"stock_schema_fragment,omitempty"`
 }
 
 // AggregatedSchemaGetResponseBody defines model for aggregated-schema-get-response.
@@ -1820,6 +1827,9 @@ type ArticlesListRequest struct {
 
 	// OwnedBy Filters for articles owned by any of the provided users.
 	OwnedBy *[]string `json:"owned_by,omitempty"`
+
+	// Parent Filters for articles with the provided parent directories.
+	Parent *[]string `json:"parent,omitempty"`
 
 	// Scope Filter for the scope of the articles.
 	Scope *[]int64 `json:"scope,omitempty"`
@@ -3345,9 +3355,6 @@ type ConversationsCreateRequest struct {
 	// Title The title for the conversation.
 	Title *string                             `json:"title,omitempty"`
 	Type  ConversationsCreateRequestTypeValue `json:"type"`
-
-	// UserSessions The IDs of user sessions associated with the conversation.
-	UserSessions *[]string `json:"user_sessions,omitempty"`
 }
 
 // ConversationsCreateRequestMessage defines model for conversations-create-request-message.
@@ -3539,8 +3546,7 @@ type ConversationsUpdateRequest struct {
 	Tags   *ConversationsUpdateRequestTags `json:"tags,omitempty"`
 
 	// Title The updated title of the conversation.
-	Title        *string                                 `json:"title,omitempty"`
-	UserSessions *ConversationsUpdateRequestUserSessions `json:"user_sessions,omitempty"`
+	Title *string `json:"title,omitempty"`
 }
 
 // ConversationsUpdateRequestAppliesToParts defines model for conversations-update-request-applies-to-parts.
@@ -3582,12 +3588,6 @@ type ConversationsUpdateRequestTags struct {
 
 	// Set Sets the tag IDs to the provided tags.
 	Set *[]SetTagWithValue `json:"set,omitempty"`
-}
-
-// ConversationsUpdateRequestUserSessions defines model for conversations-update-request-user-sessions.
-type ConversationsUpdateRequestUserSessions struct {
-	// Set The updated user sessions that the conversation is associated with.
-	Set *[]string `json:"set,omitempty"`
 }
 
 // ConversationsUpdateResponseBody The response for updating a conversation.
@@ -4737,6 +4737,7 @@ type DevUser struct {
 	// PhoneNumbers Phone numbers of the user.
 	PhoneNumbers    *[]string    `json:"phone_numbers,omitempty"`
 	PrimaryIdentity *UserSummary `json:"primary_identity,omitempty"`
+	ReportsTo       *UserSummary `json:"reports_to,omitempty"`
 
 	// Skills Array of skills of the user.
 	Skills *[]UserSkill `json:"skills,omitempty"`
@@ -5047,9 +5048,6 @@ type DirectoriesCreateRequest struct {
 	// Description Description for the directory.
 	Description *string `json:"description,omitempty"`
 
-	// Icon Icon for the directory.
-	Icon *string `json:"icon,omitempty"`
-
 	// Language Language of the directory.
 	Language *string `json:"language,omitempty"`
 
@@ -5250,10 +5248,24 @@ type DynamicVista struct {
 
 	// SharedWith Users and groups associated with vista.
 	SharedWith *[]SharedWithMembership `json:"shared_with,omitempty"`
+	union      json.RawMessage
 }
 
 // DynamicVistaFilterType Type of DevRev object for which the vista is applicable.
 type DynamicVistaFilterType string
+
+// DynamicVistaMeetingsVista defines model for dynamic-vista-meetings-vista.
+type DynamicVistaMeetingsVista struct {
+	Filter MeetingsVistaFilter `json:"filter"`
+
+	// Items Pinned items associated with the vista.
+	Items *[]DynamicVistaMeetingsVistaItemValue `json:"items,omitempty"`
+}
+
+// DynamicVistaMeetingsVistaItemValue defines model for dynamic-vista-meetings-vista-item-value.
+type DynamicVistaMeetingsVistaItemValue struct {
+	Item MeetingSummary `json:"item"`
+}
 
 // Empty defines model for empty.
 type Empty = map[string]interface{}
@@ -6741,6 +6753,9 @@ type Issue struct {
 	// DisplayId Human-readable object ID unique to the Dev organization.
 	DisplayId *string `json:"display_id,omitempty"`
 
+	// EstimatedEffort Estimated effort to complete the issue.
+	EstimatedEffort *float64 `json:"estimated_effort,omitempty"`
+
 	// Id Globally unique object ID.
 	Id         string       `json:"id"`
 	ModifiedBy *UserSummary `json:"modified_by,omitempty"`
@@ -7053,6 +7068,9 @@ type MeetingChannel string
 // MeetingState The state of meeting.
 type MeetingState string
 
+// MeetingSummary defines model for meeting-summary.
+type MeetingSummary = AtomBaseSummary
+
 // MeetingsCountRequest defines model for meetings-count-request.
 type MeetingsCountRequest struct {
 	// Channel Filters for meeting on specified channels.
@@ -7091,6 +7109,10 @@ type MeetingsCountRequest struct {
 
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype      *[]string           `json:"subtype,omitempty"`
+	SyncMetadata *SyncMetadataFilter `json:"sync_metadata,omitempty"`
 }
 
 // MeetingsCountResponseBody defines model for meetings-count-response.
@@ -7247,6 +7269,10 @@ type MeetingsListRequest struct {
 
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype      *[]string           `json:"subtype,omitempty"`
+	SyncMetadata *SyncMetadataFilter `json:"sync_metadata,omitempty"`
 }
 
 // MeetingsListResponseBody defines model for meetings-list-response.
@@ -7333,6 +7359,56 @@ type MeetingsUpdateRequestTags struct {
 // MeetingsUpdateResponseBody defines model for meetings-update-response.
 type MeetingsUpdateResponseBody struct {
 	Meeting Meeting `json:"meeting"`
+}
+
+// MeetingsVistaFilter defines model for meetings-vista-filter.
+type MeetingsVistaFilter struct {
+	// Channel Filters for meeting on specified channels.
+	Channel *[]MeetingChannel `json:"channel,omitempty"`
+
+	// CreatedBy Filters for meetings created by the specified user(s).
+	CreatedBy *[]string `json:"created_by,omitempty"`
+
+	// CreatedDate Provides ways to specify date ranges on objects.
+	CreatedDate *DateFilter `json:"created_date,omitempty"`
+
+	// EndedDate Provides ways to specify date ranges on objects.
+	EndedDate *DateFilter `json:"ended_date,omitempty"`
+
+	// ExternalRef Filters for meetings with the provided external_ref(s).
+	ExternalRef *[]string `json:"external_ref,omitempty"`
+
+	// GroupBy The field to group the collection by.
+	GroupBy *string `json:"group_by,omitempty"`
+
+	// Links Filters for links associated with the meeting.
+	Links *[]MeetingsFilterLinkSummaryFilter `json:"links,omitempty"`
+
+	// Members Filter for meeting on specified Member Ids.
+	Members *[]string `json:"members,omitempty"`
+
+	// ModifiedDate Provides ways to specify date ranges on objects.
+	ModifiedDate *DateFilter `json:"modified_date,omitempty"`
+
+	// Organizer Filter for meeting on specified organizers.
+	Organizer *[]string `json:"organizer,omitempty"`
+
+	// Parent Filters for meetings with the provided parent.
+	// Deprecated:
+	Parent *[]string `json:"parent,omitempty"`
+
+	// ScheduledDate Provides ways to specify date ranges on objects.
+	ScheduledDate *DateFilter `json:"scheduled_date,omitempty"`
+
+	// SortBy Comma-separated fields to sort the objects by.
+	SortBy *[]string `json:"sort_by,omitempty"`
+
+	// State Filters for meeting on specified state or outcomes.
+	State *[]MeetingState `json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype      *[]string           `json:"subtype,omitempty"`
+	SyncMetadata *SyncMetadataFilter `json:"sync_metadata,omitempty"`
 }
 
 // MemberSummary defines model for member-summary.
@@ -14060,6 +14136,9 @@ type ListArticlesParams struct {
 	// OwnedBy Filters for articles owned by any of the provided users.
 	OwnedBy *[]string `form:"owned_by,omitempty" json:"owned_by,omitempty"`
 
+	// Parent Filters for articles with the provided parent directories.
+	Parent *[]string `form:"parent,omitempty" json:"parent,omitempty"`
+
 	// Scope Filter for the scope of the articles.
 	Scope *[]int64 `form:"scope,omitempty" json:"scope,omitempty"`
 
@@ -14560,6 +14639,33 @@ type MeetingsCountParams struct {
 
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `form:"state,omitempty" json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype *[]string `form:"subtype,omitempty" json:"subtype,omitempty"`
+
+	// SyncMetadataExternalReference Filters for issues with this specific external reference.
+	SyncMetadataExternalReference *[]string `form:"sync_metadata.external_reference,omitempty" json:"sync_metadata.external_reference,omitempty"`
+
+	// SyncMetadataLastSyncInStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncInStatus *[]SyncMetadataFilterSyncInFilterStatus `form:"sync_metadata.last_sync_in.status,omitempty" json:"sync_metadata.last_sync_in.status,omitempty"`
+
+	// SyncMetadataLastSyncInSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncInSyncHistory *[]string `form:"sync_metadata.last_sync_in.sync_history,omitempty" json:"sync_metadata.last_sync_in.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncInSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncInSyncUnit *[]string `form:"sync_metadata.last_sync_in.sync_unit,omitempty" json:"sync_metadata.last_sync_in.sync_unit,omitempty"`
+
+	// SyncMetadataLastSyncOutStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncOutStatus *[]SyncMetadataFilterSyncOutFilterStatus `form:"sync_metadata.last_sync_out.status,omitempty" json:"sync_metadata.last_sync_out.status,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncOutSyncHistory *[]string `form:"sync_metadata.last_sync_out.sync_history,omitempty" json:"sync_metadata.last_sync_out.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncOutSyncUnit *[]string `form:"sync_metadata.last_sync_out.sync_unit,omitempty" json:"sync_metadata.last_sync_out.sync_unit,omitempty"`
+
+	// SyncMetadataOriginSystem Filters for issues synced from this specific origin system.
+	SyncMetadataOriginSystem *[]string `form:"sync_metadata.origin_system,omitempty" json:"sync_metadata.origin_system,omitempty"`
 }
 
 // MeetingsGetParams defines parameters for MeetingsGet.
@@ -14613,6 +14719,33 @@ type MeetingsListParams struct {
 
 	// State Filters for meeting on specified state or outcomes.
 	State *[]MeetingState `form:"state,omitempty" json:"state,omitempty"`
+
+	// Subtype Subtypes of meeting to be filtered.
+	Subtype *[]string `form:"subtype,omitempty" json:"subtype,omitempty"`
+
+	// SyncMetadataExternalReference Filters for issues with this specific external reference.
+	SyncMetadataExternalReference *[]string `form:"sync_metadata.external_reference,omitempty" json:"sync_metadata.external_reference,omitempty"`
+
+	// SyncMetadataLastSyncInStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncInStatus *[]SyncMetadataFilterSyncInFilterStatus `form:"sync_metadata.last_sync_in.status,omitempty" json:"sync_metadata.last_sync_in.status,omitempty"`
+
+	// SyncMetadataLastSyncInSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncInSyncHistory *[]string `form:"sync_metadata.last_sync_in.sync_history,omitempty" json:"sync_metadata.last_sync_in.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncInSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncInSyncUnit *[]string `form:"sync_metadata.last_sync_in.sync_unit,omitempty" json:"sync_metadata.last_sync_in.sync_unit,omitempty"`
+
+	// SyncMetadataLastSyncOutStatus Filters for works with selected sync statuses.
+	SyncMetadataLastSyncOutStatus *[]SyncMetadataFilterSyncOutFilterStatus `form:"sync_metadata.last_sync_out.status,omitempty" json:"sync_metadata.last_sync_out.status,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncHistory Filters for works modified with selected sync history.
+	SyncMetadataLastSyncOutSyncHistory *[]string `form:"sync_metadata.last_sync_out.sync_history,omitempty" json:"sync_metadata.last_sync_out.sync_history,omitempty"`
+
+	// SyncMetadataLastSyncOutSyncUnit Filters for works modified with selected sync units.
+	SyncMetadataLastSyncOutSyncUnit *[]string `form:"sync_metadata.last_sync_out.sync_unit,omitempty" json:"sync_metadata.last_sync_out.sync_unit,omitempty"`
+
+	// SyncMetadataOriginSystem Filters for issues synced from this specific origin system.
+	SyncMetadataOriginSystem *[]string `form:"sync_metadata.origin_system,omitempty" json:"sync_metadata.origin_system,omitempty"`
 }
 
 // MetricDefinitionsGetParams defines parameters for MetricDefinitionsGet.
@@ -14925,6 +15058,9 @@ type RevUsersScanParams struct {
 
 // AggregatedSchemaGetParams defines parameters for AggregatedSchemaGet.
 type AggregatedSchemaGetParams struct {
+	// CustomSchemaFragments The custom schema fragment IDs which are to be aggregated.
+	CustomSchemaFragments *[]string `form:"custom_schema_fragments,omitempty" json:"custom_schema_fragments,omitempty"`
+
 	// CustomSchemaSpecApps List of apps.
 	CustomSchemaSpecApps *[]string `form:"custom_schema_spec.apps,omitempty" json:"custom_schema_spec.apps,omitempty"`
 
@@ -14937,6 +15073,9 @@ type AggregatedSchemaGetParams struct {
 	// LeafType The leaf type. Used for inferring the default stage diagram and
 	// tenant fragment ID.
 	LeafType *string `form:"leaf_type,omitempty" json:"leaf_type,omitempty"`
+
+	// StockSchemaFragment The stock schema fragment which is to be aggregated.
+	StockSchemaFragment *string `form:"stock_schema_fragment,omitempty" json:"stock_schema_fragment,omitempty"`
 }
 
 // CustomSchemaFragmentsGetParams defines parameters for CustomSchemaFragmentsGet.
@@ -19791,6 +19930,196 @@ func (t *DevOrgAuthConnectionsUpdateRequest) UnmarshalJSON(b []byte) error {
 		err = json.Unmarshal(raw, &t.Type)
 		if err != nil {
 			return fmt.Errorf("error reading 'type': %w", err)
+		}
+	}
+
+	return err
+}
+
+// AsDynamicVistaMeetingsVista returns the union data inside the DynamicVista as a DynamicVistaMeetingsVista
+func (t DynamicVista) AsDynamicVistaMeetingsVista() (DynamicVistaMeetingsVista, error) {
+	var body DynamicVistaMeetingsVista
+	err := json.Unmarshal(t.union, &body)
+	return body, err
+}
+
+// FromDynamicVistaMeetingsVista overwrites any union data inside the DynamicVista as the provided DynamicVistaMeetingsVista
+func (t *DynamicVista) FromDynamicVistaMeetingsVista(v DynamicVistaMeetingsVista) error {
+	b, err := json.Marshal(v)
+	t.union = b
+	return err
+}
+
+// MergeDynamicVistaMeetingsVista performs a merge with any union data inside the DynamicVista, using the provided DynamicVistaMeetingsVista
+func (t *DynamicVista) MergeDynamicVistaMeetingsVista(v DynamicVistaMeetingsVista) error {
+	b, err := json.Marshal(v)
+	if err != nil {
+		return err
+	}
+
+	merged, err := runtime.JSONMerge(t.union, b)
+	t.union = merged
+	return err
+}
+
+func (t DynamicVista) MarshalJSON() ([]byte, error) {
+	b, err := t.union.MarshalJSON()
+	if err != nil {
+		return nil, err
+	}
+	object := make(map[string]json.RawMessage)
+	if t.union != nil {
+		err = json.Unmarshal(b, &object)
+		if err != nil {
+			return nil, err
+		}
+	}
+
+	if t.CreatedBy != nil {
+		object["created_by"], err = json.Marshal(t.CreatedBy)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'created_by': %w", err)
+		}
+	}
+
+	if t.CreatedDate != nil {
+		object["created_date"], err = json.Marshal(t.CreatedDate)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'created_date': %w", err)
+		}
+	}
+
+	if t.DisplayId != nil {
+		object["display_id"], err = json.Marshal(t.DisplayId)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'display_id': %w", err)
+		}
+	}
+
+	object["filter_type"], err = json.Marshal(t.FilterType)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'filter_type': %w", err)
+	}
+
+	object["id"], err = json.Marshal(t.Id)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'id': %w", err)
+	}
+
+	if t.IsDefault != nil {
+		object["is_default"], err = json.Marshal(t.IsDefault)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'is_default': %w", err)
+		}
+	}
+
+	if t.ModifiedBy != nil {
+		object["modified_by"], err = json.Marshal(t.ModifiedBy)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'modified_by': %w", err)
+		}
+	}
+
+	if t.ModifiedDate != nil {
+		object["modified_date"], err = json.Marshal(t.ModifiedDate)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'modified_date': %w", err)
+		}
+	}
+
+	object["name"], err = json.Marshal(t.Name)
+	if err != nil {
+		return nil, fmt.Errorf("error marshaling 'name': %w", err)
+	}
+
+	if t.SharedWith != nil {
+		object["shared_with"], err = json.Marshal(t.SharedWith)
+		if err != nil {
+			return nil, fmt.Errorf("error marshaling 'shared_with': %w", err)
+		}
+	}
+	b, err = json.Marshal(object)
+	return b, err
+}
+
+func (t *DynamicVista) UnmarshalJSON(b []byte) error {
+	err := t.union.UnmarshalJSON(b)
+	if err != nil {
+		return err
+	}
+	object := make(map[string]json.RawMessage)
+	err = json.Unmarshal(b, &object)
+	if err != nil {
+		return err
+	}
+
+	if raw, found := object["created_by"]; found {
+		err = json.Unmarshal(raw, &t.CreatedBy)
+		if err != nil {
+			return fmt.Errorf("error reading 'created_by': %w", err)
+		}
+	}
+
+	if raw, found := object["created_date"]; found {
+		err = json.Unmarshal(raw, &t.CreatedDate)
+		if err != nil {
+			return fmt.Errorf("error reading 'created_date': %w", err)
+		}
+	}
+
+	if raw, found := object["display_id"]; found {
+		err = json.Unmarshal(raw, &t.DisplayId)
+		if err != nil {
+			return fmt.Errorf("error reading 'display_id': %w", err)
+		}
+	}
+
+	if raw, found := object["filter_type"]; found {
+		err = json.Unmarshal(raw, &t.FilterType)
+		if err != nil {
+			return fmt.Errorf("error reading 'filter_type': %w", err)
+		}
+	}
+
+	if raw, found := object["id"]; found {
+		err = json.Unmarshal(raw, &t.Id)
+		if err != nil {
+			return fmt.Errorf("error reading 'id': %w", err)
+		}
+	}
+
+	if raw, found := object["is_default"]; found {
+		err = json.Unmarshal(raw, &t.IsDefault)
+		if err != nil {
+			return fmt.Errorf("error reading 'is_default': %w", err)
+		}
+	}
+
+	if raw, found := object["modified_by"]; found {
+		err = json.Unmarshal(raw, &t.ModifiedBy)
+		if err != nil {
+			return fmt.Errorf("error reading 'modified_by': %w", err)
+		}
+	}
+
+	if raw, found := object["modified_date"]; found {
+		err = json.Unmarshal(raw, &t.ModifiedDate)
+		if err != nil {
+			return fmt.Errorf("error reading 'modified_date': %w", err)
+		}
+	}
+
+	if raw, found := object["name"]; found {
+		err = json.Unmarshal(raw, &t.Name)
+		if err != nil {
+			return fmt.Errorf("error reading 'name': %w", err)
+		}
+	}
+
+	if raw, found := object["shared_with"]; found {
+		err = json.Unmarshal(raw, &t.SharedWith)
+		if err != nil {
+			return fmt.Errorf("error reading 'shared_with': %w", err)
 		}
 	}
 
@@ -34811,6 +35140,22 @@ func NewListArticlesRequest(server string, params *ListArticlesParams) (*http.Re
 
 		}
 
+		if params.Parent != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "parent", runtime.ParamLocationQuery, *params.Parent); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		if params.Scope != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "scope", runtime.ParamLocationQuery, *params.Scope); err != nil {
@@ -40860,6 +41205,150 @@ func NewMeetingsCountRequest(server string, params *MeetingsCountParams) (*http.
 
 		}
 
+		if params.Subtype != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "subtype", runtime.ParamLocationQuery, *params.Subtype); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataExternalReference != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.external_reference", runtime.ParamLocationQuery, *params.SyncMetadataExternalReference); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataOriginSystem != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.origin_system", runtime.ParamLocationQuery, *params.SyncMetadataOriginSystem); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		queryURL.RawQuery = queryValues.Encode()
 	}
 
@@ -41309,6 +41798,150 @@ func NewMeetingsListRequest(server string, params *MeetingsListParams) (*http.Re
 		if params.State != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "state", runtime.ParamLocationQuery, *params.State); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.Subtype != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "subtype", runtime.ParamLocationQuery, *params.Subtype); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataExternalReference != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.external_reference", runtime.ParamLocationQuery, *params.SyncMetadataExternalReference); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncInSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_in.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncInSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutStatus != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.status", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutStatus); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncHistory != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_history", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncHistory); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataLastSyncOutSyncUnit != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.last_sync_out.sync_unit", runtime.ParamLocationQuery, *params.SyncMetadataLastSyncOutSyncUnit); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.SyncMetadataOriginSystem != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "sync_metadata.origin_system", runtime.ParamLocationQuery, *params.SyncMetadataOriginSystem); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
@@ -44594,6 +45227,22 @@ func NewAggregatedSchemaGetRequest(server string, params *AggregatedSchemaGetPar
 	if params != nil {
 		queryValues := queryURL.Query()
 
+		if params.CustomSchemaFragments != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_fragments", runtime.ParamLocationQuery, *params.CustomSchemaFragments); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
 		if params.CustomSchemaSpecApps != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "custom_schema_spec.apps", runtime.ParamLocationQuery, *params.CustomSchemaSpecApps); err != nil {
@@ -44645,6 +45294,22 @@ func NewAggregatedSchemaGetRequest(server string, params *AggregatedSchemaGetPar
 		if params.LeafType != nil {
 
 			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "leaf_type", runtime.ParamLocationQuery, *params.LeafType); err != nil {
+				return nil, err
+			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
+				return nil, err
+			} else {
+				for k, v := range parsed {
+					for _, v2 := range v {
+						queryValues.Add(k, v2)
+					}
+				}
+			}
+
+		}
+
+		if params.StockSchemaFragment != nil {
+
+			if queryFrag, err := runtime.StyleParamWithLocation("form", false, "stock_schema_fragment", runtime.ParamLocationQuery, *params.StockSchemaFragment); err != nil {
 				return nil, err
 			} else if parsed, err := url.ParseQuery(queryFrag); err != nil {
 				return nil, err
