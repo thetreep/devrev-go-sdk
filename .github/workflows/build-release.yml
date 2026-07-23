@@ -52,12 +52,22 @@ jobs:
         id: check_changes
         run: |
           git add -A
-          if git diff --staged --quiet; then
+          # Release when specs drifted, when there are unreleased commits since
+          # the last tag, or when a human manually dispatched the workflow.
+          # Drift alone misses spec changes committed outside this workflow.
+          latest_tag=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          if ! git diff --staged --quiet; then
+            echo "Spec changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          elif [ -n "$latest_tag" ] && [ -n "$(git rev-list "${latest_tag}"..HEAD)" ]; then
+            echo "Unreleased commits since ${latest_tag}"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual dispatch, forcing release"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
             echo "No changes detected"
             echo "has_changes=false" >> $GITHUB_OUTPUT
-          else
-            echo "Changes detected"
-            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Generate SDK
