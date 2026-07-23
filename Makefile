@@ -21,6 +21,3 @@ generate:
 
 update-specs:
 	./.github/scripts/fetch-specs.sh
-
-update-changelogs:
-	./.github/scripts/fetch-changelogs.sh
