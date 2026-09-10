@@ -1,3 +1,9 @@
+## v0.3.1 (2026-09-10)
+
+### Public API Changes
+
+### Beta API Changes
+
 ## v0.3.0 (2026-07-23)
 
 ### Public API Changes
